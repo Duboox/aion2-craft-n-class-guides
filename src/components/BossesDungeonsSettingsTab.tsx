@@ -60,10 +60,29 @@ interface SettingGroupDto {
   readonly options: readonly SettingOptionDto[];
 }
 
+interface ProgressionSectionDto {
+  readonly id: string;
+  readonly labelEn: string;
+  readonly titleEn: string;
+  readonly descEn: string;
+  readonly bullets: readonly string[];
+}
+
+interface KeyItemDto {
+  readonly id: string;
+  readonly nameEn: string;
+  readonly grade: string;
+  readonly slotEn: string;
+  readonly tooltipLines: readonly string[];
+  readonly iconUrl: string;
+}
+
 interface BossesDungeonsSettingsPayload {
   readonly bossGroups: readonly BossGroupDto[];
   readonly dungeonGuides: readonly DungeonGuideDto[];
   readonly settingsGroups: readonly SettingGroupDto[];
+  readonly progressionSections?: readonly ProgressionSectionDto[];
+  readonly keyItems?: readonly KeyItemDto[];
 }
 
 interface BossesDungeonsSettingsTabProps {
@@ -74,11 +93,12 @@ export const BossesDungeonsSettingsTab: React.FC<BossesDungeonsSettingsTabProps>
   locale,
 }) => {
   const [subView, setSubView] = useState<
-    'DUNGEON_MECHS' | 'WORLD_BOSSES' | 'GATHERING_TREE' | 'SETTINGS'
+    'DUNGEON_MECHS' | 'WORLD_BOSSES' | 'PROGRESSION' | 'GATHERING_TREE' | 'SETTINGS'
   >('DUNGEON_MECHS');
   const [payload, setPayload] = useState<BossesDungeonsSettingsPayload | null>(null);
   const [selectedBossFaction, setSelectedBossFaction] = useState<string>('asmodians');
   const [bossSearch, setBossSearch] = useState<string>('');
+  const [selectedProgId, setSelectedProgId] = useState<string>('global');
 
   useEffect(() => {
     const loadData = async (): Promise<void> => {
@@ -161,6 +181,17 @@ export const BossesDungeonsSettingsTab: React.FC<BossesDungeonsSettingsTabProps>
             }`}
           >
             ⏱️ {locale === 'es' ? 'Jefes de Mundo (53)' : 'World Bosses (53)'}
+          </button>
+          <button
+            type="button"
+            onClick={() => setSubView('PROGRESSION')}
+            className={`px-3.5 py-2 rounded-lg text-xs font-extrabold transition ${
+              subView === 'PROGRESSION'
+                ? 'bg-[#d9b36c] text-[#0b0e14]'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            🚀 {locale === 'es' ? 'Ruta 0➔2800 GS & Ítems (45)' : '0➔2800 GS Roadmap & Items (45)'}
           </button>
           <button
             type="button"
@@ -544,6 +575,139 @@ export const BossesDungeonsSettingsTab: React.FC<BossesDungeonsSettingsTabProps>
               </div>
             </div>
           ))}
+        </div>
+      )}
+
+      {/* =====================================================================
+          5. PROGRESSION ROADMAP (0 ➔ 2,800+ GS) & 45 KEY ITEMS (ITEMS.JSON)
+         ===================================================================== */}
+      {subView === 'PROGRESSION' && (
+        <div className="space-y-6">
+          {/* Progression Stage Selector */}
+          <div className="aion-card rounded-2xl p-6 space-y-4">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+              <div>
+                <h3 className="text-base font-extrabold text-[#f0d59a]">
+                  🚀{' '}
+                  {locale === 'es'
+                    ? 'Ruta Completa de Progresión (Nv. 1 ➔ 1,400 ➔ 1,900 ➔ 2,100 ➔ 2,500 ➔ 2,800+ GS)'
+                    : 'Complete Gear Progression Roadmap (Lv. 1 ➔ 1,400 ➔ 1,900 ➔ 2,100 ➔ 2,500 ➔ 2,800+ GS)'}
+                </h3>
+                <p className="text-xs text-[#9aa6bc]">
+                  {locale === 'es'
+                    ? 'Incluye las diferencias críticas del servidor Global (las mazmorras ? del mapa enemigo dan 2,500 piedras y 1,000 AP en lugar de Cristales de Daevanion).'
+                    : 'Includes critical Global server differences (enemy faction ? dungeons give 2,500 Enhance Stones and 1,000 AP instead of Daevanion Crystals).'}
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              {(payload?.progressionSections ?? []).map((sec) => (
+                <button
+                  key={sec.id}
+                  type="button"
+                  onClick={() => setSelectedProgId(sec.id)}
+                  className={`px-3 py-2 rounded-xl text-xs font-extrabold border transition ${
+                    selectedProgId === sec.id
+                      ? 'bg-[#d9b36c] text-[#0b0e14] border-[#d9b36c]'
+                      : 'bg-[#0b0e14] text-slate-300 border-[#263042] hover:text-white'
+                  }`}
+                >
+                  {sec.labelEn}
+                </button>
+              ))}
+            </div>
+
+            {(() => {
+              const activeSec =
+                (payload?.progressionSections ?? []).find(
+                  (s) => s.id === selectedProgId
+                ) ?? (payload?.progressionSections ?? [])[0];
+              if (!activeSec) return null;
+              return (
+                <div className="p-5 rounded-2xl bg-[#0b0e14] border border-[#d9b36c]/40 space-y-3">
+                  <div>
+                    <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#d9b36c]">
+                      {activeSec.labelEn}
+                    </span>
+                    <h4 className="text-lg font-extrabold text-white">
+                      {activeSec.titleEn}
+                    </h4>
+                    {activeSec.descEn && (
+                      <p className="text-xs text-slate-300 mt-1">
+                        {activeSec.descEn}
+                      </p>
+                    )}
+                  </div>
+                  <ul className="space-y-2 text-xs text-slate-200">
+                    {activeSec.bullets.map((b, bIdx) => (
+                      <li
+                        key={`${activeSec.id}_b_${bIdx}`}
+                        className="p-2.5 rounded-xl bg-[#141a24] border border-[#263042] leading-relaxed"
+                      >
+                        • {b}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            })()}
+          </div>
+
+          {/* 45 Key Progression Items */}
+          <div className="aion-card rounded-2xl p-6 space-y-4">
+            <div>
+              <h3 className="text-base font-extrabold text-[#f0d59a]">
+                🎒{' '}
+                {locale === 'es'
+                  ? '45 Ítems Clave de Progresión, Monedas, Piedras y Alas (con Efectos Equipado/Poseído)'
+                  : '45 Key Progression Items, Currencies, Stones & Wings (with Equipped/Owned Effects)'}
+              </h3>
+              <p className="text-xs text-[#9aa6bc]">
+                {locale === 'es'
+                  ? 'Referencia directa de items.json para identificar de inmediato para qué sirve cada piedra, moneda o pieza de progresión.'
+                  : 'Direct reference from items.json to immediately identify the purpose of every progression stone, currency, or gear piece.'}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {(payload?.keyItems ?? []).map((item) => (
+                <div
+                  key={item.id}
+                  className="p-3.5 rounded-xl bg-[#0b0e14] border border-[#263042] flex items-start gap-3 hover:border-[#d9b36c]/50 transition"
+                >
+                  <img
+                    src={item.iconUrl}
+                    alt={item.nameEn}
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).style.display = 'none';
+                    }}
+                    className="w-11 h-11 rounded-xl border border-[#263042] bg-[#141a24] object-contain shrink-0"
+                  />
+                  <div className="space-y-1 min-w-0">
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <strong className="text-xs text-white truncate">
+                        {item.nameEn}
+                      </strong>
+                      <span className="px-1.5 py-0.5 rounded bg-[#141a24] border border-[#263042] text-[10px] font-bold uppercase text-[#f0d59a]">
+                        {item.grade}
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-[#9aa6bc] block">
+                      {item.slotEn}
+                    </span>
+                    {item.tooltipLines.length > 0 && (
+                      <ul className="space-y-0.5 text-[11px] text-[#6fd08c]">
+                        {item.tooltipLines.map((line, lIdx) => (
+                          <li key={`${item.id}_l_${lIdx}`}>{line}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </div>

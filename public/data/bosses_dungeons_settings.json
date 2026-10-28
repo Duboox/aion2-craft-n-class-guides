@@ -1,5 +1,5 @@
 ﻿{
-    "generatedAt":  "2026-10-27T23:47:37.3169415-04:00",
+    "generatedAt":  "2026-10-27T23:51:17.8032732-04:00",
     "bossGroups":  [
                        {
                            "id":  "elyos",
@@ -1357,5 +1357,563 @@
                                                }
                                            ]
                            }
-                       ]
+                       ],
+    "progressionSections":  [
+                                {
+                                    "id":  "global",
+                                    "titleEn":  "What changes on global",
+                                    "leadEn":  "From the datamine of the global client. This is why the Korean route no longer works as is.",
+                                    "bullets":  [
+                                                    "Enemy ? marks lost the Daevanion crystals — they used to be the top goal at launch; now clear them at your own pace.",
+                                                    "Feathers ([trace]) are nerfed — collect them all, but last.",
+                                                    "Gear has a lower item level on global (for example True Dragon Lord Greatsword: 70 on KR/TW, 62 on global) — lower item level means cheaper enhancement."
+                                                ]
+                                },
+                                {
+                                    "id":  "s45",
+                                    "titleEn":  "Story, regional quests and your map",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "💡 TIP: Milestones. You reach 45 at about 700 item level. The last step of the main story (in the Abyss) asks for about 1,000 — if it doesn\u0027t let you in, do the steps below first and come back: Daevanion crystals, clash runes, belt and amulet, Exploration: Draupnir.",
+                                                    "Finish the main story first. It gives a gold weapon for your class, [bracelet] and [wings] (equipped: HP 500, MP 250, Penetration 500, Critical Hit 35; owned: Penetration 100, Accuracy +20, Attack +10).",
+                                                    "Regional quests (Journal → Regional): two rings, two earrings and a necklace (blue), plus two PvE runes. They also give titles and Theostone chests.",
+                                                    "Enhance a little, set up your PvE macro and clear every ? on your own map: each sealed dungeon gives [dcrystal] ×2 and 2 skill points, each stronghold [beltscroll] ×2.",
+                                                    "Then the remaining regional quests and the feathers: at least 95 [trace] take the Monolith to level 11, which upgrades the amulet from green to blue.",
+                                                    "Clash runes ([clashrune]): 60 item level each, so the pair is +120. They come from green quests around the map, or buy them in the Nightmare shop (Growth tab) with the currency from first clears. Don\u0027t enhance them past +1 unless you have a spare.",
+                                                    "The story bracelet ([bracelet]) stays with you for months: take it to +10–11 — it adds attack and defense too — and put your one [mana_sup] in it: two gold rolls give the most item level. The second bracelet comes from a quest of your own faction (item level 43)."
+                                                ]
+                                },
+                                {
+                                    "id":  "s1400",
+                                    "titleEn":  "To 1,400: Shugo, Nightmare, Draupnir",
+                                    "leadEn":  "Without the enemy ? marks you end up around 1,279 — about 121 short of the 1,400 needed for the tier 2 dungeons. This is how to close the gap.",
+                                    "bullets":  [
+                                                    "Mini-games with a reward card at the end. Your place decides how many cards you open. If you placed badly you can skip the reward — the [shugokey] is only spent when you take it. Keys: 7 by default, +1 a day, up to 30 more stored — don\u0027t let them cap.",
+                                                    "Boss rifts (e.g. Beritra Air Raid): hold off the waves, then kill the mini-boss. 100 contribution points = 3 cards, the same rewards as Shugo. Invite Chanters, Clerics and Templars right at the portal — their party buffs make 100 points easy.",
+                                                    "💡 TIP: The main prize is Shugo currency: spend all of it on [dcrystal] in the Festival Shop — per character, price goes up in steps: 50 (×10), 100 (×10), 200 (×15), 400 (×15) — [shugocoin] ×10,500 in total.",
+                                                    "Solo boss dungeon. 14 base attempts that refill on their own (+2 a day), plus a second pool of up to 30 that you fill with tickets; charges start piling up at level 45 — reach it before the first reset.",
+                                                    "Every boss has 10 challenge levels; kill each on all of them. An attempt is spent only on a kill, so leave and come back stronger. Greys first, then greens, then the Last Boss.",
+                                                    "First clear gives [nmcoin] ×500, repeats 100. Shop, Growth tab: [dcrystal] for 300 (×50 per character), [stigmashard] for 1,500 (×35), [clashrune] for 500. Keep 14,000 for the statue.",
+                                                    "Run it up to the guarantee: 14 chest openings (7 with premium), 40 Odyle energy each. The goal is two gold pieces from drops and a third from the guarantee — you pick which Bakarma piece ([bakarma], helm, pauldrons, gloves, greaves, boots).",
+                                                    "Collect every [trace] in Chaotic Lower Reshanta: the Monolith resonance levels give Daevanion crystals such as [dcrystal_azphel].",
+                                                    "Still short? Three runs of Exploration: Draupnir guarantee another gold piece — take any you don\u0027t have and put an [mana_int] in it.",
+                                                    "Plus a green Theostone in the weapon (for example [theostone]) — the regional quests hand one out. Done right, that is exactly 1,400.",
+                                                    "Belt and amulet: green → blue in Substance Morph, then up to gold — a big jump in item level. Enhancing them eats enhancement stones: the enemy ? marks (through the Rift, every 3 hours) give 2,500 [enhance] each — see the table at the top.",
+                                                    "Spend Odyle energy with care: after each new piece enhance it, add manastones, check your item level, and only then decide where to go next — another run of the same dungeon or something you haven\u0027t done yet."
+                                                ]
+                                },
+                                {
+                                    "id":  "s1900",
+                                    "titleEn":  "To 1,900: Vakron",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "Farm Vakron Sky Island (2–5 players, 40 energy a chest) until you have almost the whole armor set. Weapon and accessories are best crafted later, so Urugugu Canyon (weapon, accessories) can wait.",
+                                                    "[vakronguard] has no real alternative early. If it doesn\u0027t drop: every 21st chest gives [voucher]; two of them + 1,500,000 kina make the guard in Substance Morph.",
+                                                    "Take the set to +10. If you bought every Daevanion crystal, you should be around 1,900. Short? Manastones, or one run on each boss of ★1 Transcendence — grey arcana add about 40."
+                                                ]
+                                },
+                                {
+                                    "id":  "s2100",
+                                    "titleEn":  "To 2,100: ★2 Transcendence",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "Run ★2 Transcendence until you have the two green slots — bell and mirror ([bell_green], [mirror_green], item level 40 each). Fill the other slots with grey arcana ([compass_grey], [chalice_grey] — item level 20). Bonuses don\u0027t matter yet, only item level.",
+                                                    "Transcendence opens at 1,600. Five arcana slots: a grey card gives 20 item level, green 40, blue 60. A full green set is +200 (1,600 → 1,800), swapping it for blue is another +100."
+                                                ]
+                                },
+                                {
+                                    "id":  "s2500",
+                                    "titleEn":  "To 2,500: Ferocious Horn Den",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "Go straight to Ferocious Horn Den (the RU community calls it “the Dog”) and stay until you have most of its armor set. Move your Vakron enhancement into the new pieces with Gear Transfer.",
+                                                    "Fire Temple, the other dungeon of this tier, drops the weapon and accessories."
+                                                ]
+                                },
+                                {
+                                    "id":  "s2800",
+                                    "titleEn":  "To 2,800: gold arcana and the raid",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "Farm gold arcana in ★4 Transcendence and roll the skills you need for your PvE and PvP setups (for example [mirror_gold] +5 with the Primal Vigor set). At 2,800 the 10-player dragon raid opens — the hardest PvE of Season 1 and a source of resources for the next update.",
+                                                    "From here +10–11 is not enough: gear goes past +15 towards +20, and above +15 that needs [amplify]. Don\u0027t take all dungeon gear to +20 — crafted gear (item level 94 and 102 against 86 from drops) is what is worth +20 and fine-tuned manastones."
+                                                ]
+                                },
+                                {
+                                    "id":  "hardcore",
+                                    "titleEn":  "Hardcore route: enhance a cheap blank, then transfer",
+                                    "leadEn":  "Same steps as above, but saving every enhancement stone and kina. Depends on the datamine holding up — if transfers are limited at launch, skip this.",
+                                    "bullets":  [
+                                                    "Enhancement cost grows with item level (Vakron Cloak, 76: 380 stones and 9,500 kina a try; Abyssal Bracelet, 84: 420 and 10,500). After +10 the chance drops (+13 → +14: 25%, +5% after each fail) and a try at the top costs about 2 million kina.",
+                                                    "A transfer stone ([transfer_w], [transfer_a]) moves the enhancement level and rolled stats to any item — even from the cheapest gold piece to the best one. Made in Substance Morph from gold gear.",
+                                                    "Plan: wear the lowest item level gold gear, don\u0027t enhance new drops. When a long-term upgrade drops, take a cheap blank for that slot to +15 and transfer it. Works for weapon, armor and guard, not accessories (no cheap sources).",
+                                                    "It is slow without alts: 3–4 extra characters bring the additional enhancement stones."
+                                                ]
+                                },
+                                {
+                                    "id":  "titan",
+                                    "titleEn":  "TitanTheF\u0027s route: Abyss farm and a crafted weapon",
+                                    "leadEn":  "Another route from TitanTheF\u0027s progression sheet (Taiwan experience): less waiting for dungeons, more Abyss and crafting. Needs a lot of play time.",
+                                    "bullets":  [
+                                                    "Every Shugo Festival. Only at level 45 do you get the full rewards — including gold gear and craft materials; global also added [stigmashard]. Chests and jumping games; skip the tiles — newcomers ruin them.",
+                                                    "Clear the map: every ? and campfire, the green side quests, and pick up hidden cubes and feathers on the way. Together with your levels that is about 316 of 570 Daevanion points (levels 136, sealed dungeons 122, regional quests 58); Shugo and Nightmare add 50 each. Feathers take the altar to level 30 and give a title.",
+                                                    "Then one of three: kill mobs until every pet is level 3 (all pets together give 55k combat power), go to the Abyss (the same pets plus wings), or get a party for 3–4 runs of Draupnir. TitanTheF picks Draupnir — first gear, kina and enhancement.",
+                                                    "Spend the daily Nightmare entry. One run of the first Transcendence for white arcana is enough — you only need to open floor 2. Watch the market for T1 dungeon materials and pick up everything for the season shop.",
+                                                    "The goal of the first days: currency for a crafted T1 weapon — it is the one you will enhance and roll stats on.",
+                                                    "At launch you won\u0027t just stand on a spot. Buy the quest scrolls from the NPC at the Abyss base — all of them, white to gold (about 1.4 million kina) — and do the white, green and blue ones.",
+                                                    "Tag along with players doing the same quests and skip the fights — they pay less. Reroll quests towards gold materials or PvP boards, but watch the currency. Then the gold quests in the centre, then a side island to farm.",
+                                                    "Go in pairs: two players get more AP and materials, then split the gold gear. If farming is impossible, do the same quests in the world — there is a merchant in every big city. And don\u0027t forget Shugo.",
+                                                    "Kill every world boss once — a chance at a drop plus a participation title. The timers are on the map; there is one in almost every zone.",
+                                                    "As soon as your item level allows, clear floor 2 of Transcendence as well (different arcana). Then Vakron and Urugugu (T2 dungeons) — watch your energy, sell what you don\u0027t need and buy T1 materials.",
+                                                    "With enough T1 materials, level your crafting (about 2 million kina, see \u003ca href=\"../crafting/\"\u003eGathering and crafting\u003c/a\u003e). Craft at least one gold level 60 blank — don\u0027t wear or enhance it. Then the T1 weapon: in the first days it should come out at no more than about 30 million kina.",
+                                                    "Don\u0027t take the weapon above +10 yet — next are the rings (three times cheaper than weapons). Try ★3 Transcendence if energy and gear allow, otherwise kill more mobs. The solo dungeon with enhancement stones: go only for the stones, and only after raising your item level — more mobs killed, bigger reward.",
+                                                    "Back to the Abyss: not the centre — a corner with a small pack of mobs. 8–10 hours of this gives a pile of AP, kina, gear and materials; nothing pays better in the first days.",
+                                                    "Finish the ring, then arcana; with blue arcana and enhanced gear try the T3 dungeons. Roll stats only on T3 dungeon gear. When the energy runs out, roll the genus (about 10 million kina for all of it): don\u0027t lock stats before level 10; hidden cubes give 1,000 crystals — enough for level 10.",
+                                                    "Don\u0027t spend unbound kina on enhancement — only on buying materials.",
+                                                    "Later: energy into T3 dungeons, ★4 Transcendence with a good party, arcana up to level 20. After 2–3 days Abyss kills pay well; buying the necklace for Abyss points and enhancing it is fine, but not the whole Abyss set at the start — the first AP go into stigmas. Don\u0027t skip Abyss activities, weekly bosses and artifact battles — they give medals for the PvP set. Earrings can come from Kromede; the next upgrade is a crafted guard.",
+                                                    "For those who can play 10 hours a day: Shugo as usual, the rest of the time gathering. Priority — Odyle and wood, also sapphires, rubies and diamonds; level gathering fast and forget your item level. People who know the game buy gold materials and materials in general, and crafting gets easier for you too. You can also buy kuna for kina on the auction house and flip paintings, materials and leather (cheap now, ten times more a week later). Bots are a risk here.",
+                                                    "With 10–16 hours at launch, put the time into your main and start alts after 1–2 days, when the starting zones are emptier. With less time, take 4 characters to level 22 first and only then finish the main — by then the alts\u0027 energy is full."
+                                                ]
+                                },
+                                {
+                                    "id":  "enhance",
+                                    "titleEn":  "How gear upgrades work",
+                                    "leadEn":  "The five Enhancement tabs in short: Enhance, Manastone, Theostone, Soul Binding and Transfer.",
+                                    "bullets":  [
+                                                    "Enhance. Gold gear has a 100% chance up to +10, after that it drops. A fail never breaks the item — only the materials and kina are spent. Above +15 you also need [amplify], made in Substance Morph from [amplify_frag] and [enhance].",
+                                                    "Manastones. The number of slots depends on the rarity: white 1, green 2 and so on. There are two kinds — for weapons and armor, and for accessories — each in a normal and a PvP version ([mana_sup]).",
+                                                    "Theostones go into the weapon and the guard: damage, damage over time or control. They trigger with a chance on attack — the higher your combat speed, the more often ([theostone]).",
+                                                    "Soul Binding. Tab 1 raises the quality of the stats, tab 2 rerolls them — with any unneeded gold gear or reroll items — tab 3 uses books. [sync] comes from the battle pass, hard dungeons and dungeons from 2,800.",
+                                                    "Transfer moves enhancement and stats to another item — see the hardcore route above.",
+                                                    "Titles each give passive stats; the title info shows how to get one.",
+                                                    "The season lasts 2–3 months. Season points buy crafting materials in the season shop."
+                                                ]
+                                },
+                                {
+                                    "id":  "all",
+                                    "titleEn":  "Tips for everyone",
+                                    "leadEn":  "",
+                                    "bullets":  [
+                                                    "Daily contracts (Journal → Duty → Mission) reset every day. Only the first random reward is guaranteed; the others are a chance that drops along the list — 100%, 50%, 33%, 25%, 10%.",
+                                                    "Take every contract with the golden key in slots 1–4.",
+                                                    "No key: short on enhancement stones — the one with the most stones; otherwise the one with the most rainbow and other pet stones.",
+                                                    "A gold item or resource at the end of the list is almost always a trap — skip those.",
+                                                    "💡 TIP: Hidden cubes give 1,000 crystals each — pick up every one you pass. Unbound kina is for buying materials, not for enhancement.",
+                                                    "💡 TIP: Daily Dungeon and the trials: don\u0027t touch them and don\u0027t open their pass boxes if they are handed out at launch. They are being reworked, rewards depend on your score (kill speed), and they refresh only at the end of the week — go then, at your strongest. Weekly world and Abyss rewards are being reworked too; wait for the live numbers.",
+                                                    "Stigmas and their levels — the biggest single jump.",
+                                                    "Soul Binding: reroll the stats on your weapon, guard and accessories towards better ones (for example Critical Hit → Attack Speed).",
+                                                    "Offensive items past +15 — each step adds Attack %.",
+                                                    "Titles, Pantheon decorations (Illusion and Wisdom have the best stats) and wings — Vakron or Nightmare wings are great.",
+                                                    "Rerolling the stats on the Pet / Genus Insight branch, and fine-tuning manastones and soulstones towards offensive stats.",
+                                                    "Weapon skins: dismantle them on alts and use Combine on your main — every weapon you unlock adds damage with that weapon type."
+                                                ]
+                                }
+                            ],
+    "keyItems":  [
+                     {
+                         "key":  "wings",
+                         "id":  "532400007",
+                         "nameEn":  "Ultimate Daeva Wings (Bound)",
+                         "category":  "getwing",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/wings.webp",
+                         "descEn":  "Grants [Ultimate Daeva Wings (Bound)].\n\n[Equipped Effect]\nHP: 500\nMP: 250\nPenetration: 500\nCritical Hit: 35\n[Owned Effect]\nFlight Power: 500\nPenetration: 100\nAccuracy Bonus: 20\nAttack Bonus: 10"
+                     },
+                     {
+                         "key":  "bracelet",
+                         "id":  "310430046",
+                         "nameEn":  "Ascension Bracelet",
+                         "category":  "bracelet",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/bracelet.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "trace",
+                         "id":  "631900007",
+                         "nameEn":  "Empyrean Trace: Altgard (Bound)",
+                         "category":  "monolithtoken",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/trace.webp",
+                         "descEn":  "A trace faintly imbued with the strength of the Empyrean Lords who protect Altgard. Can be resonated with Altgard Monolith."
+                     },
+                     {
+                         "key":  "dcrystal",
+                         "id":  "531900003",
+                         "nameEn":  "Daevanion Crystal (Bound)",
+                         "category":  "getpoint",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/dcrystal.webp",
+                         "descEn":  "Use to obtain 1 Daevanion Point."
+                     },
+                     {
+                         "key":  "dcrystal_azphel",
+                         "id":  "531900012",
+                         "nameEn":  "Daevanion Crystal: Azphel (Bound)",
+                         "category":  "getpoint",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/dcrystal_azphel.webp",
+                         "descEn":  "Use to obtain 1 Azphel Daevanion Point."
+                     },
+                     {
+                         "key":  "wisdom",
+                         "id":  "531900001",
+                         "nameEn":  "Wisdom Stone (Bound)",
+                         "category":  "getpoint",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/wisdom.webp",
+                         "descEn":  "A mysterious stone imbued with memories of battle.\nUse to obtain 1 Skill Point."
+                     },
+                     {
+                         "key":  "clashrune",
+                         "id":  "533700064",
+                         "nameEn":  "Clash Rune Chest (Bound)",
+                         "category":  "rewardbox",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/clashrune.webp",
+                         "descEn":  "A rune that can be earned only by those who have overcome a nightmare.\nUse to obtain a Clash Rune (Bound) and Rune Enhance Scrolls (Bound)."
+                     },
+                     {
+                         "key":  "beltscroll",
+                         "id":  "531110006",
+                         "nameEn":  "Noble Belt Enhance Scroll (Bound)",
+                         "category":  "usable",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/beltscroll.webp",
+                         "descEn":  "An Enhance Scroll containing an ancient power.\nUse to enhance Noble Belt."
+                     },
+                     {
+                         "key":  "shugokey",
+                         "id":  "532000018",
+                         "nameEn":  "Shugo Festival Reward Key (Bound)",
+                         "category":  "addcontentsticketcount",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/shugokey.webp",
+                         "descEn":  "Recharges 1 Shugo Festival Reward Key count."
+                     },
+                     {
+                         "key":  "shugocoin",
+                         "id":  "930100011",
+                         "nameEn":  "Centuryroot Token",
+                         "category":  "currency",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/shugocoin.webp",
+                         "descEn":  "Made by drying high quality centuryroot, this token is popular among Shugo as a collectable item. Can be used to purchase various items in the Shugo Festival Shop."
+                     },
+                     {
+                         "key":  "nmcoin",
+                         "id":  "930100017",
+                         "nameEn":  "Phantasmal Fragment",
+                         "category":  "currency",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/nmcoin.webp",
+                         "descEn":  "A fragment of a dream corrupted by nightmarish horrors. Can be used to purchase various items in the Nightmare Shop."
+                     },
+                     {
+                         "key":  "abysspts",
+                         "id":  "930100003",
+                         "nameEn":  "Abyss Points",
+                         "category":  "currency",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/abysspts.webp",
+                         "descEn":  "A mark of honor won on the fields of a war without end."
+                     },
+                     {
+                         "key":  "bakarma",
+                         "id":  "210130034",
+                         "nameEn":  "Bakarma Breastplate",
+                         "category":  "torso",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/bakarma.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "voucher",
+                         "id":  "632510016",
+                         "nameEn":  "Gear Change Voucher: Vakron Sky Island (Bound)",
+                         "category":  "conversionresource_special",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/voucher.webp",
+                         "descEn":  "A reward obtained by defeating Vakron.\nWhen used as a Substance Morph material, it can be transformed into a Unique Guard or Unique Gear Selection Chest."
+                     },
+                     {
+                         "key":  "vakronguard",
+                         "id":  "115030050",
+                         "nameEn":  "Vakron Guard",
+                         "category":  "guarder",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/vakronguard.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "mana_sup",
+                         "id":  "531360004",
+                         "nameEn":  "Superior Manastone (Bound)",
+                         "category":  "magicstone",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mana_sup.webp",
+                         "descEn":  "Can be engraved on Manastone slots in all weapons and armor to imbue them with stats.\nThe type and value of the stats are determined by chance."
+                     },
+                     {
+                         "key":  "mana_int",
+                         "id":  "531360003",
+                         "nameEn":  "Intermediate Manastone (Bound)",
+                         "category":  "magicstone",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mana_int.webp",
+                         "descEn":  "Can be engraved on Manastone slots in all weapons and armor to imbue them with stats.\nThe type and value of the stats are determined by chance."
+                     },
+                     {
+                         "key":  "mana_less",
+                         "id":  "531360001",
+                         "nameEn":  "Lesser Manastone (Bound)",
+                         "category":  "magicstone",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mana_less.webp",
+                         "descEn":  "Can be engraved on Manastone slots in all weapons and armor to imbue them with stats.\nThe type and value of the stats are determined by chance."
+                     },
+                     {
+                         "key":  "theostone",
+                         "id":  "533840018",
+                         "nameEn":  "Theostone: Jumentis\u0027s Dexterity (Bound)",
+                         "category":  "getgodstone",
+                         "grade":  31,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/theostone.webp",
+                         "descEn":  "Grants [Theostone: Jumentis\u0027s Dexterity].\nThe obtained Theostone can be found in the Enhancement menu.\nHas a 20% chance to deal 250 AoE Wind damage to up to 4 targets on attack\nEffect Activation Cooldown: 1s\nOnly one Theostone\u0027s effect applies when identical Theostones are engraved."
+                     },
+                     {
+                         "key":  "enhance",
+                         "id":  "930100023",
+                         "nameEn":  "Enhance Stone",
+                         "category":  "currency",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/enhance.webp",
+                         "descEn":  "Used to awaken hidden potential of gear."
+                     },
+                     {
+                         "key":  "bell_green",
+                         "id":  "810450001",
+                         "nameEn":  "Bell of Vigor",
+                         "category":  "bell",
+                         "grade":  21,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/bell_green.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "mirror_green",
+                         "id":  "810550002",
+                         "nameEn":  "Mirror of Magic",
+                         "category":  "mirror",
+                         "grade":  21,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mirror_green.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "compass_grey",
+                         "id":  "810360002",
+                         "nameEn":  "Compass of Magic",
+                         "category":  "compass",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/compass_grey.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "chalice_grey",
+                         "id":  "810160002",
+                         "nameEn":  "Chalice of Magic",
+                         "category":  "grail",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/chalice_grey.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "mirror_gold",
+                         "id":  "810530001",
+                         "nameEn":  "Mirror of Vigor",
+                         "category":  "mirror",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mirror_gold.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "transfer_w",
+                         "id":  "536830001",
+                         "nameEn":  "Transfer Stone: Weapon (Unique) (Bound)",
+                         "category":  "succession",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/transfer_w.webp",
+                         "descEn":  "A formidable gemstone that transfers the boundless power of the gear to another.\nCan be used on the Unique Weapon."
+                     },
+                     {
+                         "key":  "transfer_a",
+                         "id":  "536830002",
+                         "nameEn":  "Transfer Stone: Armor (Unique) (Bound)",
+                         "category":  "succession",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/transfer_a.webp",
+                         "descEn":  "A formidable gemstone that transfers the boundless power of the gear to another.\nCan be used on the Unique Armor."
+                     },
+                     {
+                         "key":  "stigmashard",
+                         "id":  "531900010",
+                         "nameEn":  "Stigma Shard (Bound)",
+                         "category":  "getpoint",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/stigmashard.webp",
+                         "descEn":  "A fragment sealed with the Essence of Experience.\nGrants 1 Stigma Shard Point when obtained."
+                     },
+                     {
+                         "key":  "amplify",
+                         "id":  "536530001",
+                         "nameEn":  "Amplify Stone (Unique) (Bound)",
+                         "category":  "usable",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/amplify.webp",
+                         "descEn":  "A mystical gemstone that awakens the unique power of gear.\nUsed to amplify Unique Gear that has reached its maximum enhancement level."
+                     },
+                     {
+                         "key":  "amplify_frag",
+                         "id":  "631800004",
+                         "nameEn":  "Amplify Stone Fragment (Unique) (Bound)",
+                         "category":  "material",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/amplify_frag.webp",
+                         "descEn":  "A piece of an Amplify Stone used to awaken the unique power of the gear.\nCan be converted into an Amplify Stone through Substance Morph."
+                     },
+                     {
+                         "key":  "sync",
+                         "id":  "536630001",
+                         "nameEn":  "Sync Stone (Unique) (Bound)",
+                         "category":  "usable",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/sync.webp",
+                         "descEn":  "A stone that harmonizes the energies within gear to awaken new possibilities.\nWhen used in [Enhancement - Soul Binding - Sync], it allows you to adjust the properties of gear."
+                     },
+                     {
+                         "key":  "sapphire",
+                         "id":  "630660001",
+                         "nameEn":  "Sapphire Gemstone (Bound)",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/sapphire.webp",
+                         "descEn":  "A gemstone infused with valuable gems. Used as a material for handicrafting accessories."
+                     },
+                     {
+                         "key":  "ruby",
+                         "id":  "630660003",
+                         "nameEn":  "Ruby Gemstone (Bound)",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/ruby.webp",
+                         "descEn":  "A gemstone infused with valuable gems. Used as a material for handicrafting accessories."
+                     },
+                     {
+                         "key":  "odyle",
+                         "id":  "610610013",
+                         "nameEn":  "Odyle",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/odyle.webp",
+                         "descEn":  "Used to imbue an item with the power of Odyle. Used as a material for Crafting and Substance Morph."
+                     },
+                     {
+                         "key":  "log",
+                         "id":  "630650001",
+                         "nameEn":  "Yggdrasil Log (Bound)",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/log.webp",
+                         "descEn":  "A magic-imbued log. Used for making wooden weapons in Handicrafting."
+                     },
+                     {
+                         "key":  "odyle_energy",
+                         "id":  "532000014",
+                         "nameEn":  "Odyle Energy (Bound)",
+                         "category":  "addcontentsticketcount",
+                         "grade":  71,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/odyle_energy.webp",
+                         "descEn":  "Recharges 40 Odyle Energy.\nOdyle Energy can be used to activate the Odyle Energy Cube that appears when you clear an Expedition, Transcendence, or Sanctuary."
+                     },
+                     {
+                         "key":  "ore",
+                         "id":  "610620013",
+                         "nameEn":  "Orichalcum Ore",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/ore.webp",
+                         "descEn":  "A hard ore. Used as a material for Blacksmithing and Armorsmithing."
+                     },
+                     {
+                         "key":  "herb",
+                         "id":  "610670044",
+                         "nameEn":  "Calendula",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/herb.webp",
+                         "descEn":  "An herb used to concoct a potion in Alchemy."
+                     },
+                     {
+                         "key":  "ingredient",
+                         "id":  "610680044",
+                         "nameEn":  "Kukuru",
+                         "category":  "gatherresource",
+                         "grade":  11,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/ingredient.webp",
+                         "descEn":  "A cooking ingredient."
+                     },
+                     {
+                         "key":  "parchment_vigor",
+                         "id":  "810230001",
+                         "nameEn":  "Parchment of Vigor",
+                         "category":  "parchment",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/parchment_vigor.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "compass_vigor",
+                         "id":  "810330001",
+                         "nameEn":  "Compass of Vigor",
+                         "category":  "compass",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/compass_vigor.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "chalice_vigor",
+                         "id":  "810130001",
+                         "nameEn":  "Chalice of Vigor",
+                         "category":  "grail",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/chalice_vigor.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "mirror_magic_gold",
+                         "id":  "810530002",
+                         "nameEn":  "Mirror of Magic",
+                         "category":  "mirror",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/mirror_magic_gold.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "holyspirit_torso",
+                         "id":  "210130002",
+                         "nameEn":  "Holy Spirit Breastplate",
+                         "category":  "torso",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/holyspirit_torso.webp",
+                         "descEn":  ""
+                     },
+                     {
+                         "key":  "spectral_torso",
+                         "id":  "210130006",
+                         "nameEn":  "Spectral Breastplate",
+                         "category":  "torso",
+                         "grade":  41,
+                         "iconUrl":  "https://aion2-guides.info/assets/items/spectral_torso.webp",
+                         "descEn":  ""
+                     }
+                 ]
 }
