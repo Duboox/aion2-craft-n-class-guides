@@ -1,0 +1,200 @@
+﻿[
+    {
+        "id":  530116001,
+        "name_en":  "Life Serum (Bound)",
+        "name_es":  "Elixir de vida (vinculado)",
+        "vendor_price_kinah":  1000
+    },
+    {
+        "id":  530126003,
+        "name_en":  "Life Potion (Bound)",
+        "name_es":  "Poción de vida (vinculado)",
+        "vendor_price_kinah":  250
+    },
+    {
+        "id":  530146001,
+        "name_en":  "Healing Potion (Bound)",
+        "name_es":  "Poción de curación (vinculado)",
+        "vendor_price_kinah":  630
+    },
+    {
+        "id":  531060003,
+        "name_en":  "Speed Scroll (Bound)",
+        "name_es":  "Pergamino de esprint (vinculado)",
+        "vendor_price_kinah":  1000
+    },
+    {
+        "id":  531060004,
+        "name_en":  "Courage Scroll (Bound)",
+        "name_es":  "Pergamino de valentía (vinculado)",
+        "vendor_price_kinah":  1000
+    },
+    {
+        "id":  531060027,
+        "name_en":  "Benediction Scroll (Bound)",
+        "name_es":  "Pergamino de favor (vinculado)",
+        "vendor_price_kinah":  1000
+    },
+    {
+        "id":  630520001,
+        "name_en":  "Zircon Hammer (Bound)",
+        "name_es":  "Martillo de circón (vinculado)",
+        "vendor_price_kinah":  4650
+    },
+    {
+        "id":  630520002,
+        "name_en":  "Lazuli Hammer (Bound)",
+        "name_es":  "Martillo de lazuli (vinculado)",
+        "vendor_price_kinah":  5600
+    },
+    {
+        "id":  630520003,
+        "name_en":  "Moonstone Hammer (Bound)",
+        "name_es":  "Martillo de piedra de luna (vinculado)",
+        "vendor_price_kinah":  6550
+    },
+    {
+        "id":  630520004,
+        "name_en":  "Lesser Dragon Leather Softener (Bound)",
+        "name_es":  "Suavizante de cuero de dragón inferior (vinculado)",
+        "vendor_price_kinah":  4650
+    },
+    {
+        "id":  630520005,
+        "name_en":  "Intermediate Dragon Leather Softener (Bound)",
+        "name_es":  "Suavizante de cuero de dragón intermedio (vinculado)",
+        "vendor_price_kinah":  5600
+    },
+    {
+        "id":  630520006,
+        "name_en":  "Superior Dragon Leather Softener (Bound)",
+        "name_es":  "Suavizante de cuero de dragón superior (vinculado)",
+        "vendor_price_kinah":  6550
+    },
+    {
+        "id":  630520007,
+        "name_en":  "Lesser Dragon Scale Hardener (Bound)",
+        "name_es":  "Endurecedor de escama de dragón inferior (vinculado)",
+        "vendor_price_kinah":  4650
+    },
+    {
+        "id":  630520008,
+        "name_en":  "Intermediate Dragon Scale Hardener (Bound)",
+        "name_es":  "Endurecedor de escama de dragón intermedio (vinculado)",
+        "vendor_price_kinah":  5600
+    },
+    {
+        "id":  630520009,
+        "name_en":  "Superior Dragon Scale Hardener (Bound)",
+        "name_es":  "Endurecedor de escama de dragón superior (vinculado)",
+        "vendor_price_kinah":  6550
+    },
+    {
+        "id":  630541001,
+        "name_en":  "Orichalcum Solvent (Bound)",
+        "name_es":  "Disolvente de orichalcum (vinculado)",
+        "vendor_price_kinah":  400
+    },
+    {
+        "id":  630542001,
+        "name_en":  "Abrasive (Bound)",
+        "name_es":  "Abrasivo (vinculado)",
+        "vendor_price_kinah":  400
+    },
+    {
+        "id":  630542005,
+        "name_en":  "Sandpaper (Bound)",
+        "name_es":  "Papel de lija (vinculado)",
+        "vendor_price_kinah":  400
+    },
+    {
+        "id":  630543001,
+        "name_en":  "Glass Bottle (Bound)",
+        "name_es":  "Frasco de vidrio (vinculado)",
+        "vendor_price_kinah":  400
+    },
+    {
+        "id":  630543002,
+        "name_en":  "Professional Glass Bottle (Bound)",
+        "name_es":  "Frasco de vidrio avanzado (vinculado)",
+        "vendor_price_kinah":  1200
+    },
+    {
+        "id":  630543005,
+        "name_en":  "Catalyst (Bound)",
+        "name_es":  "Catalizador (vinculado)",
+        "vendor_price_kinah":  400
+    },
+    {
+        "id":  630543008,
+        "name_en":  "Professional Ink (Bound)",
+        "name_es":  "Tinta avanzada (vinculado)",
+        "vendor_price_kinah":  1200
+    },
+    {
+        "id":  630543013,
+        "name_en":  "Exceptional Ink (Bound)",
+        "name_es":  "Tinta lujosa (vinculado)",
+        "vendor_price_kinah":  10000
+    },
+    {
+        "id":  630554002,
+        "name_en":  "Salt (Bound)",
+        "name_es":  "Sal (vinculado)",
+        "vendor_price_kinah":  220
+    },
+    {
+        "id":  630554003,
+        "name_en":  "Ulmus Oil (Bound)",
+        "name_es":  "Aceite de ulmus (vinculado)",
+        "vendor_price_kinah":  880
+    },
+    {
+        "id":  630554004,
+        "name_en":  "Soy Sauce (Bound)",
+        "name_es":  "Salsa de soja (vinculado)",
+        "vendor_price_kinah":  440
+    },
+    {
+        "id":  630554005,
+        "name_en":  "Verteron Pepper (Bound)",
+        "name_es":  "Pimienta de Verteron (vinculado)",
+        "vendor_price_kinah":  880
+    },
+    {
+        "id":  630554006,
+        "name_en":  "Curry Powder (Bound)",
+        "name_es":  "Curry en polvo (vinculado)",
+        "vendor_price_kinah":  440
+    },
+    {
+        "id":  630554007,
+        "name_en":  "Abex Butter (Bound)",
+        "name_es":  "Mantequilla de abex (vinculado)",
+        "vendor_price_kinah":  880
+    },
+    {
+        "id":  630554008,
+        "name_en":  "Raw Triora Noodles (Bound)",
+        "name_es":  "Fideos frescos de triora (vinculado)",
+        "vendor_price_kinah":  880
+    },
+    {
+        "id":  630554009,
+        "name_en":  "Cheese (Bound)",
+        "name_es":  "Queso (vinculado)",
+        "vendor_price_kinah":  440
+    },
+    {
+        "id":  630554011,
+        "name_en":  "Altgard Pepper (Bound)",
+        "name_es":  "Pimienta de Altgard (vinculado)",
+        "vendor_price_kinah":  880
+    },
+    {
+        "id":  630840002,
+        "name_en":  "Silentium (Bound)",
+        "name_es":  "Silentium (vinculado)",
+        "vendor_price_kinah":  5000
+    }
+]

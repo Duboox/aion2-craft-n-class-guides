@@ -1,0 +1,74 @@
+name: Deploy Next.js to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js from .nvmrc
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - name: Install dependencies (with Node/NVM Guard)
+        run: npm ci || npm install
+
+      - name: Refresh Live Azphel Market Snapshot (Server-side without CORS limits)
+        continue-on-error: true
+        run: |
+          curl -sS "https://aion2.exchange/api/items?server=12106&limit=1000" -o /tmp/live_items.json
+          node -e '
+            const fs = require("fs");
+            try {
+              const raw = JSON.parse(fs.readFileSync("/tmp/live_items.json", "utf8"));
+              const items = Array.isArray(raw.items) ? raw.items : (Array.isArray(raw) ? raw : []);
+              if (items.length > 100) {
+                fs.writeFileSync("public/data/azphel_items_precios_mercado.json", JSON.stringify(items, null, 2));
+                console.log("Updated Azphel live snapshot with", items.length, "items");
+              }
+            } catch (e) { console.warn("Keeping existing snapshot:", e.message); }
+          '
+
+      - name: Typecheck strict TypeScript
+        run: npm run typecheck
+
+      - name: Build Static Export for GitHub Pages
+        env:
+          NODE_ENV: production
+          NEXT_PUBLIC_BASE_PATH: /aion2-craft-n-class-guides
+        run: |
+          npm run build
+          touch out/.nojekyll
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

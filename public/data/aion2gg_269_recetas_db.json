@@ -1,0 +1,2584 @@
+﻿[
+    {
+        "id":  315016001,
+        "n":  "Magic Crystal",
+        "s":  "magic-crystal",
+        "g":  "Common",
+        "i":  "15dac07dd34436e7c10ce023995957ae9b7f0aba",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  1,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610530014,
+                       "Spiritstone",
+                       "Common",
+                       "5fe87d265648bcaf3bb15929c32f1e94ecfe189e",
+                       2
+                   ],
+                   [
+                       630543005,
+                       "Catalyst (Bound)",
+                       "Common",
+                       "06079515d2d0ad95e22e0e297ea1a73d52935d9d",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016001,
+                      "magic-crystal",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016001,
+                      "magic-crystal",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314016001,
+        "n":  "Life Serum (Bound)",
+        "s":  "life-serum-bound",
+        "g":  "Common",
+        "i":  "ddd2cf26f9caa876db499ec921040a0eceadb898",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  1,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610670045,
+                       "Fresh Aria",
+                       "Rare",
+                       "5603b6ce0e7089ded591f4dc3dee6da08c389380",
+                       1
+                   ],
+                   [
+                       630543001,
+                       "Glass Bottle (Bound)",
+                       "Common",
+                       "97b8874a2badd3596f6f3f55d0967e1d19378858",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016001,
+                      "life-serum-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016001,
+                      "life-serum-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311056001,
+        "n":  "Truth Spellbook",
+        "s":  "truth-spellbook",
+        "g":  "Common",
+        "i":  "bb5b99018ae8d848aa50c5de109c8fa8fefc5179",
+        "x":  1,
+        "d":  null,
+        "l":  18,
+        "m":  3,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610740015,
+                       "Magic Crystal",
+                       "Common",
+                       "15dac07dd34436e7c10ce023995957ae9b7f0aba",
+                       3
+                   ],
+                   [
+                       610530001,
+                       "Refining Stone",
+                       "Common",
+                       "b4edf33223f22260c28d0a0f415ebe76ec0de93e",
+                       5
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      311056001,
+                      "truth-spellbook",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321056001,
+                      "truth-spellbook",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311096001,
+        "n":  "Truth Orb",
+        "s":  "truth-orb",
+        "g":  "Common",
+        "i":  "78e6ade2a4a0113bc1871c6b33e93ce74c156ef9",
+        "x":  1,
+        "d":  null,
+        "l":  18,
+        "m":  3,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610740015,
+                       "Magic Crystal",
+                       "Common",
+                       "15dac07dd34436e7c10ce023995957ae9b7f0aba",
+                       3
+                   ],
+                   [
+                       610530001,
+                       "Refining Stone",
+                       "Common",
+                       "b4edf33223f22260c28d0a0f415ebe76ec0de93e",
+                       5
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      311096001,
+                      "truth-orb",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321096001,
+                      "truth-orb",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016006,
+        "n":  "Spiritstone Powder",
+        "s":  "spiritstone-powder",
+        "g":  "Common",
+        "i":  "077053d0c7131463f711f1c7aea7510b590e567a",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  5,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610530014,
+                       "Spiritstone",
+                       "Common",
+                       "5fe87d265648bcaf3bb15929c32f1e94ecfe189e",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016006,
+                      "spiritstone-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016006,
+                      "spiritstone-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016007,
+        "n":  "Yggdrasil Paper",
+        "s":  "yggdrasil-paper",
+        "g":  "Common",
+        "i":  "83139e4331985a106f3caade64f184234594f265",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  5,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610650011,
+                       "Yggdrasil Log",
+                       "Common",
+                       "2bdc33216e33283dabc08bcb34a7ac551caa3b87",
+                       1
+                   ]
+               ]
+    },
+    {
+        "id":  325016007,
+        "n":  "Asvata Paper",
+        "s":  "asvata-paper",
+        "g":  "Common",
+        "i":  "83139e4331985a106f3caade64f184234594f265",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  5,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Dark",
+        "rl":  "Asmodians",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610650012,
+                       "Asvata Log",
+                       "Common",
+                       "2bdc33216e33283dabc08bcb34a7ac551caa3b87",
+                       1
+                   ]
+               ]
+    },
+    {
+        "id":  314016002,
+        "n":  "Wind Serum",
+        "s":  "wind-serum",
+        "g":  "Common",
+        "i":  "5323f7637b0fd21466a3e0e7a0734831e568d31b",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  10,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610670041,
+                       "Aria",
+                       "Common",
+                       "5cca0b390b24717fb362c3f9abed5f2391eaf7fc",
+                       1
+                   ],
+                   [
+                       610670042,
+                       "Targena",
+                       "Common",
+                       "5dbd6843075d97319ab9a222c7eda16193290b7f",
+                       1
+                   ],
+                   [
+                       630543001,
+                       "Glass Bottle (Bound)",
+                       "Common",
+                       "97b8874a2badd3596f6f3f55d0967e1d19378858",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016002,
+                      "wind-serum",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016002,
+                      "wind-serum",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311055001,
+        "n":  "Expert\u0027s Truth Spellbook",
+        "s":  "experts-truth-spellbook",
+        "g":  "Rare",
+        "i":  "918dbd94ea282c2b26c52c312d62112e536b6ab7",
+        "x":  1,
+        "d":  null,
+        "l":  28,
+        "m":  15,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110550014,
+                       "Splendent Truth Spellbook",
+                       "Rare",
+                       "bb5b99018ae8d848aa50c5de109c8fa8fefc5179",
+                       1
+                   ],
+                   [
+                       610530005,
+                       "Expert\u0027s Refining Stone",
+                       "Rare",
+                       "07ea73bf41832b74b6d4a21224c0f4ff213dac23",
+                       5
+                   ],
+                   [
+                       610660030,
+                       "Fine Ruby Gemstone",
+                       "Rare",
+                       "69513f7bfea91c5429eaf8953602b4d9ee45c6f5",
+                       6
+                   ],
+                   [
+                       610610014,
+                       "Fine Odyle",
+                       "Rare",
+                       "597c28b3b3aad996b07d826ea2be8770027f177d",
+                       3
+                   ]
+               ],
+        "v":  [
+                  [
+                      311055001,
+                      "experts-truth-spellbook",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321055001,
+                      "experts-truth-spellbook",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311095001,
+        "n":  "Expert\u0027s Truth Orb",
+        "s":  "experts-truth-orb",
+        "g":  "Rare",
+        "i":  "f4cad838a6caceb989fcaf4be7571dc3de518ca9",
+        "x":  1,
+        "d":  null,
+        "l":  28,
+        "m":  15,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110650014,
+                       "Splendent Truth Orb",
+                       "Rare",
+                       "78e6ade2a4a0113bc1871c6b33e93ce74c156ef9",
+                       1
+                   ],
+                   [
+                       610530005,
+                       "Expert\u0027s Refining Stone",
+                       "Rare",
+                       "07ea73bf41832b74b6d4a21224c0f4ff213dac23",
+                       5
+                   ],
+                   [
+                       610660028,
+                       "Fine Sapphire Gemstone",
+                       "Rare",
+                       "e311f438888e570983df402c50b49a87acdab8fb",
+                       6
+                   ],
+                   [
+                       610610014,
+                       "Fine Odyle",
+                       "Rare",
+                       "597c28b3b3aad996b07d826ea2be8770027f177d",
+                       3
+                   ]
+               ],
+        "v":  [
+                  [
+                      311095001,
+                      "experts-truth-orb",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321095001,
+                      "experts-truth-orb",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016003,
+        "n":  "Sapphire Powder",
+        "s":  "sapphire-powder",
+        "g":  "Common",
+        "i":  "5333b26952170ab29a3e3ce20caa2ef5da04bd87",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  20,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660025,
+                       "Sapphire Gemstone",
+                       "Common",
+                       "7ac0241be242fa731240cecdd13bc124319b3151",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016003,
+                      "sapphire-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016003,
+                      "sapphire-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016004,
+        "n":  "Diamond Powder",
+        "s":  "diamond-powder",
+        "g":  "Common",
+        "i":  "fae67cd683eb1cf4f40ce1311359aab4c380dba9",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  20,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660026,
+                       "Diamond Gemstone",
+                       "Common",
+                       "f544b8a8630e0b94225fb6b9df6765fd488195e5",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016004,
+                      "diamond-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016004,
+                      "diamond-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016005,
+        "n":  "Ruby Powder",
+        "s":  "ruby-powder",
+        "g":  "Common",
+        "i":  "30ff573f820cada4e55dc48c12bda5fa7c45c124",
+        "x":  3,
+        "d":  null,
+        "l":  0,
+        "m":  20,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660027,
+                       "Ruby Gemstone",
+                       "Common",
+                       "1e5376a5accb644f9a850677a4183ee804a3f0f3",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016005,
+                      "ruby-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016005,
+                      "ruby-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314046001,
+        "n":  "Intermediate Manastone",
+        "s":  "intermediate-manastone",
+        "g":  "Common",
+        "i":  "6c82b982d608dc8b05c6e25b8c98e36acdb6de8a",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  20,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       511360001,
+                       "Lesser Manastone",
+                       "Common",
+                       "3ab45605f345a5b9683d84bba8ab8b6d94131243",
+                       5
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       3
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      314046001,
+                      "intermediate-manastone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324046001,
+                      "intermediate-manastone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016002,
+        "n":  "Magic Crystal",
+        "s":  "magic-crystal",
+        "g":  "Common",
+        "i":  "15dac07dd34436e7c10ce023995957ae9b7f0aba",
+        "x":  10,
+        "d":  null,
+        "l":  0,
+        "m":  25,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610530014,
+                       "Spiritstone",
+                       "Common",
+                       "5fe87d265648bcaf3bb15929c32f1e94ecfe189e",
+                       20
+                   ],
+                   [
+                       630543005,
+                       "Catalyst (Bound)",
+                       "Common",
+                       "06079515d2d0ad95e22e0e297ea1a73d52935d9d",
+                       10
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016002,
+                      "magic-crystal",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016002,
+                      "magic-crystal",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016011,
+        "n":  "Spiritstone Powder",
+        "s":  "spiritstone-powder",
+        "g":  "Common",
+        "i":  "077053d0c7131463f711f1c7aea7510b590e567a",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  25,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610530014,
+                       "Spiritstone",
+                       "Common",
+                       "5fe87d265648bcaf3bb15929c32f1e94ecfe189e",
+                       10
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016011,
+                      "spiritstone-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016011,
+                      "spiritstone-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016012,
+        "n":  "Yggdrasil Paper",
+        "s":  "yggdrasil-paper",
+        "g":  "Common",
+        "i":  "83139e4331985a106f3caade64f184234594f265",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  25,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610650011,
+                       "Yggdrasil Log",
+                       "Common",
+                       "2bdc33216e33283dabc08bcb34a7ac551caa3b87",
+                       10
+                   ]
+               ]
+    },
+    {
+        "id":  325016012,
+        "n":  "Asvata Paper",
+        "s":  "asvata-paper",
+        "g":  "Common",
+        "i":  "83139e4331985a106f3caade64f184234594f265",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  25,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Dark",
+        "rl":  "Asmodians",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610650012,
+                       "Asvata Log",
+                       "Common",
+                       "2bdc33216e33283dabc08bcb34a7ac551caa3b87",
+                       10
+                   ]
+               ]
+    },
+    {
+        "id":  314046002,
+        "n":  "Intermediate Soulstone",
+        "s":  "intermediate-soulstone",
+        "g":  "Common",
+        "i":  "86a282ffa302567bfbfa4b7aa60bd5e2b6abb03e",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  25,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       513560001,
+                       "Lesser Soulstone",
+                       "Common",
+                       "e94b964c0b8bedfd6f43940827210fda994f3521",
+                       5
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       3
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      314046002,
+                      "intermediate-soulstone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324046002,
+                      "intermediate-soulstone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311054001,
+        "n":  "Artisan\u0027s Truth Spellbook",
+        "s":  "artisans-truth-spellbook",
+        "g":  "Legend",
+        "i":  "c879ee63112fd54233fe312679dcf884866b9c76",
+        "x":  1,
+        "d":  null,
+        "l":  39,
+        "m":  30,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110540012,
+                       "Expert\u0027s Splendent Truth Spellbook",
+                       "Legend",
+                       "918dbd94ea282c2b26c52c312d62112e536b6ab7",
+                       1
+                   ],
+                   [
+                       610530008,
+                       "Artisan\u0027s Refining Stone",
+                       "Legend",
+                       "9f2feddafd02cc2b331e444959e14335617aac40",
+                       5
+                   ],
+                   [
+                       610660033,
+                       "Pure Ruby Gemstone",
+                       "Legend",
+                       "3b56dc77e1c526fb837b5abf037eb217a1b8d711",
+                       8
+                   ],
+                   [
+                       610610015,
+                       "Pure Odyle",
+                       "Legend",
+                       "af7a30a6ac7ab10f83cdb5a4719034af4592671f",
+                       4
+                   ]
+               ],
+        "v":  [
+                  [
+                      311054001,
+                      "artisans-truth-spellbook",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321054001,
+                      "artisans-truth-spellbook",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311094001,
+        "n":  "Artisan\u0027s Truth Orb",
+        "s":  "artisans-truth-orb",
+        "g":  "Legend",
+        "i":  "7619fe97dc5508d672220f30eb8b5ec0d75d78f6",
+        "x":  1,
+        "d":  null,
+        "l":  39,
+        "m":  30,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110640012,
+                       "Expert\u0027s Splendent Truth Orb",
+                       "Legend",
+                       "f4cad838a6caceb989fcaf4be7571dc3de518ca9",
+                       1
+                   ],
+                   [
+                       610530008,
+                       "Artisan\u0027s Refining Stone",
+                       "Legend",
+                       "9f2feddafd02cc2b331e444959e14335617aac40",
+                       5
+                   ],
+                   [
+                       610660031,
+                       "Pure Sapphire Gemstone",
+                       "Legend",
+                       "2e65668ffca92d39a8be00f15e631ebb4820f608",
+                       8
+                   ],
+                   [
+                       610610015,
+                       "Pure Odyle",
+                       "Legend",
+                       "af7a30a6ac7ab10f83cdb5a4719034af4592671f",
+                       4
+                   ]
+               ],
+        "v":  [
+                  [
+                      311094001,
+                      "artisans-truth-orb",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      321094001,
+                      "artisans-truth-orb",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314016006,
+        "n":  "Mana Potion",
+        "s":  "mana-potion",
+        "g":  "Common",
+        "i":  "ce10ed7df3b2158c134e0eb299839901a55573f7",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  40,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610670042,
+                       "Targena",
+                       "Common",
+                       "5dbd6843075d97319ab9a222c7eda16193290b7f",
+                       1
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       1
+                   ],
+                   [
+                       630543002,
+                       "Professional Glass Bottle (Bound)",
+                       "Common",
+                       "75a1c5999d6c4c2784439b61bf7a66099ec13705",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016006,
+                      "mana-potion",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016006,
+                      "mana-potion",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016008,
+        "n":  "Sapphire Powder",
+        "s":  "sapphire-powder",
+        "g":  "Common",
+        "i":  "5333b26952170ab29a3e3ce20caa2ef5da04bd87",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  45,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660025,
+                       "Sapphire Gemstone",
+                       "Common",
+                       "7ac0241be242fa731240cecdd13bc124319b3151",
+                       10
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016008,
+                      "sapphire-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016008,
+                      "sapphire-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016009,
+        "n":  "Diamond Powder",
+        "s":  "diamond-powder",
+        "g":  "Common",
+        "i":  "fae67cd683eb1cf4f40ce1311359aab4c380dba9",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  45,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660026,
+                       "Diamond Gemstone",
+                       "Common",
+                       "f544b8a8630e0b94225fb6b9df6765fd488195e5",
+                       10
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016009,
+                      "diamond-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016009,
+                      "diamond-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315016010,
+        "n":  "Ruby Powder",
+        "s":  "ruby-powder",
+        "g":  "Common",
+        "i":  "30ff573f820cada4e55dc48c12bda5fa7c45c124",
+        "x":  30,
+        "d":  null,
+        "l":  0,
+        "m":  45,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610660027,
+                       "Ruby Gemstone",
+                       "Common",
+                       "1e5376a5accb644f9a850677a4183ee804a3f0f3",
+                       10
+                   ]
+               ],
+        "v":  [
+                  [
+                      315016010,
+                      "ruby-powder",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325016010,
+                      "ruby-powder",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  419016001,
+        "n":  "Novice Alchemist\u0027s Scale (Bound)",
+        "s":  "novice-alchemists-scale-bound",
+        "g":  "Common",
+        "i":  "4f5b42be08a6248c397ec408202820a73c2e5078",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  50,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610740015,
+                       "Magic Crystal",
+                       "Common",
+                       "15dac07dd34436e7c10ce023995957ae9b7f0aba",
+                       6
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       2
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       3
+                   ]
+               ],
+        "v":  [
+                  [
+                      419016001,
+                      "novice-alchemists-scale-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      429016005,
+                      "novice-alchemists-scale-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315024001,
+        "n":  "Enhanced Thick Balaur Scale",
+        "s":  "enhanced-thick-balaur-scale",
+        "g":  "Legend",
+        "i":  "04851e113863f1791bd44df1b967c915fe241a8d",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  51,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       600590001,
+                       "Balaur\u0027s Essence",
+                       "Legend",
+                       "d36ea3099a6d0203d45a3d5371198da37bcb3aad",
+                       2
+                   ],
+                   [
+                       630520007,
+                       "Lesser Dragon Scale Hardener (Bound)",
+                       "Common",
+                       "51b6b9d7065fd8da9079e5224e6764043c3c514d",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315024001,
+                      "enhanced-thick-balaur-scale",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325024001,
+                      "enhanced-thick-balaur-scale",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314016003,
+        "n":  "Superior Life Potion",
+        "s":  "superior-life-potion",
+        "g":  "Common",
+        "i":  "39be198b2640764254334f5a36791c37f0dd538b",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  51,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       530126003,
+                       "Life Potion (Bound)",
+                       "Common",
+                       "089c4261c1537aa8b3d8919704c69948357bec08",
+                       1
+                   ],
+                   [
+                       610670041,
+                       "Aria",
+                       "Common",
+                       "5cca0b390b24717fb362c3f9abed5f2391eaf7fc",
+                       1
+                   ],
+                   [
+                       630543002,
+                       "Professional Glass Bottle (Bound)",
+                       "Common",
+                       "75a1c5999d6c4c2784439b61bf7a66099ec13705",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016003,
+                      "superior-life-potion",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016003,
+                      "superior-life-potion",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  311053001,
+        "n":  "True Dragon Lord Spellbook",
+        "s":  "true-dragon-lord-spellbook",
+        "g":  "Unique",
+        "i":  "ec38038d8b9e0c8a714bd4270ab1dec23b5559c9",
+        "x":  1,
+        "d":  null,
+        "l":  62,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110530013,
+                       "Artisan\u0027s Splendent Truth Spellbook",
+                       "Unique",
+                       "c879ee63112fd54233fe312679dcf884866b9c76",
+                       1
+                   ],
+                   [
+                       610530010,
+                       "Artisan\u0027s Ultimate Refining Stone",
+                       "Unique",
+                       "bfa12f52b85e813a0d8b721c41c51150d813c3a9",
+                       4
+                   ],
+                   [
+                       610730022,
+                       "Enhanced Thick Balaur Scale",
+                       "Legend",
+                       "04851e113863f1791bd44df1b967c915fe241a8d",
+                       22
+                   ],
+                   [
+                       610511013,
+                       "Wrathful Mind",
+                       "Unique",
+                       "885c28d3fc9c752c73a41eb8f0b2b5601668d08a",
+                       10
+                   ],
+                   [
+                       610660036,
+                       "Radiant Ruby Gemstone",
+                       "Unique",
+                       "0b08e4dd8f35a31eda82b94889c8d2291018993b",
+                       9
+                   ],
+                   [
+                       610610016,
+                       "Radiant Odyle",
+                       "Unique",
+                       "201eee540652ebdf79222835f0db653d3572a9f3",
+                       5
+                   ]
+               ]
+    },
+    {
+        "id":  321053001,
+        "n":  "Star Dragon Lord Spellbook",
+        "s":  "star-dragon-lord-spellbook",
+        "g":  "Unique",
+        "i":  "ec38038d8b9e0c8a714bd4270ab1dec23b5559c9",
+        "x":  1,
+        "d":  null,
+        "l":  62,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Dark",
+        "rl":  "Asmodians",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110530014,
+                       "Artisan\u0027s Splendent Truth Spellbook",
+                       "Unique",
+                       "c879ee63112fd54233fe312679dcf884866b9c76",
+                       1
+                   ],
+                   [
+                       610530010,
+                       "Artisan\u0027s Ultimate Refining Stone",
+                       "Unique",
+                       "bfa12f52b85e813a0d8b721c41c51150d813c3a9",
+                       4
+                   ],
+                   [
+                       610730022,
+                       "Enhanced Thick Balaur Scale",
+                       "Legend",
+                       "04851e113863f1791bd44df1b967c915fe241a8d",
+                       22
+                   ],
+                   [
+                       610511013,
+                       "Wrathful Mind",
+                       "Unique",
+                       "885c28d3fc9c752c73a41eb8f0b2b5601668d08a",
+                       10
+                   ],
+                   [
+                       610660036,
+                       "Radiant Ruby Gemstone",
+                       "Unique",
+                       "0b08e4dd8f35a31eda82b94889c8d2291018993b",
+                       9
+                   ],
+                   [
+                       610610016,
+                       "Radiant Odyle",
+                       "Unique",
+                       "201eee540652ebdf79222835f0db653d3572a9f3",
+                       5
+                   ]
+               ]
+    },
+    {
+        "id":  311093001,
+        "n":  "True Dragon Lord Orb",
+        "s":  "true-dragon-lord-orb",
+        "g":  "Unique",
+        "i":  "41aa29a1eb993db49108d9978704eac396064f10",
+        "x":  1,
+        "d":  null,
+        "l":  62,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110630013,
+                       "Artisan\u0027s Splendent Truth Orb",
+                       "Unique",
+                       "7619fe97dc5508d672220f30eb8b5ec0d75d78f6",
+                       1
+                   ],
+                   [
+                       610530010,
+                       "Artisan\u0027s Ultimate Refining Stone",
+                       "Unique",
+                       "bfa12f52b85e813a0d8b721c41c51150d813c3a9",
+                       4
+                   ],
+                   [
+                       610730022,
+                       "Enhanced Thick Balaur Scale",
+                       "Legend",
+                       "04851e113863f1791bd44df1b967c915fe241a8d",
+                       22
+                   ],
+                   [
+                       610511013,
+                       "Wrathful Mind",
+                       "Unique",
+                       "885c28d3fc9c752c73a41eb8f0b2b5601668d08a",
+                       10
+                   ],
+                   [
+                       610660034,
+                       "Radiant Sapphire Gemstone",
+                       "Unique",
+                       "5043cd9f85dee7a195f598da038f9d4e065eda79",
+                       9
+                   ],
+                   [
+                       610610016,
+                       "Radiant Odyle",
+                       "Unique",
+                       "201eee540652ebdf79222835f0db653d3572a9f3",
+                       5
+                   ]
+               ]
+    },
+    {
+        "id":  321093001,
+        "n":  "Star Dragon Lord Orb",
+        "s":  "star-dragon-lord-orb",
+        "g":  "Unique",
+        "i":  "41aa29a1eb993db49108d9978704eac396064f10",
+        "x":  1,
+        "d":  null,
+        "l":  62,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Dark",
+        "rl":  "Asmodians",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110630014,
+                       "Artisan\u0027s Splendent Truth Orb",
+                       "Unique",
+                       "7619fe97dc5508d672220f30eb8b5ec0d75d78f6",
+                       1
+                   ],
+                   [
+                       610530010,
+                       "Artisan\u0027s Ultimate Refining Stone",
+                       "Unique",
+                       "bfa12f52b85e813a0d8b721c41c51150d813c3a9",
+                       4
+                   ],
+                   [
+                       610730022,
+                       "Enhanced Thick Balaur Scale",
+                       "Legend",
+                       "04851e113863f1791bd44df1b967c915fe241a8d",
+                       22
+                   ],
+                   [
+                       610511013,
+                       "Wrathful Mind",
+                       "Unique",
+                       "885c28d3fc9c752c73a41eb8f0b2b5601668d08a",
+                       10
+                   ],
+                   [
+                       610660034,
+                       "Radiant Sapphire Gemstone",
+                       "Unique",
+                       "5043cd9f85dee7a195f598da038f9d4e065eda79",
+                       9
+                   ],
+                   [
+                       610610016,
+                       "Radiant Odyle",
+                       "Unique",
+                       "201eee540652ebdf79222835f0db653d3572a9f3",
+                       5
+                   ]
+               ]
+    },
+    {
+        "id":  314016004,
+        "n":  "Superior Life Serum",
+        "s":  "superior-life-serum",
+        "g":  "Common",
+        "i":  "0e1accac330af50de6d570b47a662f039365cbb2",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       530116001,
+                       "Life Serum (Bound)",
+                       "Common",
+                       "ddd2cf26f9caa876db499ec921040a0eceadb898",
+                       1
+                   ],
+                   [
+                       610670045,
+                       "Fresh Aria",
+                       "Rare",
+                       "5603b6ce0e7089ded591f4dc3dee6da08c389380",
+                       1
+                   ],
+                   [
+                       630543002,
+                       "Professional Glass Bottle (Bound)",
+                       "Common",
+                       "75a1c5999d6c4c2784439b61bf7a66099ec13705",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016004,
+                      "superior-life-serum",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016004,
+                      "superior-life-serum",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314016005,
+        "n":  "Superior Wind Serum",
+        "s":  "superior-wind-serum",
+        "g":  "Common",
+        "i":  "b72bf98bb12701f8d90b3e953d07458965c33d2f",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  55,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       510116005,
+                       "Wind Serum",
+                       "Common",
+                       "5323f7637b0fd21466a3e0e7a0734831e568d31b",
+                       2
+                   ],
+                   [
+                       610670045,
+                       "Fresh Aria",
+                       "Rare",
+                       "5603b6ce0e7089ded591f4dc3dee6da08c389380",
+                       1
+                   ],
+                   [
+                       610670046,
+                       "Fresh Targena",
+                       "Rare",
+                       "eb3f5496cffc20223e91cff7cc5509b45618066a",
+                       1
+                   ],
+                   [
+                       630543002,
+                       "Professional Glass Bottle (Bound)",
+                       "Common",
+                       "75a1c5999d6c4c2784439b61bf7a66099ec13705",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314016005,
+                      "superior-wind-serum",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324016005,
+                      "superior-wind-serum",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314026001,
+        "n":  "Superior Healing Potion",
+        "s":  "superior-healing-potion",
+        "g":  "Common",
+        "i":  "856b43c1a92826c40b2842bac582e6b4fead1e77",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  60,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       530146001,
+                       "Healing Potion (Bound)",
+                       "Common",
+                       "51125f4155f291a33c1daed7abcedbda244ec4bb",
+                       1
+                   ],
+                   [
+                       610670046,
+                       "Fresh Targena",
+                       "Rare",
+                       "eb3f5496cffc20223e91cff7cc5509b45618066a",
+                       1
+                   ],
+                   [
+                       630543002,
+                       "Professional Glass Bottle (Bound)",
+                       "Common",
+                       "75a1c5999d6c4c2784439b61bf7a66099ec13705",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314026001,
+                      "superior-healing-potion",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324026001,
+                      "superior-healing-potion",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315024002,
+        "n":  "Enhanced Hard Balaur Scale",
+        "s":  "enhanced-hard-balaur-scale",
+        "g":  "Legend",
+        "i":  "578f92757f4cfe1f4bdb0f2b4ca7e202f95e1312",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  65,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       600590001,
+                       "Balaur\u0027s Essence",
+                       "Legend",
+                       "d36ea3099a6d0203d45a3d5371198da37bcb3aad",
+                       2
+                   ],
+                   [
+                       630520008,
+                       "Intermediate Dragon Scale Hardener (Bound)",
+                       "Common",
+                       "ba19b800af3c896a468af9548fe4385463fd4087",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315024002,
+                      "enhanced-hard-balaur-scale",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325024002,
+                      "enhanced-hard-balaur-scale",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314036001,
+        "n":  "Superior Speed Scroll",
+        "s":  "superior-speed-scroll",
+        "g":  "Common",
+        "i":  "dbb2b139ae6a1dec0ed14504192940c79cd4386b",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  65,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       531060003,
+                       "Speed Scroll (Bound)",
+                       "Common",
+                       "6e22ec08e400d7451085dbbb08f3b4d3e1405f68",
+                       1
+                   ],
+                   [
+                       610740010,
+                       "Ruby Powder",
+                       "Common",
+                       "30ff573f820cada4e55dc48c12bda5fa7c45c124",
+                       3
+                   ],
+                   [
+                       610740011,
+                       "Yggdrasil Paper",
+                       "Common",
+                       "83139e4331985a106f3caade64f184234594f265",
+                       1
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314036001,
+                      "superior-speed-scroll",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324036001,
+                      "superior-speed-scroll",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314036002,
+        "n":  "Superior Courage Scroll",
+        "s":  "superior-courage-scroll",
+        "g":  "Common",
+        "i":  "588552422b09ab6942fd012ec1732bb0f4af3ddc",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  70,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       531060004,
+                       "Courage Scroll (Bound)",
+                       "Common",
+                       "1d0e4d8024a92c79482a09a3d31247adb9a34506",
+                       1
+                   ],
+                   [
+                       610740008,
+                       "Sapphire Powder",
+                       "Common",
+                       "5333b26952170ab29a3e3ce20caa2ef5da04bd87",
+                       3
+                   ],
+                   [
+                       610740011,
+                       "Yggdrasil Paper",
+                       "Common",
+                       "83139e4331985a106f3caade64f184234594f265",
+                       1
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314036002,
+                      "superior-courage-scroll",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324036002,
+                      "superior-courage-scroll",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314036003,
+        "n":  "Superior Benediction Scroll",
+        "s":  "superior-benediction-scroll",
+        "g":  "Common",
+        "i":  "3918ba41a768e8fc76a2b33add8fcf994aeb31df",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  75,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       531060027,
+                       "Benediction Scroll (Bound)",
+                       "Common",
+                       "2327f39e2e8553f2d7346dde65f5f8cecaee1cd4",
+                       1
+                   ],
+                   [
+                       610740009,
+                       "Diamond Powder",
+                       "Common",
+                       "fae67cd683eb1cf4f40ce1311359aab4c380dba9",
+                       3
+                   ],
+                   [
+                       610740011,
+                       "Yggdrasil Paper",
+                       "Common",
+                       "83139e4331985a106f3caade64f184234594f265",
+                       1
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314036003,
+                      "superior-benediction-scroll",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324036003,
+                      "superior-benediction-scroll",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  315024003,
+        "n":  "Enhanced Durable Balaur Scale",
+        "s":  "enhanced-durable-balaur-scale",
+        "g":  "Legend",
+        "i":  "60082e4fed0eb7dbdc992590c1760351ff82b2a3",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  80,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       600590001,
+                       "Balaur\u0027s Essence",
+                       "Legend",
+                       "d36ea3099a6d0203d45a3d5371198da37bcb3aad",
+                       2
+                   ],
+                   [
+                       630520009,
+                       "Superior Dragon Scale Hardener (Bound)",
+                       "Common",
+                       "065e834500ead8e4d7406a0533078a59ab9adfd5",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      315024003,
+                      "enhanced-durable-balaur-scale",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      325024003,
+                      "enhanced-durable-balaur-scale",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314045001,
+        "n":  "Intermediate Abyssal Manastone",
+        "s":  "intermediate-abyssal-manastone",
+        "g":  "Rare",
+        "i":  "5154b3e220ca24f58e6c13da650fb7c39b1a5c36",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  85,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       511351001,
+                       "Lesser Abyssal Manastone",
+                       "Rare",
+                       "bf718765c8a9b3e19eb99f822c861a313150884b",
+                       5
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       5
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       3
+                   ]
+               ],
+        "v":  [
+                  [
+                      314045001,
+                      "intermediate-abyssal-manastone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324045001,
+                      "intermediate-abyssal-manastone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314046003,
+        "n":  "Superior Manastone",
+        "s":  "superior-manastone",
+        "g":  "Common",
+        "i":  "c5e4a536f2a8e79a3e6a2bc41ce6ebf7ce0951df",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  85,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       511360003,
+                       "Intermediate Manastone",
+                       "Common",
+                       "6c82b982d608dc8b05c6e25b8c98e36acdb6de8a",
+                       30
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       10
+                   ],
+                   [
+                       630543013,
+                       "Exceptional Ink (Bound)",
+                       "Common",
+                       "a9723f70b15804f8d7a5e0c32d3e51a8fddfc61b",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      314046003,
+                      "superior-manastone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324046003,
+                      "superior-manastone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314045002,
+        "n":  "Intermediate Abyssal Soulstone",
+        "s":  "intermediate-abyssal-soulstone",
+        "g":  "Rare",
+        "i":  "e4effade90f8a5f60e6aeed84d0aa5453303bfcc",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  90,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       513551001,
+                       "Lesser Abyssal Soulstone",
+                       "Rare",
+                       "de202f75ab7b1260a086fc187565eb0766fe1049",
+                       5
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       5
+                   ],
+                   [
+                       630543008,
+                       "Professional Ink (Bound)",
+                       "Common",
+                       "20c27673daa74b25043086497cc1cb1f9cf272b8",
+                       3
+                   ]
+               ],
+        "v":  [
+                  [
+                      314045002,
+                      "intermediate-abyssal-soulstone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324045002,
+                      "intermediate-abyssal-soulstone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314046004,
+        "n":  "Superior Soulstone",
+        "s":  "superior-soulstone",
+        "g":  "Common",
+        "i":  "3cad333a115bcadba83f1630a90c97b9dcbbfd2f",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  90,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       513560003,
+                       "Intermediate Soulstone",
+                       "Common",
+                       "86a282ffa302567bfbfa4b7aa60bd5e2b6abb03e",
+                       30
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       10
+                   ],
+                   [
+                       630543013,
+                       "Exceptional Ink (Bound)",
+                       "Common",
+                       "a9723f70b15804f8d7a5e0c32d3e51a8fddfc61b",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      314046004,
+                      "superior-soulstone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324046004,
+                      "superior-soulstone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  314036008,
+        "n":  "Status Effect Resist Scroll",
+        "s":  "status-effect-resist-scroll",
+        "g":  "Common",
+        "i":  "d47184cff029b0e1a3cba4eba2de0ca117f043eb",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  95,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Consumables",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610740009,
+                       "Diamond Powder",
+                       "Common",
+                       "fae67cd683eb1cf4f40ce1311359aab4c380dba9",
+                       3
+                   ],
+                   [
+                       610740001,
+                       "Spiritstone Powder",
+                       "Common",
+                       "077053d0c7131463f711f1c7aea7510b590e567a",
+                       5
+                   ],
+                   [
+                       610740011,
+                       "Yggdrasil Paper",
+                       "Common",
+                       "83139e4331985a106f3caade64f184234594f265",
+                       1
+                   ],
+                   [
+                       630543013,
+                       "Exceptional Ink (Bound)",
+                       "Common",
+                       "a9723f70b15804f8d7a5e0c32d3e51a8fddfc61b",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      314036008,
+                      "status-effect-resist-scroll",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      324036008,
+                      "status-effect-resist-scroll",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  419016002,
+        "n":  "Professional Alchemist\u0027s Scale (Bound)",
+        "s":  "professional-alchemists-scale-bound",
+        "g":  "Common",
+        "i":  "c697faa2f83475d5fa1e6fb392f866596bc7a13c",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  100,
+        "c":  "Alchemy",
+        "k":  "Alchemy",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       110530013,
+                       "Artisan\u0027s Splendent Truth Spellbook",
+                       "Unique",
+                       "c879ee63112fd54233fe312679dcf884866b9c76",
+                       1
+                   ],
+                   [
+                       610660032,
+                       "Pure Diamond Gemstone",
+                       "Legend",
+                       "8d18f8b54231dbaaecba0da83e9f7da3a9cdefbc",
+                       7
+                   ],
+                   [
+                       610660033,
+                       "Pure Ruby Gemstone",
+                       "Legend",
+                       "3b56dc77e1c526fb837b5abf037eb217a1b8d711",
+                       7
+                   ],
+                   [
+                       610660031,
+                       "Pure Sapphire Gemstone",
+                       "Legend",
+                       "2e65668ffca92d39a8be00f15e631ebb4820f608",
+                       7
+                   ],
+                   [
+                       610530008,
+                       "Artisan\u0027s Refining Stone",
+                       "Legend",
+                       "9f2feddafd02cc2b331e444959e14335617aac40",
+                       15
+                   ]
+               ],
+        "v":  [
+                  [
+                      419016002,
+                      "professional-alchemists-scale-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      429016006,
+                      "professional-alchemists-scale-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  115016001,
+        "n":  "Orichalcum Ingot",
+        "s":  "orichalcum-ingot",
+        "g":  "Common",
+        "i":  "5189ac6ce3a5ce731c83f8c717bf90e44bdc1d0b",
+        "x":  1,
+        "d":  null,
+        "l":  0,
+        "m":  1,
+        "c":  "Blacksmithing",
+        "k":  "Blacksmithing",
+        "b":  "Materials",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610620013,
+                       "Orichalcum Ore",
+                       "Common",
+                       "14620cb612b6ad86fb326e6834a5ba25796efd81",
+                       2
+                   ],
+                   [
+                       630541001,
+                       "Orichalcum Solvent (Bound)",
+                       "Common",
+                       "347de0e7da6e0a08763fa29fbb519d8b0065d939",
+                       1
+                   ]
+               ],
+        "v":  [
+                  [
+                      115016001,
+                      "orichalcum-ingot",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      125016001,
+                      "orichalcum-ingot",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  111016001,
+        "n":  "Orichalcum Longsword",
+        "s":  "orichalcum-longsword",
+        "g":  "Common",
+        "i":  "970047481ea0c29886dc5ee4a704154fca006f1f",
+        "x":  1,
+        "d":  null,
+        "l":  18,
+        "m":  3,
+        "c":  "Blacksmithing",
+        "k":  "Blacksmithing",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610710001,
+                       "Orichalcum Ingot",
+                       "Common",
+                       "5189ac6ce3a5ce731c83f8c717bf90e44bdc1d0b",
+                       3
+                   ],
+                   [
+                       610530001,
+                       "Refining Stone",
+                       "Common",
+                       "b4edf33223f22260c28d0a0f415ebe76ec0de93e",
+                       5
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      111016001,
+                      "orichalcum-longsword",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      121016001,
+                      "orichalcum-longsword",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  111026001,
+        "n":  "Orichalcum Greatsword",
+        "s":  "orichalcum-greatsword",
+        "g":  "Common",
+        "i":  "a420f17caa06538ab88bd332cbff8dc826a5e4b0",
+        "x":  1,
+        "d":  null,
+        "l":  18,
+        "m":  3,
+        "c":  "Blacksmithing",
+        "k":  "Blacksmithing",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610710001,
+                       "Orichalcum Ingot",
+                       "Common",
+                       "5189ac6ce3a5ce731c83f8c717bf90e44bdc1d0b",
+                       3
+                   ],
+                   [
+                       610530001,
+                       "Refining Stone",
+                       "Common",
+                       "b4edf33223f22260c28d0a0f415ebe76ec0de93e",
+                       5
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      111026001,
+                      "orichalcum-greatsword",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      121026001,
+                      "orichalcum-greatsword",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  111036001,
+        "n":  "Orichalcum Dagger",
+        "s":  "orichalcum-dagger",
+        "g":  "Common",
+        "i":  "a85d2520828babe5765b334dd92f31f53e309c42",
+        "x":  1,
+        "d":  null,
+        "l":  18,
+        "m":  3,
+        "c":  "Blacksmithing",
+        "k":  "Blacksmithing",
+        "b":  "Weapons",
+        "t":  "Standard",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "xf":  null,
+        "mt":  [
+                   [
+                       610710001,
+                       "Orichalcum Ingot",
+                       "Common",
+                       "5189ac6ce3a5ce731c83f8c717bf90e44bdc1d0b",
+                       3
+                   ],
+                   [
+                       610530001,
+                       "Refining Stone",
+                       "Common",
+                       "b4edf33223f22260c28d0a0f415ebe76ec0de93e",
+                       5
+                   ],
+                   [
+                       610610013,
+                       "Odyle",
+                       "Common",
+                       "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                       2
+                   ]
+               ],
+        "v":  [
+                  [
+                      111036001,
+                      "orichalcum-dagger",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      121036001,
+                      "orichalcum-dagger",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    }
+]

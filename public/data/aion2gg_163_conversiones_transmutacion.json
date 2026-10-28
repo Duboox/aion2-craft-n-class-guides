@@ -1,0 +1,1114 @@
+﻿[
+    {
+        "id":  31024005,
+        "n":  "Mau Transformation Candy (Bound)",
+        "s":  "mau-transformation-candy-bound",
+        "g":  "Legend",
+        "i":  "0e25129a97575de465f6b0f74408fbabff1e1d6c",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Candy",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632530002,
+                    "n":  "Mau\u0027s Essence (Bound)",
+                    "s":  "mau-s-essence-bound",
+                    "g":  "Common",
+                    "i":  "bb9ccc9d82db473bb0655d627574d8af1136950d",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31024005,
+                      "mau-transformation-candy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32024005,
+                      "mau-transformation-candy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31024004,
+        "n":  "Mumu Transformation Candy (Bound)",
+        "s":  "mumu-transformation-candy-bound",
+        "g":  "Legend",
+        "i":  "0e25129a97575de465f6b0f74408fbabff1e1d6c",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Candy",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632530005,
+                    "n":  "Mumu\u0027s Essence (Bound)",
+                    "s":  "mumu-s-essence-bound",
+                    "g":  "Common",
+                    "i":  "1c91e1c5c05f2febecd144aeb927a4ef57365501",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31024004,
+                      "mumu-transformation-candy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32024004,
+                      "mumu-transformation-candy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31024003,
+        "n":  "Aullaeu Transformation Candy (Bound)",
+        "s":  "aullaeu-transformation-candy-bound",
+        "g":  "Legend",
+        "i":  "0e25129a97575de465f6b0f74408fbabff1e1d6c",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Candy",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632530004,
+                    "n":  "Aullaeu\u0027s Essence (Bound)",
+                    "s":  "aullaeu-s-essence-bound",
+                    "g":  "Common",
+                    "i":  "1c91e1c5c05f2febecd144aeb927a4ef57365501",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31024003,
+                      "aullaeu-transformation-candy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32024003,
+                      "aullaeu-transformation-candy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31024002,
+        "n":  "Dratona Transformation Candy (Bound)",
+        "s":  "dratona-transformation-candy-bound",
+        "g":  "Legend",
+        "i":  "0e25129a97575de465f6b0f74408fbabff1e1d6c",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Candy",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632530003,
+                    "n":  "Dratona\u0027s Essence (Bound)",
+                    "s":  "dratona-s-essence-bound",
+                    "g":  "Common",
+                    "i":  "6ecf56e6f28f4a117828cd878a2cdc89f3e69346",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31024002,
+                      "dratona-transformation-candy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32024002,
+                      "dratona-transformation-candy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31024001,
+        "n":  "Kobold Transformation Candy (Bound)",
+        "s":  "kobold-transformation-candy-bound",
+        "g":  "Legend",
+        "i":  "0e25129a97575de465f6b0f74408fbabff1e1d6c",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Candy",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632530001,
+                    "n":  "Kobold\u0027s Essence (Bound)",
+                    "s":  "kobold-s-essence-bound",
+                    "g":  "Common",
+                    "i":  "6ecf56e6f28f4a117828cd878a2cdc89f3e69346",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31024001,
+                      "kobold-transformation-candy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32024001,
+                      "kobold-transformation-candy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31036005,
+        "n":  "Abyssal Power Shard (Bound)",
+        "s":  "abyssal-power-shard-bound",
+        "g":  "Common",
+        "i":  "8a88a40642a1db597b7e00808001ebdff8cefaf4",
+        "x":  10,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  533460001,
+                    "n":  "Power Shard (Bound)",
+                    "s":  "power-shard-bound",
+                    "g":  "Common",
+                    "i":  "81f763536af73557bced32acc71513163b613bbf",
+                    "q":  150
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31036005,
+                      "abyssal-power-shard-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32036005,
+                      "abyssal-power-shard-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31036001,
+        "n":  "Superior Power Shard (Bound)",
+        "s":  "superior-power-shard-bound",
+        "g":  "Common",
+        "i":  "81d5d1bc1871f91b91bbb0fa6d2fb3abc4ef06a7",
+        "x":  10,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  533460001,
+                    "n":  "Power Shard (Bound)",
+                    "s":  "power-shard-bound",
+                    "g":  "Common",
+                    "i":  "81f763536af73557bced32acc71513163b613bbf",
+                    "q":  100
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31036001,
+                      "superior-power-shard-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32036001,
+                      "superior-power-shard-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31036002,
+        "n":  "Power Shard (Bound)",
+        "s":  "power-shard-bound",
+        "g":  "Common",
+        "i":  "81f763536af73557bced32acc71513163b613bbf",
+        "x":  10,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos",
+        "ing":  {
+                    "id":  631900001,
+                    "n":  "Empyrean Trace: Verteron (Bound)",
+                    "s":  "empyrean-trace-verteron-bound",
+                    "g":  "Special",
+                    "i":  "e82c78bbbb41de77306d1e69120ade1cab4102d9",
+                    "q":  1
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null
+    },
+    {
+        "id":  32036002,
+        "n":  "Power Shard (Bound)",
+        "s":  "power-shard-bound",
+        "g":  "Common",
+        "i":  "81f763536af73557bced32acc71513163b613bbf",
+        "x":  10,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Dark",
+        "rl":  "Asmodians",
+        "ing":  {
+                    "id":  631900007,
+                    "n":  "Empyrean Trace: Altgard (Bound)",
+                    "s":  "empyrean-trace-altgard-bound",
+                    "g":  "Special",
+                    "i":  "7a6517946b6cef10b8bf1f99c621e55da2ea043b",
+                    "q":  1
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null
+    },
+    {
+        "id":  31116001,
+        "n":  "Enhance Stone",
+        "s":  "enhance-stone",
+        "g":  "Common",
+        "i":  "967fe3f001969442080e352fc6dcc4f98f09b4f3",
+        "x":  100,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  531110003,
+                    "n":  "Clash Rune Enhance Scroll (Bound)",
+                    "s":  "clash-rune-enhance-scroll-bound",
+                    "g":  "Common",
+                    "i":  "51ce027836f04320563fe25da08a67a34b80c7aa",
+                    "q":  1
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31116001,
+                      "enhance-stone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32116001,
+                      "enhance-stone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31116004,
+        "n":  "Enhance Stone",
+        "s":  "enhance-stone",
+        "g":  "Common",
+        "i":  "967fe3f001969442080e352fc6dcc4f98f09b4f3",
+        "x":  10000,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460003,
+                    "n":  "Sealed Ancient Aullaeu Wings",
+                    "s":  "sealed-ancient-aullaeu-wings",
+                    "g":  "Unique",
+                    "i":  "e5db392f41692713b84bbbf08a2a054a0d64ad7c",
+                    "q":  1
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31116004,
+                      "enhance-stone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32116004,
+                      "enhance-stone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31116005,
+        "n":  "Enhance Stone",
+        "s":  "enhance-stone",
+        "g":  "Common",
+        "i":  "967fe3f001969442080e352fc6dcc4f98f09b4f3",
+        "x":  5,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632510901,
+                    "n":  "Ariel Fragment: Krao (Bound)",
+                    "s":  "ariel-fragment-krao-bound",
+                    "g":  "Unique",
+                    "i":  "de10698388265dcd64fed7ccd3482eeaf653632f",
+                    "q":  1
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31116005,
+                      "enhance-stone",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32116005,
+                      "enhance-stone",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31070002,
+        "n":  "Odyle Energy (Bound)",
+        "s":  "odyle-energy-bound",
+        "g":  "Special",
+        "i":  "14c6481352438fc7b1a9957ce2b443fa9c437bcd",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  610610013,
+                    "n":  "Odyle",
+                    "s":  "odyle",
+                    "g":  "Common",
+                    "i":  "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                    "q":  25
+                },
+        "more":  3,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31070002,
+                      "odyle-energy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32070002,
+                      "odyle-energy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31070001,
+        "n":  "Odyle Energy (Bound)",
+        "s":  "odyle-energy-bound",
+        "g":  "Special",
+        "i":  "14c6481352438fc7b1a9957ce2b443fa9c437bcd",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  610610013,
+                    "n":  "Odyle",
+                    "s":  "odyle",
+                    "g":  "Common",
+                    "i":  "4e3e6c91e19b20c89d1129147a5a3712de3ddb4d",
+                    "q":  25
+                },
+        "more":  3,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31070001,
+                      "odyle-energy-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32070001,
+                      "odyle-energy-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31063001,
+        "n":  "Kina Chest: 10,000,000 Kina",
+        "s":  "kina-chest-10-000-000-kina",
+        "g":  "Unique",
+        "i":  "700b5515ee574e806e865ad3288380324546e2e2",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  930100031,
+                    "n":  "Kina",
+                    "s":  "kina",
+                    "g":  "Common",
+                    "i":  "e15e1e93a3885df24a0b402e7e8607605730e752",
+                    "q":  11000000
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31063001,
+                      "kina-chest-10-000-000-kina",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32063001,
+                      "kina-chest-10-000-000-kina",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31064001,
+        "n":  "Kina Chest: 2,000,000 Kina",
+        "s":  "kina-chest-2-000-000-kina",
+        "g":  "Legend",
+        "i":  "eab6def37589db24a09b02379818d4da098185f8",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  930100031,
+                    "n":  "Kina",
+                    "s":  "kina",
+                    "g":  "Common",
+                    "i":  "e15e1e93a3885df24a0b402e7e8607605730e752",
+                    "q":  2200000
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31064001,
+                      "kina-chest-2-000-000-kina",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32064001,
+                      "kina-chest-2-000-000-kina",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  31065001,
+        "n":  "Kina Chest: 400,000 Kina",
+        "s":  "kina-chest-400-000-kina",
+        "g":  "Rare",
+        "i":  "6c07a787d3f729b19018b3692515165c97c1f3c5",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Special ┬╖ Consumable",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  930100031,
+                    "n":  "Kina",
+                    "s":  "kina",
+                    "g":  "Common",
+                    "i":  "e15e1e93a3885df24a0b402e7e8607605730e752",
+                    "q":  440000
+                },
+        "more":  0,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      31065001,
+                      "kina-chest-400-000-kina",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      32065001,
+                      "kina-chest-400-000-kina",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013006,
+        "n":  "Dark Veil Wings (Bound)",
+        "s":  "dark-veil-wings-bound",
+        "g":  "Unique",
+        "i":  "708ecfcfb56658f52c0f2ab325b1939c29b97784",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460006,
+                    "n":  "Sealed Dark Veil Wings",
+                    "s":  "sealed-dark-veil-wings",
+                    "g":  "Unique",
+                    "i":  "1d8eb86e13c9b75482e7f78c626647d805dbe180",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013006,
+                      "dark-veil-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013006,
+                      "dark-veil-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013005,
+        "n":  "Forest Spirit Wings (Bound)",
+        "s":  "forest-spirit-wings-bound",
+        "g":  "Unique",
+        "i":  "a5797ec24c1394640b4014282eefe56e90a80633",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460004,
+                    "n":  "Sealed Forest Spirit Wings",
+                    "s":  "sealed-forest-spirit-wings",
+                    "g":  "Unique",
+                    "i":  "dbc83f9b665fbdbdb1639c6c97daf000545ffa8f",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013005,
+                      "forest-spirit-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013005,
+                      "forest-spirit-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013004,
+        "n":  "Black Fragment Wings (Bound)",
+        "s":  "black-fragment-wings-bound",
+        "g":  "Unique",
+        "i":  "176d5783db511c5f4ec551fe63c7134c165e49ce",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460001,
+                    "n":  "Sealed Black Fragment Wings",
+                    "s":  "sealed-black-fragment-wings",
+                    "g":  "Unique",
+                    "i":  "f8e9571750c315255bf8be11b540d374175dd3c5",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013004,
+                      "black-fragment-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013004,
+                      "black-fragment-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013003,
+        "n":  "Blue Wave Wings (Bound)",
+        "s":  "blue-wave-wings-bound",
+        "g":  "Unique",
+        "i":  "c08bb3cce9d9b419382e79aabd3be69782c09122",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460002,
+                    "n":  "Sealed Blue Wave Wings",
+                    "s":  "sealed-blue-wave-wings",
+                    "g":  "Unique",
+                    "i":  "876a2dd5e0c138f466725bcdcff7435de070ab2e",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013003,
+                      "blue-wave-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013003,
+                      "blue-wave-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013002,
+        "n":  "Kromede Wings (Bound)",
+        "s":  "kromede-wings-bound",
+        "g":  "Unique",
+        "i":  "28839753db389c585f1018da1e96a731f9655951",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460005,
+                    "n":  "Sealed Kromede Wings",
+                    "s":  "sealed-kromede-wings",
+                    "g":  "Unique",
+                    "i":  "4c2b73abc6bf1a5542ceb22247a15a6d2530ac7b",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013002,
+                      "kromede-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013002,
+                      "kromede-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61013001,
+        "n":  "Ancient Aullaeu Wings (Bound)",
+        "s":  "ancient-aullaeu-wings-bound",
+        "g":  "Unique",
+        "i":  "27f122273b32c64ef3b185538e969d4cd34392d8",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602460003,
+                    "n":  "Sealed Ancient Aullaeu Wings",
+                    "s":  "sealed-ancient-aullaeu-wings",
+                    "g":  "Unique",
+                    "i":  "e5db392f41692713b84bbbf08a2a054a0d64ad7c",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61013001,
+                      "ancient-aullaeu-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62013001,
+                      "ancient-aullaeu-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61014002,
+        "n":  "Glorious Wings (Bound)",
+        "s":  "glorious-wings-bound",
+        "g":  "Legend",
+        "i":  "9d42eacccdecead2bbfeb3617236c7a2f49e0aed",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632540011,
+                    "n":  "Sealed Wing Featherdown (Bound)",
+                    "s":  "sealed-wing-featherdown-bound",
+                    "g":  "Legend",
+                    "i":  "3e3794db49e7a51d2e680e2d0d00f93ec2063064",
+                    "q":  70
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61014002,
+                      "glorious-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62014002,
+                      "glorious-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  61014001,
+        "n":  "Sealing Wings (Bound)",
+        "s":  "sealing-wings-bound",
+        "g":  "Legend",
+        "i":  "fba14aa8d2329c4617075ae0f15229b8729cc3b9",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Wings",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632540011,
+                    "n":  "Sealed Wing Featherdown (Bound)",
+                    "s":  "sealed-wing-featherdown-bound",
+                    "g":  "Legend",
+                    "i":  "3e3794db49e7a51d2e680e2d0d00f93ec2063064",
+                    "q":  70
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      61014001,
+                      "sealing-wings-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      62014001,
+                      "sealing-wings-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  43033003,
+        "n":  "Abyssal Forge: Weapon Selection Chest (Bound)",
+        "s":  "abyssal-forge-weapon-selection-chest-bound",
+        "g":  "Unique",
+        "i":  "bb5b661b1295754792dab5c31ccf794aac0a5246",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Gear",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  110120003,
+                    "n":  "Ludra\u0027s Blade of Extinction",
+                    "s":  "ludra-s-blade-of-extinction",
+                    "g":  "Unique",
+                    "i":  "5f30a9394b3d3550ac9ffe654edb53556111d44d",
+                    "q":  1
+                },
+        "more":  2,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      43033003,
+                      "abyssal-forge-weapon-selection-chest-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      44033003,
+                      "abyssal-forge-weapon-selection-chest-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  43033001,
+        "n":  "Abyssal Bracelet",
+        "s":  "abyssal-bracelet",
+        "g":  "Unique",
+        "i":  "d7c39e9491c1f2089669152a0b402be1e9253e4f",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Gear",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  602500001,
+                    "n":  "Ludra Gear Voucher (Bound)",
+                    "s":  "ludra-gear-voucher-bound",
+                    "g":  "Unique",
+                    "i":  "53af459e72a18ceb08ed4409abef39a5771aa789",
+                    "q":  3
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      43033001,
+                      "abyssal-bracelet",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      44033001,
+                      "abyssal-bracelet",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  41043003,
+        "n":  "Ferocious Horn Den: Armor Selection Chest (Bound)",
+        "s":  "ferocious-horn-den-armor-selection-chest-bound",
+        "g":  "Unique",
+        "i":  "bb5b661b1295754792dab5c31ccf794aac0a5246",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Gear",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632510017,
+                    "n":  "Gear Change Voucher: Ferocious Horn Den (Bound)",
+                    "s":  "gear-change-voucher-ferocious-horn-den-bound",
+                    "g":  "Unique",
+                    "i":  "cb29055f59256141a4b10b9942194d11c8f34c95",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      41043003,
+                      "ferocious-horn-den-armor-selection-chest-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      42043003,
+                      "ferocious-horn-den-armor-selection-chest-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  41043002,
+        "n":  "Vakron Sky Island: Armor Selection Chest (Bound)",
+        "s":  "vakron-sky-island-armor-selection-chest-bound",
+        "g":  "Unique",
+        "i":  "bb5b661b1295754792dab5c31ccf794aac0a5246",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Gear",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632510016,
+                    "n":  "Gear Change Voucher: Vakron Sky Island (Bound)",
+                    "s":  "gear-change-voucher-vakron-sky-island-bound",
+                    "g":  "Unique",
+                    "i":  "cb29055f59256141a4b10b9942194d11c8f34c95",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      41043002,
+                      "vakron-sky-island-armor-selection-chest-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      42043002,
+                      "vakron-sky-island-armor-selection-chest-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    },
+    {
+        "id":  41043001,
+        "n":  "Draupnir: Armor Selection Chest (Bound)",
+        "s":  "draupnir-armor-selection-chest-bound",
+        "g":  "Unique",
+        "i":  "bb5b661b1295754792dab5c31ccf794aac0a5246",
+        "x":  1,
+        "sc":  10000,
+        "cr":  0,
+        "tb":  "Gear",
+        "r":  "Light",
+        "rl":  "Elyos / Asmodians",
+        "ing":  {
+                    "id":  632510015,
+                    "n":  "Gear Change Voucher: Draupnir (Bound)",
+                    "s":  "gear-change-voucher-draupnir-bound",
+                    "g":  "Unique",
+                    "i":  "cb29055f59256141a4b10b9942194d11c8f34c95",
+                    "q":  1
+                },
+        "more":  1,
+        "pool":  0,
+        "lt":  null,
+        "v":  [
+                  [
+                      41043001,
+                      "draupnir-armor-selection-chest-bound",
+                      "Light",
+                      "Elyos"
+                  ],
+                  [
+                      42043001,
+                      "draupnir-armor-selection-chest-bound",
+                      "Dark",
+                      "Asmodians"
+                  ]
+              ]
+    }
+]

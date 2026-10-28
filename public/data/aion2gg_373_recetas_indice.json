@@ -1,0 +1,2986 @@
+﻿[
+    {
+        "idx":  0,
+        "recipeId":  111013001,
+        "nameEn":  "True Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón verdadero",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  1,
+        "recipeId":  111013011,
+        "nameEn":  "Splendent True Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón verdadero brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  2,
+        "recipeId":  111013012,
+        "nameEn":  "White Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón blanco",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  3,
+        "recipeId":  111013013,
+        "nameEn":  "Splendent White Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón blanco brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  4,
+        "recipeId":  111013014,
+        "nameEn":  "Wise Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón sabio",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  5,
+        "recipeId":  111013015,
+        "nameEn":  "Splendent Wise Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón sabio brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  6,
+        "recipeId":  111014001,
+        "nameEn":  "Artisan\u0027s Orichalcum Longsword",
+        "nameEs":  "Espada larga de orichalcum de artesano",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  7,
+        "recipeId":  111015001,
+        "nameEn":  "Expert\u0027s Orichalcum Longsword",
+        "nameEs":  "Espada larga de orichalcum de experto",
+        "subIdx":  42,
+        "grade":  "2"
+    },
+    {
+        "idx":  8,
+        "recipeId":  111016001,
+        "nameEn":  "Orichalcum Longsword",
+        "nameEs":  "Espada larga de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  9,
+        "recipeId":  111023001,
+        "nameEn":  "True Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón verdadero",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  10,
+        "recipeId":  111023011,
+        "nameEn":  "Splendent True Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón verdadero brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  11,
+        "recipeId":  111023012,
+        "nameEn":  "White Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón blanco",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  12,
+        "recipeId":  111023013,
+        "nameEn":  "Splendent White Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón blanco brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  13,
+        "recipeId":  111023014,
+        "nameEn":  "Wise Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón sabio",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  14,
+        "recipeId":  111023015,
+        "nameEn":  "Splendent Wise Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón sabio brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  15,
+        "recipeId":  111024001,
+        "nameEn":  "Artisan\u0027s Orichalcum Greatsword",
+        "nameEs":  "Espadón de orichalcum de artesano",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  16,
+        "recipeId":  111025001,
+        "nameEn":  "Expert\u0027s Orichalcum Greatsword",
+        "nameEs":  "Espadón de orichalcum de experto",
+        "subIdx":  42,
+        "grade":  "2"
+    },
+    {
+        "idx":  17,
+        "recipeId":  111026001,
+        "nameEn":  "Orichalcum Greatsword",
+        "nameEs":  "Espadón de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  18,
+        "recipeId":  111033001,
+        "nameEn":  "True Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón verdadero",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  19,
+        "recipeId":  111033011,
+        "nameEn":  "Splendent True Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón verdadero brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  20,
+        "recipeId":  111033012,
+        "nameEn":  "White Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón blanco",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  21,
+        "recipeId":  111033013,
+        "nameEn":  "Splendent White Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón blanco brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  22,
+        "recipeId":  111033014,
+        "nameEn":  "Wise Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón sabio",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  23,
+        "recipeId":  111033015,
+        "nameEn":  "Splendent Wise Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón sabio brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  24,
+        "recipeId":  111034001,
+        "nameEn":  "Artisan\u0027s Orichalcum Dagger",
+        "nameEs":  "Daga de orichalcum de artesano",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  25,
+        "recipeId":  111035001,
+        "nameEn":  "Expert\u0027s Orichalcum Dagger",
+        "nameEs":  "Daga de orichalcum de experto",
+        "subIdx":  42,
+        "grade":  "2"
+    },
+    {
+        "idx":  26,
+        "recipeId":  111036001,
+        "nameEn":  "Orichalcum Dagger",
+        "nameEs":  "Daga de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  27,
+        "recipeId":  111063001,
+        "nameEn":  "True Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón verdadero",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  28,
+        "recipeId":  111063011,
+        "nameEn":  "Splendent True Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón verdadero brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  29,
+        "recipeId":  111063012,
+        "nameEn":  "White Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón blanco",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  30,
+        "recipeId":  111063013,
+        "nameEn":  "Splendent White Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón blanco brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  31,
+        "recipeId":  111063014,
+        "nameEn":  "Wise Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón sabio",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  32,
+        "recipeId":  111063015,
+        "nameEn":  "Splendent Wise Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón sabio brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  33,
+        "recipeId":  111064001,
+        "nameEn":  "Artisan\u0027s Orichalcum Mace",
+        "nameEs":  "Maza de orichalcum de artesano",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  34,
+        "recipeId":  111065001,
+        "nameEn":  "Expert\u0027s Orichalcum Mace",
+        "nameEs":  "Maza de orichalcum de experto",
+        "subIdx":  42,
+        "grade":  "2"
+    },
+    {
+        "idx":  35,
+        "recipeId":  111066001,
+        "nameEn":  "Orichalcum Mace",
+        "nameEs":  "Maza de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  36,
+        "recipeId":  111083001,
+        "nameEn":  "True Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón verdadero",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  37,
+        "recipeId":  111083011,
+        "nameEn":  "Splendent True Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón verdadero brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  38,
+        "recipeId":  111083012,
+        "nameEn":  "White Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón blanco",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  39,
+        "recipeId":  111083013,
+        "nameEn":  "Splendent White Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón blanco brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  40,
+        "recipeId":  111083014,
+        "nameEn":  "Wise Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón sabio",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  41,
+        "recipeId":  111083015,
+        "nameEn":  "Splendent Wise Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón sabio brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  42,
+        "recipeId":  111084001,
+        "nameEn":  "Artisan\u0027s Orichalcum Guard",
+        "nameEs":  "Arma de Puño de orichalcum de artesano",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  43,
+        "recipeId":  111085001,
+        "nameEn":  "Expert\u0027s Orichalcum Guard",
+        "nameEs":  "Arma de Puño de orichalcum de experto",
+        "subIdx":  42,
+        "grade":  "2"
+    },
+    {
+        "idx":  44,
+        "recipeId":  111086001,
+        "nameEn":  "Orichalcum Guard",
+        "nameEs":  "Arma de Puño de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  45,
+        "recipeId":  115016001,
+        "nameEn":  "Orichalcum Ingot",
+        "nameEs":  "Lingote de orichalcum",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  46,
+        "recipeId":  115024001,
+        "nameEn":  "Fine Thick Balaur Horn",
+        "nameEs":  "Cuerno grueso de Balaur refinado",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  47,
+        "recipeId":  115024002,
+        "nameEn":  "Fine Hard Balaur Horn",
+        "nameEs":  "Cuerno duro de Balaur refinado",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  48,
+        "recipeId":  115024003,
+        "nameEn":  "Fine Durable Balaur Horn",
+        "nameEs":  "Cuerno firme de Balaur refinado",
+        "subIdx":  42,
+        "grade":  "3"
+    },
+    {
+        "idx":  49,
+        "recipeId":  119016001,
+        "nameEn":  "Novice Blacksmith\u0027s Hammer (Bound)",
+        "nameEs":  "Martillo de herrero principiante (vinculado)",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  50,
+        "recipeId":  119016002,
+        "nameEn":  "Professional Blacksmith\u0027s Hammer (Bound)",
+        "nameEs":  "Martillo de herrero especialista (vinculado)",
+        "subIdx":  42,
+        "grade":  "1"
+    },
+    {
+        "idx":  51,
+        "recipeId":  121013001,
+        "nameEn":  "Star Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón estelar",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  52,
+        "recipeId":  121013011,
+        "nameEn":  "Splendent Star Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón estelar brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  53,
+        "recipeId":  121013012,
+        "nameEn":  "Dark Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón oscuro",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  54,
+        "recipeId":  121013013,
+        "nameEn":  "Splendent Dark Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón oscuro brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  55,
+        "recipeId":  121013014,
+        "nameEn":  "Ebony Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón sombrío",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  56,
+        "recipeId":  121013015,
+        "nameEn":  "Splendent Ebony Dragon Lord Longsword",
+        "nameEs":  "Espada larga de rey dragón sombrío brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  57,
+        "recipeId":  121023001,
+        "nameEn":  "Star Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón estelar",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  58,
+        "recipeId":  121023011,
+        "nameEn":  "Splendent Star Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón estelar brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  59,
+        "recipeId":  121023012,
+        "nameEn":  "Dark Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón oscuro",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  60,
+        "recipeId":  121023013,
+        "nameEn":  "Splendent Dark Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón oscuro brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  61,
+        "recipeId":  121023014,
+        "nameEn":  "Ebony Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón sombrío",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  62,
+        "recipeId":  121023015,
+        "nameEn":  "Splendent Ebony Dragon Lord Greatsword",
+        "nameEs":  "Espadón de rey dragón sombrío brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  63,
+        "recipeId":  121033001,
+        "nameEn":  "Star Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón estelar",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  64,
+        "recipeId":  121033011,
+        "nameEn":  "Splendent Star Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón estelar brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  65,
+        "recipeId":  121033012,
+        "nameEn":  "Dark Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón oscuro",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  66,
+        "recipeId":  121033013,
+        "nameEn":  "Splendent Dark Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón oscuro brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  67,
+        "recipeId":  121033014,
+        "nameEn":  "Ebony Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón sombrío",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  68,
+        "recipeId":  121033015,
+        "nameEn":  "Splendent Ebony Dragon Lord Dagger",
+        "nameEs":  "Daga de rey dragón sombrío brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  69,
+        "recipeId":  121063001,
+        "nameEn":  "Star Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón estelar",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  70,
+        "recipeId":  121063011,
+        "nameEn":  "Splendent Star Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón estelar brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  71,
+        "recipeId":  121063012,
+        "nameEn":  "Dark Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón oscuro",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  72,
+        "recipeId":  121063013,
+        "nameEn":  "Splendent Dark Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón oscuro brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  73,
+        "recipeId":  121063014,
+        "nameEn":  "Ebony Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón sombrío",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  74,
+        "recipeId":  121063015,
+        "nameEn":  "Splendent Ebony Dragon Lord Mace",
+        "nameEs":  "Maza de rey dragón sombrío brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  75,
+        "recipeId":  121083001,
+        "nameEn":  "Star Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón estelar",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  76,
+        "recipeId":  121083011,
+        "nameEn":  "Splendent Star Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón estelar brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  77,
+        "recipeId":  121083012,
+        "nameEn":  "Dark Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón oscuro",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  78,
+        "recipeId":  121083013,
+        "nameEn":  "Splendent Dark Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón oscuro brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  79,
+        "recipeId":  121083014,
+        "nameEn":  "Ebony Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón sombrío",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  80,
+        "recipeId":  121083015,
+        "nameEn":  "Splendent Ebony Dragon Lord Guard",
+        "nameEs":  "Arma de Puño de rey dragón sombrío brillante",
+        "subIdx":  42,
+        "grade":  "4"
+    },
+    {
+        "idx":  81,
+        "recipeId":  211043001,
+        "nameEn":  "True Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón verdadero",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  82,
+        "recipeId":  211043011,
+        "nameEn":  "Splendent True Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón verdadero brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  83,
+        "recipeId":  211043012,
+        "nameEn":  "White Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón blanco",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  84,
+        "recipeId":  211043013,
+        "nameEn":  "Splendent White Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón blanco brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  85,
+        "recipeId":  211043014,
+        "nameEn":  "Wise Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón sabio",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  86,
+        "recipeId":  211043015,
+        "nameEn":  "Splendent Wise Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón sabio brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  87,
+        "recipeId":  211044001,
+        "nameEn":  "Artisan\u0027s Yggdrasil Bow",
+        "nameEs":  "Arco de Yggdrasil de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  88,
+        "recipeId":  211045001,
+        "nameEn":  "Expert\u0027s Yggdrasil Bow",
+        "nameEs":  "Arco de Yggdrasil de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  89,
+        "recipeId":  211046001,
+        "nameEn":  "Yggdrasil Bow",
+        "nameEs":  "Arco de Yggdrasil",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  90,
+        "recipeId":  211103001,
+        "nameEn":  "True Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón verdadero",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  91,
+        "recipeId":  211103011,
+        "nameEn":  "Splendent True Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón verdadero brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  92,
+        "recipeId":  211103012,
+        "nameEn":  "White Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón blanco",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  93,
+        "recipeId":  211103013,
+        "nameEn":  "Splendent White Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón blanco brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  94,
+        "recipeId":  211103014,
+        "nameEn":  "Wise Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón sabio",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  95,
+        "recipeId":  211103015,
+        "nameEn":  "Splendent Wise Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón sabio brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  96,
+        "recipeId":  211104001,
+        "nameEn":  "Artisan\u0027s Yggdrasil Staff",
+        "nameEs":  "Bastón de Yggdrasil de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  97,
+        "recipeId":  211105001,
+        "nameEn":  "Expert\u0027s Yggdrasil Staff",
+        "nameEs":  "Bastón de Yggdrasil de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  98,
+        "recipeId":  211106001,
+        "nameEn":  "Yggdrasil Staff",
+        "nameEs":  "Bastón de Yggdrasil",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  99,
+        "recipeId":  213013001,
+        "nameEn":  "True Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón verdadero",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  100,
+        "recipeId":  213013011,
+        "nameEn":  "Splendent True Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón verdadero brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  101,
+        "recipeId":  213013012,
+        "nameEn":  "White Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón blanco",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  102,
+        "recipeId":  213013013,
+        "nameEn":  "Splendent White Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón blanco brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  103,
+        "recipeId":  213013014,
+        "nameEn":  "Wise Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón sabio",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  104,
+        "recipeId":  213013015,
+        "nameEn":  "Splendent Wise Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón sabio brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  105,
+        "recipeId":  213014001,
+        "nameEn":  "Artisan\u0027s Ruby Necklace",
+        "nameEs":  "Collar de rubí de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  106,
+        "recipeId":  213015001,
+        "nameEn":  "Expert\u0027s Ruby Necklace",
+        "nameEs":  "Collar de rubí de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  107,
+        "recipeId":  213016001,
+        "nameEn":  "Ruby Necklace",
+        "nameEs":  "Collar de rubí",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  108,
+        "recipeId":  213023001,
+        "nameEn":  "True Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón verdadero",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  109,
+        "recipeId":  213023011,
+        "nameEn":  "Splendent True Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón verdadero brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  110,
+        "recipeId":  213023012,
+        "nameEn":  "White Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón blanco",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  111,
+        "recipeId":  213023013,
+        "nameEn":  "Splendent White Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón blanco brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  112,
+        "recipeId":  213023014,
+        "nameEn":  "Wise Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón sabio",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  113,
+        "recipeId":  213023015,
+        "nameEn":  "Splendent Wise Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón sabio brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  114,
+        "recipeId":  213024001,
+        "nameEn":  "Artisan\u0027s Diamond Earrings",
+        "nameEs":  "Pendientes de diamante de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  115,
+        "recipeId":  213025001,
+        "nameEn":  "Expert\u0027s Diamond Earrings",
+        "nameEs":  "Pendientes de diamante de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  116,
+        "recipeId":  213026001,
+        "nameEn":  "Diamond Earrings",
+        "nameEs":  "Pendientes de diamante",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  117,
+        "recipeId":  213033001,
+        "nameEn":  "True Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón verdadero",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  118,
+        "recipeId":  213033011,
+        "nameEn":  "Splendent True Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón verdadero brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  119,
+        "recipeId":  213033012,
+        "nameEn":  "White Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón blanco",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  120,
+        "recipeId":  213033013,
+        "nameEn":  "Splendent White Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón blanco brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  121,
+        "recipeId":  213033014,
+        "nameEn":  "Wise Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón sabio",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  122,
+        "recipeId":  213033015,
+        "nameEn":  "Splendent Wise Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón sabio brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  123,
+        "recipeId":  213034001,
+        "nameEn":  "Artisan\u0027s Sapphire Ring",
+        "nameEs":  "Anillo de zafiro de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  124,
+        "recipeId":  213035001,
+        "nameEn":  "Expert\u0027s Sapphire Ring",
+        "nameEs":  "Anillo de zafiro de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  125,
+        "recipeId":  213036001,
+        "nameEn":  "Sapphire Ring",
+        "nameEs":  "Anillo de zafiro",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  126,
+        "recipeId":  213044002,
+        "nameEn":  "Pilgrim Bracelet",
+        "nameEs":  "Brazalete de peregrino",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  127,
+        "recipeId":  213045002,
+        "nameEn":  "Wind Breeze Bracelet",
+        "nameEs":  "Brazalete de la Brisa",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  128,
+        "recipeId":  213046002,
+        "nameEn":  "Dawn Bracelet",
+        "nameEs":  "Brazalete de alba",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  129,
+        "recipeId":  215016001,
+        "nameEn":  "Sapphire Decoration",
+        "nameEs":  "Accesorio de zafiro",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  130,
+        "recipeId":  215016003,
+        "nameEn":  "Diamond Decoration",
+        "nameEs":  "Accesorio de diamante",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  131,
+        "recipeId":  215016005,
+        "nameEn":  "Ruby Decoration",
+        "nameEs":  "Accesorio de rubí",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  132,
+        "recipeId":  215016007,
+        "nameEn":  "Yggdrasil Wood",
+        "nameEs":  "Madera de yggdrasil",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  133,
+        "recipeId":  215016009,
+        "nameEn":  "Magic Crystal",
+        "nameEs":  "Cristal de magia",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  134,
+        "recipeId":  215024001,
+        "nameEn":  "Enhanced Thick Balaur Scale",
+        "nameEs":  "Escama gruesa de Balaur mejorada",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  135,
+        "recipeId":  215024002,
+        "nameEn":  "Enhanced Hard Balaur Scale",
+        "nameEs":  "Escama dura de Balaur mejorada",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  136,
+        "recipeId":  215024003,
+        "nameEn":  "Enhanced Durable Balaur Scale",
+        "nameEs":  "Escama firme de Balaur mejorada",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  137,
+        "recipeId":  219016001,
+        "nameEn":  "Novice Armorsmith\u0027s Fabric (Bound)",
+        "nameEs":  "Tela de fabricante de armaduras principiante (vinculado)",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  138,
+        "recipeId":  219016002,
+        "nameEn":  "Professional Armorsmith\u0027s Fabric (Bound)",
+        "nameEs":  "Tela de fabricante de armaduras especialista (vinculado)",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  139,
+        "recipeId":  221043001,
+        "nameEn":  "Star Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón estelar",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  140,
+        "recipeId":  221043011,
+        "nameEn":  "Splendent Star Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón estelar brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  141,
+        "recipeId":  221043012,
+        "nameEn":  "Dark Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón oscuro",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  142,
+        "recipeId":  221043013,
+        "nameEn":  "Splendent Dark Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón oscuro brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  143,
+        "recipeId":  221043014,
+        "nameEn":  "Ebony Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón sombrío",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  144,
+        "recipeId":  221043015,
+        "nameEn":  "Splendent Ebony Dragon Lord Bow",
+        "nameEs":  "Arco de rey dragón sombrío brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  145,
+        "recipeId":  221044001,
+        "nameEn":  "Artisan\u0027s Asvata Bow",
+        "nameEs":  "Arco de Asvata de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  146,
+        "recipeId":  221045001,
+        "nameEn":  "Expert\u0027s Asvata Bow",
+        "nameEs":  "Arco de Asvata de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  147,
+        "recipeId":  221046001,
+        "nameEn":  "Asvata Bow",
+        "nameEs":  "Arco de Asvata",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  148,
+        "recipeId":  221103001,
+        "nameEn":  "Star Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón estelar",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  149,
+        "recipeId":  221103011,
+        "nameEn":  "Splendent Star Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón estelar brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  150,
+        "recipeId":  221103012,
+        "nameEn":  "Dark Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón oscuro",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  151,
+        "recipeId":  221103013,
+        "nameEn":  "Splendent Dark Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón oscuro brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  152,
+        "recipeId":  221103014,
+        "nameEn":  "Ebony Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón sombrío",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  153,
+        "recipeId":  221103015,
+        "nameEn":  "Splendent Ebony Dragon Lord Staff",
+        "nameEs":  "Bastón de rey dragón sombrío brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  154,
+        "recipeId":  221104001,
+        "nameEn":  "Artisan\u0027s Asvata Staff",
+        "nameEs":  "Bastón de Asvata de artesano",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  155,
+        "recipeId":  221105001,
+        "nameEn":  "Expert\u0027s Asvata Staff",
+        "nameEs":  "Bastón de Asvata de experto",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  156,
+        "recipeId":  221106001,
+        "nameEn":  "Asvata Staff",
+        "nameEs":  "Bastón de Asvata",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  157,
+        "recipeId":  223013001,
+        "nameEn":  "Star Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón estelar",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  158,
+        "recipeId":  223013011,
+        "nameEn":  "Splendent Star Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón estelar brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  159,
+        "recipeId":  223013012,
+        "nameEn":  "Dark Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón oscuro",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  160,
+        "recipeId":  223013013,
+        "nameEn":  "Splendent Dark Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón oscuro brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  161,
+        "recipeId":  223013014,
+        "nameEn":  "Ebony Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón sombrío",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  162,
+        "recipeId":  223013015,
+        "nameEn":  "Splendent Ebony Dragon Lord Necklace",
+        "nameEs":  "Collar de rey dragón sombrío brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  163,
+        "recipeId":  223023001,
+        "nameEn":  "Star Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón estelar",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  164,
+        "recipeId":  223023011,
+        "nameEn":  "Splendent Star Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón estelar brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  165,
+        "recipeId":  223023012,
+        "nameEn":  "Dark Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón oscuro",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  166,
+        "recipeId":  223023013,
+        "nameEn":  "Splendent Dark Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón oscuro brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  167,
+        "recipeId":  223023014,
+        "nameEn":  "Ebony Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón sombrío",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  168,
+        "recipeId":  223023015,
+        "nameEn":  "Splendent Ebony Dragon Lord Earrings",
+        "nameEs":  "Pendientes de rey dragón sombrío brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  169,
+        "recipeId":  223033001,
+        "nameEn":  "Star Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón estelar",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  170,
+        "recipeId":  223033011,
+        "nameEn":  "Splendent Star Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón estelar brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  171,
+        "recipeId":  223033012,
+        "nameEn":  "Dark Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón oscuro",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  172,
+        "recipeId":  223033013,
+        "nameEn":  "Splendent Dark Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón oscuro brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  173,
+        "recipeId":  223033014,
+        "nameEn":  "Ebony Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón sombrío",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  174,
+        "recipeId":  223033015,
+        "nameEn":  "Splendent Ebony Dragon Lord Ring",
+        "nameEs":  "Anillo de rey dragón sombrío brillante",
+        "subIdx":  43,
+        "grade":  "4"
+    },
+    {
+        "idx":  175,
+        "recipeId":  223044002,
+        "nameEn":  "Liberator Bracelet",
+        "nameEs":  "Brazalete de libertador",
+        "subIdx":  43,
+        "grade":  "3"
+    },
+    {
+        "idx":  176,
+        "recipeId":  223045002,
+        "nameEn":  "Chaser Bracelet",
+        "nameEs":  "Brazalete de perseguidor",
+        "subIdx":  43,
+        "grade":  "2"
+    },
+    {
+        "idx":  177,
+        "recipeId":  223046002,
+        "nameEn":  "Old Mercenary Commander Bracelet",
+        "nameEs":  "Brazalete de capitán del antiguo grupo mercenario",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  178,
+        "recipeId":  225016007,
+        "nameEn":  "Asvata Wood",
+        "nameEs":  "Madera de asvata",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  179,
+        "recipeId":  311053001,
+        "nameEn":  "True Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón verdadero",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  180,
+        "recipeId":  311053011,
+        "nameEn":  "Splendent True Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón verdadero brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  181,
+        "recipeId":  311053012,
+        "nameEn":  "White Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón blanco",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  182,
+        "recipeId":  311053013,
+        "nameEn":  "Splendent White Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón blanco brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  183,
+        "recipeId":  311053014,
+        "nameEn":  "Wise Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón sabio",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  184,
+        "recipeId":  311053015,
+        "nameEn":  "Splendent Wise Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón sabio brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  185,
+        "recipeId":  311054001,
+        "nameEn":  "Artisan\u0027s Truth Spellbook",
+        "nameEs":  "Grimorio de verdad de artesano",
+        "subIdx":  45,
+        "grade":  "3"
+    },
+    {
+        "idx":  186,
+        "recipeId":  311055001,
+        "nameEn":  "Expert\u0027s Truth Spellbook",
+        "nameEs":  "Grimorio de verdad de experto",
+        "subIdx":  45,
+        "grade":  "2"
+    },
+    {
+        "idx":  187,
+        "recipeId":  311056001,
+        "nameEn":  "Truth Spellbook",
+        "nameEs":  "Grimorio de verdad",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  188,
+        "recipeId":  311093001,
+        "nameEn":  "True Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón verdadero",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  189,
+        "recipeId":  311093011,
+        "nameEn":  "Splendent True Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón verdadero brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  190,
+        "recipeId":  311093012,
+        "nameEn":  "White Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón blanco",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  191,
+        "recipeId":  311093013,
+        "nameEn":  "Splendent White Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón blanco brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  192,
+        "recipeId":  311093014,
+        "nameEn":  "Wise Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón sabio",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  193,
+        "recipeId":  311093015,
+        "nameEn":  "Splendent Wise Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón sabio brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  194,
+        "recipeId":  311094001,
+        "nameEn":  "Artisan\u0027s Truth Orb",
+        "nameEs":  "Orbe de verdad de artesano",
+        "subIdx":  45,
+        "grade":  "3"
+    },
+    {
+        "idx":  195,
+        "recipeId":  311095001,
+        "nameEn":  "Expert\u0027s Truth Orb",
+        "nameEs":  "Orbe de verdad de experto",
+        "subIdx":  45,
+        "grade":  "2"
+    },
+    {
+        "idx":  196,
+        "recipeId":  311096001,
+        "nameEn":  "Truth Orb",
+        "nameEs":  "Orbe de verdad",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  197,
+        "recipeId":  314016001,
+        "nameEn":  "Life Serum (Bound)",
+        "nameEs":  "Elixir de vida (vinculado)",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  198,
+        "recipeId":  314016002,
+        "nameEn":  "Wind Serum",
+        "nameEs":  "Elixir de viento",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  199,
+        "recipeId":  314016003,
+        "nameEn":  "Superior Life Potion",
+        "nameEs":  "Poción de vida superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  200,
+        "recipeId":  314016004,
+        "nameEn":  "Superior Life Serum",
+        "nameEs":  "Elixir de vida superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  201,
+        "recipeId":  314016005,
+        "nameEn":  "Superior Wind Serum",
+        "nameEs":  "Elixir de viento superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  202,
+        "recipeId":  314016006,
+        "nameEn":  "Mana Potion",
+        "nameEs":  "Poción de maná",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  203,
+        "recipeId":  314026001,
+        "nameEn":  "Superior Healing Potion",
+        "nameEs":  "Poción de curación superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  204,
+        "recipeId":  314036001,
+        "nameEn":  "Superior Speed Scroll",
+        "nameEs":  "Pergamino de esprint superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  205,
+        "recipeId":  314036002,
+        "nameEn":  "Superior Courage Scroll",
+        "nameEs":  "Pergamino de valentía superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  206,
+        "recipeId":  314036003,
+        "nameEn":  "Superior Benediction Scroll",
+        "nameEs":  "Pergamino de favor superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  207,
+        "recipeId":  314036008,
+        "nameEn":  "Status Effect Resist Scroll",
+        "nameEs":  "Pergamino de Resistencia a Efectos de Estado",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  208,
+        "recipeId":  314045001,
+        "nameEn":  "Intermediate Abyssal Manastone",
+        "nameEs":  "Piedra de maná abismal intermedia",
+        "subIdx":  45,
+        "grade":  "2"
+    },
+    {
+        "idx":  209,
+        "recipeId":  314045002,
+        "nameEn":  "Intermediate Abyssal Soulstone",
+        "nameEs":  "Piedra de alma abismal intermedia",
+        "subIdx":  45,
+        "grade":  "2"
+    },
+    {
+        "idx":  210,
+        "recipeId":  314046001,
+        "nameEn":  "Intermediate Manastone",
+        "nameEs":  "Piedra de maná intermedia",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  211,
+        "recipeId":  314046002,
+        "nameEn":  "Intermediate Soulstone",
+        "nameEs":  "Piedra de alma intermedia",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  212,
+        "recipeId":  314046003,
+        "nameEn":  "Superior Manastone",
+        "nameEs":  "Piedra de maná superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  213,
+        "recipeId":  314046004,
+        "nameEn":  "Superior Soulstone",
+        "nameEs":  "Piedra de alma superior",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  214,
+        "recipeId":  315016003,
+        "nameEn":  "Sapphire Powder",
+        "nameEs":  "Polvo de zafiro",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  215,
+        "recipeId":  315016004,
+        "nameEn":  "Diamond Powder",
+        "nameEs":  "Polvo de diamante",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  216,
+        "recipeId":  315016005,
+        "nameEn":  "Ruby Powder",
+        "nameEs":  "Polvo de rubí",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  217,
+        "recipeId":  315016006,
+        "nameEn":  "Spiritstone Powder",
+        "nameEs":  "Polvo de piedra espiritual",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  218,
+        "recipeId":  315016007,
+        "nameEn":  "Yggdrasil Paper",
+        "nameEs":  "Hoja de papel de yggdrasil",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  219,
+        "recipeId":  319016001,
+        "nameEn":  "Novice Handicrafter\u0027s Magnifying Glass (Bound)",
+        "nameEs":  "Lupa de orfebre principiante (vinculado)",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  220,
+        "recipeId":  319016002,
+        "nameEn":  "Professional Handicrafter\u0027s Magnifying Glass (Bound)",
+        "nameEs":  "Lupa de orfebre especialista (vinculado)",
+        "subIdx":  43,
+        "grade":  "1"
+    },
+    {
+        "idx":  221,
+        "recipeId":  321053001,
+        "nameEn":  "Star Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón estelar",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  222,
+        "recipeId":  321053011,
+        "nameEn":  "Splendent Star Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón estelar brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  223,
+        "recipeId":  321053012,
+        "nameEn":  "Dark Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón oscuro",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  224,
+        "recipeId":  321053013,
+        "nameEn":  "Splendent Dark Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón oscuro brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  225,
+        "recipeId":  321053014,
+        "nameEn":  "Ebony Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón sombrío",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  226,
+        "recipeId":  321053015,
+        "nameEn":  "Splendent Ebony Dragon Lord Spellbook",
+        "nameEs":  "Grimorio de rey dragón sombrío brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  227,
+        "recipeId":  321093001,
+        "nameEn":  "Star Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón estelar",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  228,
+        "recipeId":  321093011,
+        "nameEn":  "Splendent Star Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón estelar brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  229,
+        "recipeId":  321093012,
+        "nameEn":  "Dark Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón oscuro",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  230,
+        "recipeId":  321093013,
+        "nameEn":  "Splendent Dark Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón oscuro brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  231,
+        "recipeId":  321093014,
+        "nameEn":  "Ebony Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón sombrío",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  232,
+        "recipeId":  321093015,
+        "nameEn":  "Splendent Ebony Dragon Lord Orb",
+        "nameEs":  "Orbe de rey dragón sombrío brillante",
+        "subIdx":  45,
+        "grade":  "4"
+    },
+    {
+        "idx":  233,
+        "recipeId":  325016007,
+        "nameEn":  "Asvata Paper",
+        "nameEs":  "Hoja de papel de asvata",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  234,
+        "recipeId":  412013001,
+        "nameEn":  "True Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  235,
+        "recipeId":  412013011,
+        "nameEn":  "Splendent True Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  236,
+        "recipeId":  412013012,
+        "nameEn":  "White Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  237,
+        "recipeId":  412013013,
+        "nameEn":  "Splendent White Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  238,
+        "recipeId":  412013014,
+        "nameEn":  "Wise Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  239,
+        "recipeId":  412013015,
+        "nameEn":  "Splendent Wise Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  240,
+        "recipeId":  412014001,
+        "nameEn":  "Artisan\u0027s Orichalcum Breastplate",
+        "nameEs":  "Peto de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  241,
+        "recipeId":  412015001,
+        "nameEn":  "Expert\u0027s Orichalcum Breastplate",
+        "nameEs":  "Peto de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  242,
+        "recipeId":  412016001,
+        "nameEn":  "Orichalcum Breastplate",
+        "nameEs":  "Peto de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  243,
+        "recipeId":  412023001,
+        "nameEn":  "True Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  244,
+        "recipeId":  412023011,
+        "nameEn":  "Splendent True Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  245,
+        "recipeId":  412023012,
+        "nameEn":  "White Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  246,
+        "recipeId":  412023013,
+        "nameEn":  "Splendent White Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  247,
+        "recipeId":  412023014,
+        "nameEn":  "Wise Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  248,
+        "recipeId":  412023015,
+        "nameEn":  "Splendent Wise Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  249,
+        "recipeId":  412024001,
+        "nameEn":  "Artisan\u0027s Orichalcum Greaves",
+        "nameEs":  "Grebas de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  250,
+        "recipeId":  412025001,
+        "nameEn":  "Expert\u0027s Orichalcum Greaves",
+        "nameEs":  "Grebas de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  251,
+        "recipeId":  412026001,
+        "nameEn":  "Orichalcum Greaves",
+        "nameEs":  "Grebas de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  252,
+        "recipeId":  412033001,
+        "nameEn":  "True Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  253,
+        "recipeId":  412033011,
+        "nameEn":  "Splendent True Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  254,
+        "recipeId":  412033012,
+        "nameEn":  "White Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  255,
+        "recipeId":  412033013,
+        "nameEn":  "Splendent White Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  256,
+        "recipeId":  412033014,
+        "nameEn":  "Wise Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  257,
+        "recipeId":  412033015,
+        "nameEn":  "Splendent Wise Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  258,
+        "recipeId":  412034001,
+        "nameEn":  "Artisan\u0027s Orichalcum Helm",
+        "nameEs":  "Yelmo de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  259,
+        "recipeId":  412035001,
+        "nameEn":  "Expert\u0027s Orichalcum Helm",
+        "nameEs":  "Yelmo de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  260,
+        "recipeId":  412036001,
+        "nameEn":  "Orichalcum Helm",
+        "nameEs":  "Yelmo de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  261,
+        "recipeId":  412043001,
+        "nameEn":  "True Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  262,
+        "recipeId":  412043011,
+        "nameEn":  "Splendent True Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  263,
+        "recipeId":  412043012,
+        "nameEn":  "White Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  264,
+        "recipeId":  412043013,
+        "nameEn":  "Splendent White Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  265,
+        "recipeId":  412043014,
+        "nameEn":  "Wise Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  266,
+        "recipeId":  412043015,
+        "nameEn":  "Splendent Wise Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  267,
+        "recipeId":  412044001,
+        "nameEn":  "Artisan\u0027s Orichalcum Pauldrons",
+        "nameEs":  "Hombreras de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  268,
+        "recipeId":  412045001,
+        "nameEn":  "Expert\u0027s Orichalcum Pauldrons",
+        "nameEs":  "Hombreras de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  269,
+        "recipeId":  412046001,
+        "nameEn":  "Orichalcum Pauldrons",
+        "nameEs":  "Hombreras de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  270,
+        "recipeId":  412053001,
+        "nameEn":  "True Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  271,
+        "recipeId":  412053011,
+        "nameEn":  "Splendent True Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  272,
+        "recipeId":  412053012,
+        "nameEn":  "White Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  273,
+        "recipeId":  412053013,
+        "nameEn":  "Splendent White Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  274,
+        "recipeId":  412053014,
+        "nameEn":  "Wise Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  275,
+        "recipeId":  412053015,
+        "nameEn":  "Splendent Wise Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  276,
+        "recipeId":  412054001,
+        "nameEn":  "Artisan\u0027s Orichalcum Gloves",
+        "nameEs":  "Guantes de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  277,
+        "recipeId":  412055001,
+        "nameEn":  "Expert\u0027s Orichalcum Gloves",
+        "nameEs":  "Guantes de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  278,
+        "recipeId":  412056001,
+        "nameEn":  "Orichalcum Gloves",
+        "nameEs":  "Guantes de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  279,
+        "recipeId":  412063001,
+        "nameEn":  "True Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  280,
+        "recipeId":  412063011,
+        "nameEn":  "Splendent True Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  281,
+        "recipeId":  412063012,
+        "nameEn":  "White Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  282,
+        "recipeId":  412063013,
+        "nameEn":  "Splendent White Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  283,
+        "recipeId":  412063014,
+        "nameEn":  "Wise Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  284,
+        "recipeId":  412063015,
+        "nameEn":  "Splendent Wise Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  285,
+        "recipeId":  412064001,
+        "nameEn":  "Artisan\u0027s Orichalcum Boots",
+        "nameEs":  "Botas de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  286,
+        "recipeId":  412065001,
+        "nameEn":  "Expert\u0027s Orichalcum Boots",
+        "nameEs":  "Botas de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  287,
+        "recipeId":  412066001,
+        "nameEn":  "Orichalcum Boots",
+        "nameEs":  "Botas de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  288,
+        "recipeId":  412073001,
+        "nameEn":  "True Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón verdadero",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  289,
+        "recipeId":  412073011,
+        "nameEn":  "Splendent True Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón verdadero brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  290,
+        "recipeId":  412073012,
+        "nameEn":  "White Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón blanco",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  291,
+        "recipeId":  412073013,
+        "nameEn":  "Splendent White Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón blanco brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  292,
+        "recipeId":  412073014,
+        "nameEn":  "Wise Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón sabio",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  293,
+        "recipeId":  412073015,
+        "nameEn":  "Splendent Wise Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón sabio brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  294,
+        "recipeId":  412074001,
+        "nameEn":  "Artisan\u0027s Orichalcum Cloak",
+        "nameEs":  "Capa de orichalcum de artesano",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  295,
+        "recipeId":  412075001,
+        "nameEn":  "Expert\u0027s Orichalcum Cloak",
+        "nameEs":  "Capa de orichalcum de experto",
+        "subIdx":  44,
+        "grade":  "2"
+    },
+    {
+        "idx":  296,
+        "recipeId":  412076001,
+        "nameEn":  "Orichalcum Cloak",
+        "nameEs":  "Capa de orichalcum",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  297,
+        "recipeId":  415016003,
+        "nameEn":  "Strong Leather",
+        "nameEs":  "Cuero resistente",
+        "subIdx":  44,
+        "grade":  "1"
+    },
+    {
+        "idx":  298,
+        "recipeId":  415024001,
+        "nameEn":  "Tanned Thick Balaur Leather",
+        "nameEs":  "Cuero grueso de Balaur curtido",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  299,
+        "recipeId":  415024002,
+        "nameEn":  "Tanned Hard Balaur Leather",
+        "nameEs":  "Cuero duro de Balaur curtido",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  300,
+        "recipeId":  415024003,
+        "nameEn":  "Tanned Durable Balaur Leather",
+        "nameEs":  "Cuero firme de Balaur curtido",
+        "subIdx":  44,
+        "grade":  "3"
+    },
+    {
+        "idx":  301,
+        "recipeId":  419016001,
+        "nameEn":  "Novice Alchemist\u0027s Scale (Bound)",
+        "nameEs":  "Balanza de alquimista principiante (vinculado)",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  302,
+        "recipeId":  419016002,
+        "nameEn":  "Professional Alchemist\u0027s Scale (Bound)",
+        "nameEs":  "Balanza de alquimista especialista (vinculado)",
+        "subIdx":  45,
+        "grade":  "1"
+    },
+    {
+        "idx":  303,
+        "recipeId":  422013001,
+        "nameEn":  "Star Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  304,
+        "recipeId":  422013011,
+        "nameEn":  "Splendent Star Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  305,
+        "recipeId":  422013012,
+        "nameEn":  "Dark Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  306,
+        "recipeId":  422013013,
+        "nameEn":  "Splendent Dark Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  307,
+        "recipeId":  422013014,
+        "nameEn":  "Ebony Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  308,
+        "recipeId":  422013015,
+        "nameEn":  "Splendent Ebony Dragon Lord Breastplate",
+        "nameEs":  "Peto de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  309,
+        "recipeId":  422023001,
+        "nameEn":  "Star Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  310,
+        "recipeId":  422023011,
+        "nameEn":  "Splendent Star Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  311,
+        "recipeId":  422023012,
+        "nameEn":  "Dark Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  312,
+        "recipeId":  422023013,
+        "nameEn":  "Splendent Dark Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  313,
+        "recipeId":  422023014,
+        "nameEn":  "Ebony Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  314,
+        "recipeId":  422023015,
+        "nameEn":  "Splendent Ebony Dragon Lord Greaves",
+        "nameEs":  "Grebas de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  315,
+        "recipeId":  422033001,
+        "nameEn":  "Star Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  316,
+        "recipeId":  422033011,
+        "nameEn":  "Splendent Star Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  317,
+        "recipeId":  422033012,
+        "nameEn":  "Dark Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  318,
+        "recipeId":  422033013,
+        "nameEn":  "Splendent Dark Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  319,
+        "recipeId":  422033014,
+        "nameEn":  "Ebony Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  320,
+        "recipeId":  422033015,
+        "nameEn":  "Splendent Ebony Dragon Lord Helm",
+        "nameEs":  "Yelmo de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  321,
+        "recipeId":  422043001,
+        "nameEn":  "Star Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  322,
+        "recipeId":  422043011,
+        "nameEn":  "Splendent Star Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  323,
+        "recipeId":  422043012,
+        "nameEn":  "Dark Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  324,
+        "recipeId":  422043013,
+        "nameEn":  "Splendent Dark Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  325,
+        "recipeId":  422043014,
+        "nameEn":  "Ebony Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  326,
+        "recipeId":  422043015,
+        "nameEn":  "Splendent Ebony Dragon Lord Pauldrons",
+        "nameEs":  "Hombreras de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  327,
+        "recipeId":  422053001,
+        "nameEn":  "Star Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  328,
+        "recipeId":  422053011,
+        "nameEn":  "Splendent Star Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  329,
+        "recipeId":  422053012,
+        "nameEn":  "Dark Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  330,
+        "recipeId":  422053013,
+        "nameEn":  "Splendent Dark Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  331,
+        "recipeId":  422053014,
+        "nameEn":  "Ebony Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  332,
+        "recipeId":  422053015,
+        "nameEn":  "Splendent Ebony Dragon Lord Gloves",
+        "nameEs":  "Guantes de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  333,
+        "recipeId":  422063001,
+        "nameEn":  "Star Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  334,
+        "recipeId":  422063011,
+        "nameEn":  "Splendent Star Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  335,
+        "recipeId":  422063012,
+        "nameEn":  "Dark Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  336,
+        "recipeId":  422063013,
+        "nameEn":  "Splendent Dark Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  337,
+        "recipeId":  422063014,
+        "nameEn":  "Ebony Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  338,
+        "recipeId":  422063015,
+        "nameEn":  "Splendent Ebony Dragon Lord Boots",
+        "nameEs":  "Botas de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  339,
+        "recipeId":  422073001,
+        "nameEn":  "Star Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón estelar",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  340,
+        "recipeId":  422073011,
+        "nameEn":  "Splendent Star Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón estelar brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  341,
+        "recipeId":  422073012,
+        "nameEn":  "Dark Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón oscuro",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  342,
+        "recipeId":  422073013,
+        "nameEn":  "Splendent Dark Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón oscuro brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  343,
+        "recipeId":  422073014,
+        "nameEn":  "Ebony Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón sombrío",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  344,
+        "recipeId":  422073015,
+        "nameEn":  "Splendent Ebony Dragon Lord Cloak",
+        "nameEs":  "Capa de rey dragón sombrío brillante",
+        "subIdx":  44,
+        "grade":  "4"
+    },
+    {
+        "idx":  345,
+        "recipeId":  514084001,
+        "nameEn":  "White Dragon\u0027s Chopped Steak",
+        "nameEs":  "Filete en cubos de dragón blanco",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  346,
+        "recipeId":  514084002,
+        "nameEn":  "White Dragon\u0027s Beef Wellington",
+        "nameEs":  "Solomillo wellington de dragón blanco",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  347,
+        "recipeId":  514084005,
+        "nameEn":  "White Dragon\u0027s Seafood Pasta",
+        "nameEs":  "Pasta de mariscos de dragón blanco",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  348,
+        "recipeId":  514085001,
+        "nameEn":  "Artisan\u0027s Curry Meat Stirfry",
+        "nameEs":  "Asado de carne con curry de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  349,
+        "recipeId":  514085002,
+        "nameEn":  "Artisan\u0027s Fruit Salad",
+        "nameEs":  "Macedonia de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  350,
+        "recipeId":  514085003,
+        "nameEn":  "Artisan\u0027s Steamed Cypri",
+        "nameEs":  "Guiso de cypri de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  351,
+        "recipeId":  514085004,
+        "nameEn":  "Artisan\u0027s Inina Pasta",
+        "nameEs":  "Pasta de inina de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  352,
+        "recipeId":  514085005,
+        "nameEn":  "Artisan\u0027s Kukuru Fried Meat",
+        "nameEs":  "Frituras de carne de Kukuru de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  353,
+        "recipeId":  514085006,
+        "nameEn":  "Artisan\u0027s Grilled Cypri",
+        "nameEs":  "Cypri asado de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  354,
+        "recipeId":  514086001,
+        "nameEn":  "Curry Meat Stirfry",
+        "nameEs":  "Asado de carne con curry",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  355,
+        "recipeId":  514086002,
+        "nameEn":  "Fruit Salad",
+        "nameEs":  "Macedonia",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  356,
+        "recipeId":  514086003,
+        "nameEn":  "Steamed Cypri",
+        "nameEs":  "Guiso de cypri",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  357,
+        "recipeId":  514086004,
+        "nameEn":  "Inina Pasta",
+        "nameEs":  "Pasta de inina",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  358,
+        "recipeId":  514086005,
+        "nameEn":  "Kukuru Fried Meat",
+        "nameEs":  "Frituras de carne de Kukuru",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  359,
+        "recipeId":  514086006,
+        "nameEn":  "Grilled Cypri",
+        "nameEs":  "Cypri asado",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  360,
+        "recipeId":  519016001,
+        "nameEn":  "Novice Chef\u0027s Seasoning (Bound)",
+        "nameEs":  "Condimento de cocinero principiante (vinculado)",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  361,
+        "recipeId":  519016002,
+        "nameEn":  "Professional Chef\u0027s Seasoning (Bound)",
+        "nameEs":  "Condimento de cocinero especialista (vinculado)",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  362,
+        "recipeId":  524084001,
+        "nameEn":  "Dark Dragon\u0027s Chopped Steak",
+        "nameEs":  "Filete en cubos de dragón oscuro",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  363,
+        "recipeId":  524084002,
+        "nameEn":  "Dark Dragon\u0027s Beef Wellington",
+        "nameEs":  "Solomillo wellington de dragón oscuro",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  364,
+        "recipeId":  524084005,
+        "nameEn":  "Dark Dragon\u0027s Seafood Pasta",
+        "nameEs":  "Pasta de mariscos de dragón oscuro",
+        "subIdx":  46,
+        "grade":  "3"
+    },
+    {
+        "idx":  365,
+        "recipeId":  524085003,
+        "nameEn":  "Artisan\u0027s Steamed Pujery",
+        "nameEs":  "Guiso de pujery de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  366,
+        "recipeId":  524085004,
+        "nameEn":  "Artisan\u0027s Conide Pasta",
+        "nameEs":  "Pasta de conide de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  367,
+        "recipeId":  524085005,
+        "nameEn":  "Artisan\u0027s Ohkra Fried Meat",
+        "nameEs":  "Frituras de carne de okra de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  368,
+        "recipeId":  524085006,
+        "nameEn":  "Artisan\u0027s Grilled Pujery",
+        "nameEs":  "Pujery asado de artesano",
+        "subIdx":  46,
+        "grade":  "2"
+    },
+    {
+        "idx":  369,
+        "recipeId":  524086003,
+        "nameEn":  "Steamed Pujery",
+        "nameEs":  "Guiso de pujery",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  370,
+        "recipeId":  524086004,
+        "nameEn":  "Conide Pasta",
+        "nameEs":  "Pasta de conide",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  371,
+        "recipeId":  524086005,
+        "nameEn":  "Ohkra Fried Meat",
+        "nameEs":  "Frituras de carne de okra",
+        "subIdx":  46,
+        "grade":  "1"
+    },
+    {
+        "idx":  372,
+        "recipeId":  524086006,
+        "nameEn":  "Grilled Pujery",
+        "nameEs":  "Pujery asado",
+        "subIdx":  46,
+        "grade":  "1"
+    }
+]
