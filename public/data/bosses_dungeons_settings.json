@@ -1,0 +1,1361 @@
+﻿{
+    "generatedAt":  "2026-10-27T23:47:37.3169415-04:00",
+    "bossGroups":  [
+                       {
+                           "id":  "elyos",
+                           "titleEs":  "Elyos — Verteron \u0026 Eltnen (24 Jefes de Campo)",
+                           "titleEn":  "Elyos — Verteron \u0026 Eltnen (24 Field Bosses)",
+                           "bosses":  [
+                                          {
+                                              "id":  "2100050",
+                                              "nameEn":  "Kernon of the West",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Cantas Valley",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100003",
+                                              "nameEn":  "Neikel of the East",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Cantas Valley",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100040",
+                                              "nameEn":  "Rotten Kutar",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Elun River Swamp",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100141",
+                                              "nameEn":  "Blooming Korin",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Elun River Midstream",
+                                              "respawnMinutes":  60,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100079",
+                                              "nameEn":  "Bodyguard Teegant",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Fortress Ruins",
+                                              "respawnMinutes":  90,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100076",
+                                              "nameEn":  "Kusan the Mad Gladiator",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Fortress Ruins",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100077",
+                                              "nameEn":  "Ritualist Garshim",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Fortress Ruins",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100178",
+                                              "nameEn":  "Bloodfang Pnyn",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Tolbas Forest",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100177",
+                                              "nameEn":  "Furious Saursus",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Tolbas Forest",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100988",
+                                              "nameEn":  "Scholar Aulla",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Aulau Village",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100991",
+                                              "nameEn":  "Chaser Taulo",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Aulau Village",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100989",
+                                              "nameEn":  "Forest Warrior Aullamu",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Aulau Village",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100582",
+                                              "nameEn":  "Heretic Layla",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Artamia Plateau",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100617",
+                                              "nameEn":  "Black Tentacle Lawa",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Artamia Gorge",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100708",
+                                              "nameEn":  "Centurion Demiros",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Artamia Plateau",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100718",
+                                              "nameEn":  "Divine Ansas",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Artamia Plateau",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100876",
+                                              "nameEn":  "Harvest Manager Moshav",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Drana Plantation",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100877",
+                                              "nameEn":  "Sentinel K\u0027nash",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Drana Plantation",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2101016",
+                                              "nameEn":  "Researcher Setram",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Nahid Legion Fortress",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2100661",
+                                              "nameEn":  "Phantasm Kasia",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Garden of the Illusion God",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2101120",
+                                              "nameEn":  "Silent Dartan",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Artamia Plateau South",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2101122",
+                                              "nameEn":  "Soul Ruler Kashapa",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Artamia Plateau East",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2101131",
+                                              "nameEn":  "High Commander Lagta",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Red Forest",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2101074",
+                                              "nameEn":  "Eternal Gartua",
+                                              "titleEn":  "",
+                                              "level":  51,
+                                              "areaEn":  "Isle of Eternity",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "asmodians",
+                           "titleEs":  "Asmodian — Altgard \u0026 Morheim (24 Jefes de Campo)",
+                           "titleEn":  "Asmodian — Altgard \u0026 Morheim (24 Field Bosses)",
+                           "bosses":  [
+                                          {
+                                              "id":  "2400017",
+                                              "nameEn":  "Melted Danar",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Dredgion Crash Site",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400074",
+                                              "nameEn":  "Black Warrior Aed",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Nameless Graveyard",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400140",
+                                              "nameEn":  "Faithful Rajit",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Sanctuary Watch Post",
+                                              "respawnMinutes":  30,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400141",
+                                              "nameEn":  "Berserker Vargor",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Sanctuary Watch Post",
+                                              "respawnMinutes":  60,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400223",
+                                              "nameEn":  "Blood Warrior Lannar",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Moslan Forest",
+                                              "respawnMinutes":  90,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400212",
+                                              "nameEn":  "Predator Garsan",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Moslan Forest",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400274",
+                                              "nameEn":  "Deceiver Trid",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Urtumheim",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400335",
+                                              "nameEn":  "Blue Wave Kelpina",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Forest of Purification",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400358",
+                                              "nameEn":  "Advisor Resana",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Dranactus",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400353",
+                                              "nameEn":  "High Overseer Nutah",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Dranactus",
+                                              "respawnMinutes":  120,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400419",
+                                              "nameEn":  "Special Operations Leader Linx",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Basfelt Ruins",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400424",
+                                              "nameEn":  "Desecrator Newbold",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Basfelt Ruins",
+                                              "respawnMinutes":  240,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400425",
+                                              "nameEn":  "Specter Archon Axios",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Basfelt Ruins",
+                                              "respawnMinutes":  240,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400474",
+                                              "nameEn":  "Addicted Hardirun",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Pafnite Burial Ground",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400504",
+                                              "nameEn":  "Executioner Barthien",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Gribade Canyon West",
+                                              "respawnMinutes":  240,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400593",
+                                              "nameEn":  "Drakan Battalion Weapon Guruta",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Gribade Canyon East",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400607",
+                                              "nameEn":  "Veteran Shujakan",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Black Claw Village",
+                                              "respawnMinutes":  180,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400608",
+                                              "nameEn":  "Visionary Karuka",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Black Claw Village",
+                                              "respawnMinutes":  240,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400659",
+                                              "nameEn":  "Dark Shadow Vishwada",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Ragta Fortress",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400709",
+                                              "nameEn":  "Sharp Shylak",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Impetusium Plaza",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400855",
+                                              "nameEn":  "Silent Dartan",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Forest of Purification",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400854",
+                                              "nameEn":  "Soul Ruler Kashapa",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Pafnite Burial Ground",
+                                              "respawnMinutes":  360,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400853",
+                                              "nameEn":  "High Commander Lagta",
+                                              "titleEn":  "",
+                                              "level":  48,
+                                              "areaEn":  "Ragta Fortress",
+                                              "respawnMinutes":  720,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          },
+                                          {
+                                              "id":  "2400800",
+                                              "nameEn":  "Immortal Gartua",
+                                              "titleEn":  "",
+                                              "level":  51,
+                                              "areaEn":  "Isle of Immortality",
+                                              "respawnMinutes":  720,
+                                              "schedule":  "",
+                                              "krReference":  ""
+                                          }
+                                      ]
+                       },
+                       {
+                           "id":  "abyss",
+                           "titleEs":  "Abismo — Reshanta (5 Jefes de Fortaleza / Artefacto)",
+                           "titleEn":  "Abyss — Reshanta (5 Core / Artifact Bosses)",
+                           "bosses":  [
+                                          {
+                                              "id":  "2600089",
+                                              "nameEn":  "Watcher Kaira",
+                                              "titleEn":  "",
+                                              "level":  65,
+                                              "areaEn":  "Field / Abyss",
+                                              "respawnMinutes":  0,
+                                              "schedule":  "",
+                                              "krReference":  "@{en=every 4 h from 01:00; ru=каждые 4 ч с 01:00; pt-BR=A cada 4 h de 01:00}"
+                                          },
+                                          {
+                                              "id":  "2600097",
+                                              "nameEn":  "Executor Argo",
+                                              "titleEn":  "",
+                                              "level":  65,
+                                              "areaEn":  "Field / Abyss",
+                                              "respawnMinutes":  0,
+                                              "schedule":  "",
+                                              "krReference":  "@{en=Wed, Sat 22:30; ru=ср, сб 22:30; pt-BR=Wed, Sáb 22:30}"
+                                          },
+                                          {
+                                              "id":  "2600098",
+                                              "nameEn":  "Executor Kaira",
+                                              "titleEn":  "",
+                                              "level":  65,
+                                              "areaEn":  "Field / Abyss",
+                                              "respawnMinutes":  0,
+                                              "schedule":  "",
+                                              "krReference":  "@{en=Wed, Sat 22:30; ru=ср, сб 22:30; pt-BR=Wed, Sáb 22:30}"
+                                          },
+                                          {
+                                              "id":  "2600096",
+                                              "nameEn":  "Executor Tamasa",
+                                              "titleEn":  "",
+                                              "level":  65,
+                                              "areaEn":  "Field / Abyss",
+                                              "respawnMinutes":  0,
+                                              "schedule":  "",
+                                              "krReference":  "@{en=Wed, Sat 22:30; ru=ср, сб 22:30; pt-BR=Wed, Sáb 22:30}"
+                                          },
+                                          {
+                                              "id":  "siege-lower",
+                                              "nameEn":  "Abyss siege boss",
+                                              "titleEn":  "",
+                                              "level":  45,
+                                              "areaEn":  "Field / Abyss",
+                                              "respawnMinutes":  0,
+                                              "schedule":  "",
+                                              "krReference":  "@{en=Fri, Sun 22:00; ru=пт, вс 22:00; pt-BR=Sex, Sun 22:00}"
+                                          }
+                                      ]
+                       }
+                   ],
+    "dungeonGuides":  [
+                          {
+                              "id":  "krao-cave",
+                              "dbId":  "600001",
+                              "nameEn":  "Krao Cave",
+                              "type":  "expedition",
+                              "minGs":  700,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Hide behind the rocks",
+                                                                       "textEn":  "The boss flies to the middle and four rocks appear at the edges. While he casts, everyone hides behind a rock — the green area behind each one is safe. Anyone left in the open is one-shot. Watch his cast bar.",
+                                                                       "legendEn":  "Boss in the middle, four rocks at the edge; stand in the green shadow behind a rock.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/krao-rocks.svg",
+                                                                       "videoTimestamp":  "1:15"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Bleeding spin",
+                                                                       "textEn":  "After a pizza-slice hit, bright sparks flash around him and he spins after one player, adding bleeding. Stay out of his path; new players can burn a dodge, a potion or an invulnerability here.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "1:33"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Stagger bar",
+                                                                       "textEn":  "When he raises his claws a stagger bar appears — break it fast or the group dies. Save your stagger skills for this moment; a broken bar stuns him for a few seconds of free damage.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "2:03"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "draupnir",
+                              "dbId":  "600031",
+                              "nameEn":  "Draupnir",
+                              "type":  "expedition",
+                              "minGs":  700,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Waves, then the stun bar",
+                                                                       "textEn":  "The screen goes black and everyone lands at the edge on opposite sides. Waves roll out from the boss: run in at once and jump each wave (Space) to reach the safe zone right next to him — gap-closers of Gladiator, Chanter and Assassin help. Then break the stun bar immediately: a slow group runs out of time and wipes.",
+                                                                       "legendEn":  "Start at the edge, jump the rings, finish next to the boss.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/draupnir-waves.svg",
+                                                                       "videoTimestamp":  "2:45"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Dive and scatter",
+                                                                       "textEn":  "He dives and attacks every player separately — keep moving and spread out. A big area hit ends the phase: just get out of it. Near the end the wave phase repeats with tornadoes on the water to run around.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "3:36"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "urugugu-canyon",
+                              "dbId":  "600011",
+                              "nameEn":  "Urugugu Canyon",
+                              "type":  "expedition",
+                              "minGs":  1400,
+                              "odyleCost":  20,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Winds in front",
+                                                                       "textEn":  "His winds hit in front of him — stand behind. If they catch you, he lifts you in his beak for a few seconds and slams you into the ground.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "4:30"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Marked player: share the hit",
+                                                                       "textEn":  "He flies up, marks one player with his eye and a small field grows around them, with arrows pointing in from four sides. Everyone runs into that circle and splits the final hit, or the marked player dies. Avoid the wind lines on the way. In the second phase he does the same from the middle, with a vortex around the arena.",
+                                                                       "legendEn":  "Arrows from four sides: the whole group stacks inside the marked circle.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/share-circle.svg",
+                                                                       "videoTimestamp":  "4:45"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "vakron-sky-island",
+                              "dbId":  "600071",
+                              "nameEn":  "Vakron Sky Island",
+                              "type":  "expedition",
+                              "minGs":  1400,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Poisoned arena",
+                                                                       "textEn":  "She retreats to the middle and poisons everything but a small circle around her; a flower blooms inside — kill it to clean the area. She throws poison at every player and it stays on the ground, so the whole group moves together in one direction to keep a clean patch.",
+                                                                       "legendEn":  "Kill the flower; move together so the poison stays behind you.",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "/diagrams/tiere-poison.svg",
+                                                                       "videoTimestamp":  "5:48"
+                                                                   }
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Stone circles",
+                                                                       "textEn":  "Light circles flash under the players; stay in one and you turn to stone. The others break the stone fast, because a huge area hit comes right after and hits whoever is still trapped.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "6:24"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Red or purple",
+                                                                       "textEn":  "In the second phase he puts a vampiric buff on himself: red glow — melee stops hitting; purple glow — casters stop. Hitting into the wrong colour heals him a lot.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "6:36"
+                                                                   }
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "The seed",
+                                                                       "textEn":  "He throws a seed at a player; a few seconds later it roots them in spikes with heavy damage over time and spreads to anyone close. The seeded player steps out of the group — not too far, so the others can still hit the spikes and free them.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "7:03"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Red floor: three waves and a blast",
+                                                                       "textEn":  "The whole floor turns red. Three waves roll out from him — jump each one. At the same time attacks shoot out of the centre along lines in every direction, in two sets that take turns: stand between the lines of the next set. A moment after the third wave a blast covers the area: dodge it with a jump too. The easy way: on the third wave jump, press Space again and glide, and the blast passes under you.",
+                                                                       "legendEn":  "Jump the three rings; the red lines are the attacks from the centre — stand between them; glide over the final blast.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/vakron-waves.svg",
+                                                                       "videoTimestamp":  "7:15"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "The red rock",
+                                                                       "textEn":  "He goes to the middle and pulls everyone in; rocks grow around him and one is reddish. The whole group breaks that rock and runs out of the circle through the gap — if it stays, everyone dies.",
+                                                                       "legendEn":  "Break the red rock, leave the circle through its gap.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/vakron-rocks.svg",
+                                                                       "videoTimestamp":  "7:45"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "fire-temple",
+                              "dbId":  "600021",
+                              "nameEn":  "Fire Temple",
+                              "type":  "expedition",
+                              "minGs":  2100,
+                              "odyleCost":  30,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Bow up, bow down",
+                                                                       "textEn":  "Bow raised: arrows rain on every player — keep moving. Bow lowered: balls fly out in several directions and debuff whoever they hit. Then she leaps from player to player with area hits, and later a three-stage leap whose radius grows each time.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "8:44"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Walls of fire",
+                                                                       "textEn":  "She flies up and walls of fire sweep across the arena with one safe window each. The windows jump left and right, so turn early — with high ping, start turning before you reach the wall. Heal and use invulnerabilities; surviving is all that matters. The second time, fireballs fly around the arena too.",
+                                                                       "legendEn":  "One window per wall, never in the same place: zigzag through.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/fire-walls.svg",
+                                                                       "videoTimestamp":  "9:30"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Clones",
+                                                                       "textEn":  "She moves to the middle and illusions appear that attack fast, then close in and hit an area together — dash or run out of it. After the second fire walls more illusions shoot fire arrows from the edges.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "10:12"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "ferocious-horn-den",
+                              "dbId":  "600091",
+                              "nameEn":  "Ferocious Horn Den",
+                              "type":  "expedition",
+                              "minGs":  2100,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Illusion leap",
+                                                                       "textEn":  "He jumps onto his statue, marks and roots a player and his illusion jumps away from them while a circle grows. Read the arrows: small circle — the supports run in; large circle — they run out. One more player stands in the illusion\u0027s path, or its damage-taken debuff kills the marked player when the wolf lands. Two jumps the first time, three the second.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "12:48"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Redirect the strike into the orb",
+                                                                       "textEn":  "He casts an orb in the middle that pulls players slightly, jumps to the side and marks a player. The marked player runs to the opposite side, through the area hits, so his ranged strike passes through the orb. Three hits out of four attempts must go into the orb; he jumps somewhere new every time.",
+                                                                       "legendEn":  "Boss, orb and marked player on one line.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/nuakum-orb.svg",
+                                                                       "videoTimestamp":  "13:42"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "deus-research-base",
+                              "dbId":  "600053",
+                              "nameEn":  "Deus Research Base",
+                              "type":  "transcendence",
+                              "minGs":  1600,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Charge and puddles",
+                                                                       "textEn":  "His whip hits hurt on weak gear; a debuff that reaches three stacks makes you explode with lightning in all directions. He marks a player and charges twice, leaving an electric puddle each time — the marked player drags him to a corner so the puddles don\u0027t cover the arena. Then he pounds the ground from the middle: dodge the zones before the big whip hit.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "15:09"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "The great whip",
+                                                                       "textEn":  "A large ring appears and he swings the great whip in every direction for colossal damage — run out of the ring or block it with skills.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "16:03"
+                                                                   }
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Thread and shared hit",
+                                                                       "textEn":  "She pulls the group together and a thread links the players — run apart to break it. Then she roots a player: everyone runs into that circle to share the damage. Waves fly out that hurt and stun briefly — find their rhythm — while a wind pushes you to the edge, which explodes and shrinks at the end.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "16:51"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Last stagger",
+                                                                       "textEn":  "Copies rush across the arena like a train while a red thread punishes going too far from her. Then she spawns a stagger bar, but the wind blows melee off — close in with skills and break it while dodging her pizza hits. If the bar holds, the run fails.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "17:32"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "shattered-arkanis",
+                              "dbId":  "600063",
+                              "nameEn":  "Shattered Arkanis",
+                              "type":  "transcendence",
+                              "minGs":  1600,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Cross the rings",
+                                                                       "textEn":  "First she throws rings at a few players, then the rest fly out — read their path to find a safe spot. The main mechanic is for two players: two rings slowly come at them along red bars. Stand so the bars form a cross and the rings collide. If one player moves at the last second they fly past and must be lined up again; a failed try sends them after you and hurts everyone. Adjust calmly.",
+                                                                       "legendEn":  "Two players make the red bars cross; the rings meet in the middle.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/rings-cross.svg",
+                                                                       "videoTimestamp":  "18:57"
+                                                                   }
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+
+                                                               ]
+                                             },
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Final Boss",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Spears and beams",
+                                                                       "textEn":  "Four spears appear, three purple and one white — attack the white one or it hits very hard. Circles on the water mean fire beams from above that move chaotically. She sends a white wave outward and a purple wave inward: jump both.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "20:36"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Colour orbs and domes",
+                                                                       "textEn":  "Purple and white orbs converge on her from all sides — agree in advance who collects which colour; each missed orb raises her damage. When they run out a dome of your colour forms over you; don\u0027t stand close to others or the domes vanish. Remember the order of colours she shows: everyone stands under the dome of the first colour, then moves to the second. The second time there are three colours and waves to jump.",
+                                                                       "legendEn":  "Each player under their own dome, apart; go to the colour she shows first.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/color-domes.svg",
+                                                                       "videoTimestamp":  "21:03"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Break the cage",
+                                                                       "textEn":  "She locks one player in a cage that takes damage and throws spears at the other three, their path shown by a yellow bar. Aim all three at the cage: three hits shatter it.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "22:09"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          },
+                          {
+                              "id":  "zikel",
+                              "dbId":  "",
+                              "nameEn":  "zikel",
+                              "type":  "nightmare",
+                              "minGs":  1600,
+                              "odyleCost":  40,
+                              "bosses":  [
+                                             {
+                                                 "id":  "",
+                                                 "nameEn":  "Zikel",
+                                                 "iconUrl":  "https://aion2-guides.info/assets/bosses/.webp",
+                                                 "mechanics":  [
+                                                                   {
+                                                                       "nameEn":  "Every hit hurts",
+                                                                       "textEn":  "Dodge everything: single hits and short combos all hurt, and they bleed — clear it with potions or skills. One attack tethers and lifts you, then his huge sword lands.",
+                                                                       "legendEn":  "",
+                                                                       "isWipeDanger":  false,
+                                                                       "diagramSvg":  "",
+                                                                       "videoTimestamp":  "23:27"
+                                                                   },
+                                                                   {
+                                                                       "nameEn":  "Safe lanes",
+                                                                       "textEn":  "He jumps to the edge and slams the ground; once he has struck, a safe lane forms — step in, never before. He reappears on the opposite side and slams a second, roughly parallel lane: start moving when the purple glow fades, not earlier and not later. If you are outside a lane when the arena lights purple again, you die. Then he dives to the middle — jump right before the landing wave. The second round adds area hits on the floor and a third side; at the end the safe spot is right next to him.",
+                                                                       "legendEn":  "He strikes from one side, then the other: move from lane to lane on his swing.",
+                                                                       "isWipeDanger":  true,
+                                                                       "diagramSvg":  "/diagrams/zikel-lanes.svg",
+                                                                       "videoTimestamp":  "24:00"
+                                                                   }
+                                                               ]
+                                             }
+                                         ]
+                          }
+                      ],
+    "settingsGroups":  [
+                           {
+                               "id":  "first",
+                               "titleEn":  "Change these first",
+                               "options":  [
+                                               {
+                                                   "group":  "Key Settings → General",
+                                                   "recommendedValue":  "bind a key",
+                                                   "textEn":  "Macro bind a key — usually the right mouse button It has no key by default, and without one the in-game macro simply does not work."
+                                               },
+                                               {
+                                                   "group":  "Key Settings → General",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Separate Defiance Hotkey ON + its own key On Space, Defiance shares a key with jump and glide — mash it under control and you take off gliding."
+                                               },
+                                               {
+                                                   "group":  "Key Settings → General",
+                                                   "recommendedValue":  "comfortable keys",
+                                                   "textEn":  "Fly Up, Fly Down comfortable keys The defaults are Ctrl+R and Ctrl+F, and you need both all the time."
+                                               },
+                                               {
+                                                   "group":  "Key Settings → General",
+                                                   "recommendedValue":  "a second key",
+                                                   "textEn":  "Interact a second key : F + Z Tap the two in turn — quest dialogues skip much faster."
+                                               },
+                                               {
+                                                   "group":  "Combat",
+                                                   "recommendedValue":  "In Combat",
+                                                   "textEn":  "Auto-use → Buff Auto-use Conditions In Combat Buff scrolls stop burning while you run around town."
+                                               },
+                                               {
+                                                   "group":  "Combat",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Controls → Skill Queue ON The macro works best with it."
+                                               },
+                                               {
+                                                   "group":  "Combat",
+                                                   "recommendedValue":  "Front of Camera",
+                                                   "textEn":  "Target Scanning → Preferred Search Direction Front of Camera Tab takes the target you are looking at."
+                                               },
+                                               {
+                                                   "group":  "Combat",
+                                                   "recommendedValue":  "Priority Ranking",
+                                                   "textEn":  "Target Scanning → Detailed Settings Priority Ranking , Hostile Players first For PvP: Tab takes players before mobs."
+                                               },
+                                               {
+                                                   "group":  "Info Display → Combat",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Aggro Range Display ON You see where a mob will aggro."
+                                               },
+                                               {
+                                                   "group":  "Info Display → Combat",
+                                                   "recommendedValue":  "ALL",
+                                                   "textEn":  "Display Boss Orientation Indicator ALL You see where the boss\u0027s back is."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize",
+                                                   "recommendedValue":  "Very Low",
+                                                   "textEn":  "Effect Quality Very Low The biggest FPS gain and far less flashing on screen."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize",
+                                                   "recommendedValue":  "Self Only",
+                                                   "textEn":  "Player Particle Effect Display Self Only Hides everyone else\u0027s skill effects."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Identical Player Appearance, [Abyss] Display as Tier Icon ON A must for mass PvP."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "Dark",
+                                                   "textEn":  "Teleport Effect Color Dark No white flash on every teleport."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "Camera Shake Effect During Combat OFF No shaking in combat."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "World Map Transition Animation OFF No animation every time you open the map."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "controls",
+                               "titleEn":  "Combat → Controls",
+                               "options":  [
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "AION 2",
+                                                   "textEn":  "Control Mode AION 2 Better for the macro on a mouse button; see above."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Display Distance to Aimed Target ON Shows the distance to the target above its nameplate."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Adjust Aim Position to taste Moves the aim up or down on the screen (188px in the video)."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "Hostile Target",
+                                                   "textEn":  "Select Aimable Target Hostile Target Otherwise the aim also picks allies. You rarely need to target an ally — it is better to stay on the one you are attacking."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "Pursue Targets with Skill Activation OFF for ranged, optional for melee When ON, pressing a skill out of range makes the character walk to the target and then use it. OFF gives more control."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Auto Target Upon Skill Use ON for open-world farming (default: OFF) With no target selected, a skill picks the nearest one: run around holding the macro and it goes from mob to mob. Grobs always turns it on for farming, above all on ranged classes; Whelps keeps it off outside farming."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Set Main Target Upon Attack two ways, see below (default: ON, both clicks ON) Whether an attack locks the target. Whelps: ON with left click ON and right click OFF. Grobs: OFF on melee."
+                                               },
+                                               {
+                                                   "group":  "Combat → Controls",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Skill Queue ON A skill pressed during another one is queued. Gives the best result with the macro."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "targeting",
+                               "titleEn":  "Combat → Target Scanning",
+                               "options":  [
+                                               {
+                                                   "group":  "Combat → Target Scanning",
+                                                   "recommendedValue":  "Front of Camera",
+                                                   "textEn":  "Preferred Search Direction Front of Camera (default: None) Tab looks for targets where the camera points, so you control what it picks."
+                                               },
+                                               {
+                                                   "group":  "Combat → Target Scanning",
+                                                   "recommendedValue":  "Priority Ranking",
+                                                   "textEn":  "Target Scanning Detailed Settings Priority Ranking (default: Closest First) If you PvP: targets are picked by your own priority list instead of by distance. In the Abyss there are mobs and players side by side — Tab must take the player."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "autouse",
+                               "titleEn":  "Combat → Looting and Auto-use",
+                               "options":  [
+                                               {
+                                                   "group":  "Combat → Looting and Auto-use",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Looting → Obtaining Gear / Obtaining Item All, or filter You can stop picking up a gear grade (Common, Rare …) or an item type (potions, shards, crafting materials) — useful when the bag fills up on a farm."
+                                               },
+                                               {
+                                                   "group":  "Combat → Looting and Auto-use",
+                                                   "recommendedValue":  "In Combat",
+                                                   "textEn":  "Auto-use → Buff Auto-use Conditions In Combat Buff scrolls usually sit on auto-use. With the «in motion» option they are used the moment you move, with «always» — all the time. Both waste scrolls."
+                                               },
+                                               {
+                                                   "group":  "Combat → Looting and Auto-use",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Auto-use → Life Potion ON , 83% in the video Potions are drunk automatically below the chosen HP."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "keys",
+                               "titleEn":  "Key Settings: keys worth binding",
+                               "options":  [
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "General → Separate Defiance Hotkey + Set Defiance Hotkey ON , key ` (left of 1); default: OFF By default Defiance (breaks control) is on Space together with jump and glide. Spam Space under control — and you start gliding, which ruins your next move: a boss mechanic or a PvP fight is lost."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "General → Fly Up, Fly Down side mouse button for Fly Up; defaults: Ctrl+R and Ctrl+F Flies straight up or down without tilting the camera — in PvP the camera stays on the target. You need both all the time, and nobody presses Ctrl+R for that: rebind them on the first login and get used to them."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "no key",
+                                                   "textEn":  "General → Macro right mouse button; default: no key Without a key the macro does not work at all. It is held down all fight, so it goes on the most comfortable button — for most players the right click."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "General → Target Hostile Players Caps (Whelps); e.g. the middle mouse button (Grobs) Targets enemy players only. In the Abyss Tab keeps landing on mobs — this key does not. Grobs does not use it himself: for him Priority Ranking is enough."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "General → Switch Control Mode / Switches between the AION 2 and AION 1 modes on the fly."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "General → Combat Analysis Ctrl+X Opens the built-in damage meter."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Menu → Display Cursor Alt (hold) In AION 2 mode: hold it to get the cursor and click the interface."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Quickslot two keys per slot Every hotbar slot takes a main and a second key."
+                                               },
+                                               {
+                                                   "group":  "Key Settings: keys worth binding",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Marker numpad sets a marker, Ctrl+1 selects marker 1 For group PvP with voice chat: the leader marks a target, everyone selects it with one key."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "display",
+                               "titleEn":  "Info Display: what is shown on screen",
+                               "options":  [
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Combat → Aggro Range Display ON Select a monster and you see a blue circle — step inside and it attacks."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "ALL",
+                                                   "textEn":  "Combat → Display Boss Orientation Indicator ALL An arc around the boss: the blue part is its front, the yellow one its back. Helps to stand behind it."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Combat → Display Skill Range ON Shows the range of your skills."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Common → Performance → Display Network Status ON A ping indicator in the corner of the screen."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "Common → Pets → Display Other Players\u0027 Pets OFF Your own pet stays, everyone else\u0027s disappear — they only cost performance."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Common → Nameplate to taste Hide the nameplates of other players, their spirits and monsters to clear the screen. Your own nameplate cannot be hidden."
+                                               },
+                                               {
+                                                   "group":  "Info Display: what is shown on screen",
+                                                   "recommendedValue":  "UI Proportion",
+                                                   "textEn":  "Floater → Combat Floater Display ON, with a smaller UI The flying damage and healing numbers. They can be turned off, all or one by one (damage on me, heal on me, damage on target …), but then hits feel empty. Grobs keeps them and makes them smaller with UI Proportion — see Graphics."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "graphics",
+                               "titleEn":  "Graphics → Optimize: FPS and mass PvP",
+                               "options":  [
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "Small",
+                                                   "textEn":  "UI Proportion Small (default: Medium) Scales the interface and the damage numbers together: a smaller UI means smaller numbers, so they stop covering the fight."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "Very Low",
+                                                   "textEn":  "Effect Quality Very Low Hits FPS harder than anything else (Whelps keeps the rest on Very High) and removes a lot of particles — much easier on the eyes over long sessions."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "DLSS",
+                                                   "textEn":  "Upscaler DLSS On an NVIDIA card."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "off in PvE",
+                                                   "textEn":  "Frame Generator off in PvE , on for mass PvP Frame generation adds input lag, and input lag is lost damage. In big fights smoothness matters more."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "Self Only",
+                                                   "textEn":  "Player Particle Effect Display Self Only (Grobs); Self and Party (Whelps) Self Only hides the skill effects of everyone else, teammates included: less clutter and a clear FPS gain. You will notice it is missing now and then — worth it."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "BOOST",
+                                                   "textEn":  "NVIDIA Reflex BOOST Lower input delay."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Volumetric Light Scattering, Volumetric Fog OFF in the video Set on his screen; he does not comment on them."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "[Abyss] Display as Tier Icon ON Enemy nameplates in the Abyss turn into small rank icons — far fewer labels on screen."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Optimize: FPS and mass PvP",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Identical Player Appearance ON All other players get the same simple look; applies at once. The game is not optimized for sieges and other large-scale fights — without this they are close to unplayable on any PC."
+                                               }
+                                           ]
+                           },
+                           {
+                               "id":  "camera",
+                               "titleEn":  "Graphics → Camera / Direction",
+                               "options":  [
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "World Map Transition Animation OFF Otherwise an animation plays every time you open the map — it gets dizzying."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "Dark",
+                                                   "textEn":  "Teleport Effect Color Dark (default: Bright) The bright version is a white screen in your face on every teleport."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Camera Perspective Default, or over the shoulder The second option puts the character slightly left of the centre."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "OFF",
+                                                   "textEn":  "Camera Shake Effect During Combat OFF Both authors turn it off. A matter of taste — some like the shaking."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "ON",
+                                                   "textEn":  "Display Weapon Outside of Combat ON (default: OFF) Purely for looks: the weapon stays visible instead of disappearing outside combat."
+                                               },
+                                               {
+                                                   "group":  "Graphics → Camera / Direction",
+                                                   "recommendedValue":  "Recommended",
+                                                   "textEn":  "Display Equipped Title Effects on Nameplate to taste The frames of special titles around names. OFF removes them; there is also «on my nameplate only»."
+                                               }
+                                           ]
+                           }
+                       ]
+}

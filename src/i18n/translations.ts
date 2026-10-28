@@ -9,6 +9,7 @@ export interface TranslationsDictionary {
   readonly navAuditor: string;
   readonly navClasses: string;
   readonly navCharacters: string;
+  readonly navBosses: string;
   readonly navTools: string;
   readonly navExplorer: string;
   readonly navGlossary: string;
@@ -53,6 +54,7 @@ export const TRANSLATIONS: Readonly<Record<Locale, TranslationsDictionary>> = {
     navAuditor: '📊 Crafteo & Mercado (242)',
     navClasses: '⚔️ Guías de Clases (8)',
     navCharacters: '🏆 Mis PJs & Leaderboard',
+    navBosses: '🐉 Bosses, Mecánicas & Settings',
     navTools: '🛠️ Herramientas & Mazmorras',
     navExplorer: '🗄️ Base de Datos (6.637)',
     navGlossary: '📚 Glosario & Checklist',
@@ -97,6 +99,7 @@ export const TRANSLATIONS: Readonly<Record<Locale, TranslationsDictionary>> = {
     navAuditor: '📊 Crafting & Market (242)',
     navClasses: '⚔️ Class Guides (8)',
     navCharacters: '🏆 My Chars & Leaderboard',
+    navBosses: '🐉 Bosses, Mechanics & Settings',
     navTools: '🛠️ Tools & Dungeons',
     navExplorer: '🗄️ Database (6,637)',
     navGlossary: '📚 Glossary & Checklist',

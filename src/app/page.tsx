@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useState } from 'react';
+import { BossesDungeonsSettingsTab } from '../components/BossesDungeonsSettingsTab';
 import { CharacterAndLeaderboardTab } from '../components/CharacterAndLeaderboardTab';
 import { ClassGuidesTab } from '../components/ClassGuidesTab';
 import { CraftingAuditorDashboard } from '../components/CraftingAuditorDashboard';
@@ -23,6 +24,7 @@ type MainTab =
   | 'AUDITOR'
   | 'CLASSES'
   | 'CHARACTERS'
+  | 'BOSSES'
   | 'TOOLS'
   | 'EXPLORER'
   | 'GLOSSARY';
@@ -144,6 +146,7 @@ export default function HomePage(): React.ReactElement {
                 { id: 'AUDITOR', label: t.navAuditor },
                 { id: 'CLASSES', label: t.navClasses },
                 { id: 'CHARACTERS', label: t.navCharacters },
+                { id: 'BOSSES', label: t.navBosses },
                 { id: 'TOOLS', label: t.navTools },
                 { id: 'EXPLORER', label: t.navExplorer },
                 { id: 'GLOSSARY', label: t.navGlossary },
@@ -195,6 +198,8 @@ export default function HomePage(): React.ReactElement {
         {activeTab === 'CHARACTERS' && (
           <CharacterAndLeaderboardTab locale={locale} userPrefs={userPrefs} />
         )}
+
+        {activeTab === 'BOSSES' && <BossesDungeonsSettingsTab locale={locale} />}
 
         {activeTab === 'TOOLS' && (
           <ToolsAndDungeonsTab
