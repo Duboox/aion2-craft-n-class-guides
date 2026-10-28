@@ -12,8 +12,13 @@ import type {
   EvaluatedRecipeAudit,
   MarketItem,
   NpcVendorMaterial,
+  RecipeFilterScope,
   RecipeVerdict,
+  SavedCharacterConfig,
+  ShugoCharacterProfile,
+  ShugoLeaderboardEntry,
   SubstanceMorphRecipe,
+  UserPreferences,
   VerifiedRecipe,
 } from '../../domain/models/types';
 import type {
@@ -21,27 +26,42 @@ import type {
   IDatabaseLifecycleRepository,
   IMarketRepository,
   IRecipeRepository,
+  IShugoRepository,
+  IUserPreferencesRepository,
 } from '../../domain/repositories/interfaces';
 import {
   type Aion2GgCatalogDto,
   type Aion2GgMorphRowDto,
   type Aion2GgVendorDto,
+  type ClientRecipeJsonDto,
   adaptExchangePayloadToDtoArray,
   mapCatalogDtoToDomain,
+  mapClientRecipeDtoToDomain,
   mapExchangeDtoToMarketItem,
   mapMorphDtoToDomain,
+  mapShugoLeaderboardDtoToDomain,
   mapVendorDtoToDomain,
+  parseShugoProfileHtmlToDomain,
 } from '../adapters/dto.adapters';
 import { dbInstance } from '../db/dexie.db';
 
 const META_LAST_SYNC_KEY = 'lastSyncedAt';
 const META_SYNC_SOURCE_KEY = 'syncSource';
+const META_USER_PREFS_KEY = 'userPreferencesJson';
+
+const DEFAULT_USER_PREFS: UserPreferences = {
+  selectedServerId: ENDPOINTS_CONFIG.defaultServerId,
+  hasActiveSubscription: true,
+  legionName: ENDPOINTS_CONFIG.defaultLegionName,
+};
 
 export class Aion2UnifiedRepository
   implements
     IMarketRepository,
     ICatalogRepository,
     IRecipeRepository,
+    IUserPreferencesRepository,
+    IShugoRepository,
     IDatabaseLifecycleRepository
 {
   private initPromise: Promise<DatabaseStats> | null = null;
@@ -53,6 +73,7 @@ export class Aion2UnifiedRepository
         marketItemsCount: 0,
         vendorItemsCount: 0,
         morphCount: 0,
+        clientRecipesCount: 0,
         lastSyncedAt: null,
         syncSource: 'EMPTY',
       };
@@ -64,10 +85,14 @@ export class Aion2UnifiedRepository
 
     this.initPromise = (async (): Promise<DatabaseStats> => {
       await dbInstance.open();
-      const existingMarketCount = await dbInstance.marketItems.count();
-      const existingCatalogCount = await dbInstance.catalogItems.count();
+      const [existingMarketCount, existingCatalogCount, existingRecipeCount] =
+        await Promise.all([
+          dbInstance.marketItems.count(),
+          dbInstance.catalogItems.count(),
+          dbInstance.clientRecipes.count(),
+        ]);
 
-      if (existingMarketCount > 0 && existingCatalogCount > 0) {
+      if (existingMarketCount > 0 && existingCatalogCount > 0 && existingRecipeCount > 50) {
         return this.getDatabaseStats();
       }
       return this.reseedFromStaticFiles();
@@ -87,20 +112,29 @@ export class Aion2UnifiedRepository
         marketItemsCount: 0,
         vendorItemsCount: 0,
         morphCount: 0,
+        clientRecipesCount: 0,
         lastSyncedAt: null,
         syncSource: 'EMPTY',
       };
     }
     await dbInstance.open();
-    const [catalogCount, marketItemsCount, vendorItemsCount, morphCount, syncMeta, sourceMeta] =
-      await Promise.all([
-        dbInstance.catalogItems.count(),
-        dbInstance.marketItems.count(),
-        dbInstance.vendorMaterials.count(),
-        dbInstance.morphRecipes.count(),
-        dbInstance.meta.get(META_LAST_SYNC_KEY),
-        dbInstance.meta.get(META_SYNC_SOURCE_KEY),
-      ]);
+    const [
+      catalogCount,
+      marketItemsCount,
+      vendorItemsCount,
+      morphCount,
+      clientRecipesCount,
+      syncMeta,
+      sourceMeta,
+    ] = await Promise.all([
+      dbInstance.catalogItems.count(),
+      dbInstance.marketItems.count(),
+      dbInstance.vendorMaterials.count(),
+      dbInstance.morphRecipes.count(),
+      dbInstance.clientRecipes.count(),
+      dbInstance.meta.get(META_LAST_SYNC_KEY),
+      dbInstance.meta.get(META_SYNC_SOURCE_KEY),
+    ]);
 
     const rawSource = sourceMeta?.value;
     const syncSource: 'STATIC_SEED' | 'LIVE_API' | 'EMPTY' =
@@ -115,6 +149,7 @@ export class Aion2UnifiedRepository
       marketItemsCount,
       vendorItemsCount,
       morphCount,
+      clientRecipesCount,
       lastSyncedAt: syncMeta?.value ?? null,
       syncSource,
     };
@@ -123,17 +158,21 @@ export class Aion2UnifiedRepository
   public async reseedFromStaticFiles(): Promise<DatabaseStats> {
     await dbInstance.open();
 
-    const [catalogRes, vendorRes, marketRes, morphRes] = await Promise.all([
-      fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.catalogItemsEnEs)),
-      fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.vendorPrices)),
-      fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.marketItems)),
-      fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.morphConversions)),
-    ]);
+    const [catalogRes, vendorRes, marketRes, morphRes, clientRecipesRes] =
+      await Promise.all([
+        fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.catalogItemsEnEs)),
+        fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.vendorPrices)),
+        fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.marketItems)),
+        fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.morphConversions)),
+        fetch(getStaticAssetUrl(ENDPOINTS_CONFIG.staticSeedPaths.allClientRecipes)),
+      ]);
 
     const catalogDtos = (await catalogRes.json()) as readonly Aion2GgCatalogDto[];
     const vendorDtos = (await vendorRes.json()) as readonly Aion2GgVendorDto[];
     const marketRaw = (await marketRes.json()) as unknown;
     const morphDtos = (await morphRes.json()) as readonly Aion2GgMorphRowDto[];
+    const clientRecipeDtos =
+      (await clientRecipesRes.json()) as readonly ClientRecipeJsonDto[];
 
     const catalogItems: CatalogItem[] = [];
     const esNameMap = new Map<number, string>();
@@ -146,11 +185,13 @@ export class Aion2UnifiedRepository
     }
 
     const vendorMaterials: NpcVendorMaterial[] = [];
+    const vendorPriceMap = new Map<number, number>();
     for (const dto of vendorDtos) {
       const mapped = mapVendorDtoToDomain(dto);
       if (mapped) {
         vendorMaterials.push(mapped);
         esNameMap.set(mapped.id, mapped.nameEs);
+        vendorPriceMap.set(mapped.id, mapped.vendorPriceKinah);
       }
     }
 
@@ -171,6 +212,30 @@ export class Aion2UnifiedRepository
       }
     }
 
+    // Merge curated featured recipes + all 226 client recipes across all professions
+    const mergedRecipes: VerifiedRecipe[] = VERIFIED_RECIPES_SEED.map((r) => ({
+      ...r,
+      isFeatured: true,
+      isBalaur: r.category === 'Balaur',
+      isMolienda: r.category === 'Molienda',
+      hasBoundInput:
+        r.category === 'Vinculados' || r.ingredients.some((i) => i.sourceType === 'BOUND'),
+    }));
+    const seenProductIds = new Set<string>(
+      mergedRecipes.map((r) => `${r.productId}_${r.productQuantity}`)
+    );
+
+    for (const dto of clientRecipeDtos) {
+      const mapped = mapClientRecipeDtoToDomain(dto, vendorPriceMap);
+      if (mapped) {
+        const key = `${mapped.productId}_${mapped.productQuantity}`;
+        if (!seenProductIds.has(key)) {
+          seenProductIds.add(key);
+          mergedRecipes.push(mapped);
+        }
+      }
+    }
+
     const nowIso = new Date().toISOString();
 
     await dbInstance.transaction(
@@ -180,6 +245,7 @@ export class Aion2UnifiedRepository
         dbInstance.vendorMaterials,
         dbInstance.marketItems,
         dbInstance.morphRecipes,
+        dbInstance.clientRecipes,
         dbInstance.meta,
       ],
       async () => {
@@ -187,11 +253,13 @@ export class Aion2UnifiedRepository
         await dbInstance.vendorMaterials.clear();
         await dbInstance.marketItems.clear();
         await dbInstance.morphRecipes.clear();
+        await dbInstance.clientRecipes.clear();
 
         await dbInstance.catalogItems.bulkPut(catalogItems);
         await dbInstance.vendorMaterials.bulkPut(vendorMaterials);
         await dbInstance.marketItems.bulkPut(marketItems);
         await dbInstance.morphRecipes.bulkPut(morphRecipes);
+        await dbInstance.clientRecipes.bulkPut(mergedRecipes);
 
         await dbInstance.meta.put({ key: META_LAST_SYNC_KEY, value: nowIso });
         await dbInstance.meta.put({ key: META_SYNC_SOURCE_KEY, value: 'STATIC_SEED' });
@@ -207,12 +275,154 @@ export class Aion2UnifiedRepository
     await dbInstance.open();
   }
 
+  // ==========================================================================
+  // USER PREFERENCES & SAVED CHARACTERS (PRIVACY-FIRST IN INDEXEDDB)
+  // ==========================================================================
+  public async getUserPreferences(): Promise<UserPreferences> {
+    if (typeof window === 'undefined') return DEFAULT_USER_PREFS;
+    await dbInstance.open();
+    const entry = await dbInstance.meta.get(META_USER_PREFS_KEY);
+    if (!entry?.value) return DEFAULT_USER_PREFS;
+    try {
+      const parsed = JSON.parse(entry.value) as Partial<UserPreferences>;
+      return {
+        selectedServerId:
+          typeof parsed.selectedServerId === 'number'
+            ? parsed.selectedServerId
+            : DEFAULT_USER_PREFS.selectedServerId,
+        hasActiveSubscription:
+          typeof parsed.hasActiveSubscription === 'boolean'
+            ? parsed.hasActiveSubscription
+            : DEFAULT_USER_PREFS.hasActiveSubscription,
+        legionName:
+          typeof parsed.legionName === 'string' && parsed.legionName.trim().length > 0
+            ? parsed.legionName.trim()
+            : DEFAULT_USER_PREFS.legionName,
+      };
+    } catch {
+      return DEFAULT_USER_PREFS;
+    }
+  }
+
+  public async saveUserPreferences(prefs: UserPreferences): Promise<void> {
+    if (typeof window === 'undefined') return;
+    await dbInstance.open();
+    await dbInstance.meta.put({
+      key: META_USER_PREFS_KEY,
+      value: JSON.stringify(prefs),
+    });
+  }
+
+  public async getSavedCharacters(): Promise<readonly SavedCharacterConfig[]> {
+    if (typeof window === 'undefined') return [];
+    await dbInstance.open();
+    return dbInstance.savedCharacters.toArray();
+  }
+
+  public async saveCharacterConfig(charConfig: SavedCharacterConfig): Promise<void> {
+    if (typeof window === 'undefined') return;
+    await dbInstance.open();
+    await dbInstance.savedCharacters.put(charConfig);
+  }
+
+  public async removeCharacterConfig(id: string): Promise<void> {
+    if (typeof window === 'undefined') return;
+    await dbInstance.open();
+    await dbInstance.savedCharacters.delete(id);
+  }
+
+  // ==========================================================================
+  // SHUGO.GG LIVE CHARACTER PROFILE & LEADERBOARD
+  // ==========================================================================
+  private async fetchTextWithCorsFallback(targetUrl: string): Promise<string> {
+    const candidateUrls: string[] = [
+      ...ENDPOINTS_CONFIG.liveApi.corsProxies.map((proxyFn) => proxyFn(targetUrl)),
+      targetUrl,
+    ];
+
+    for (const url of candidateUrls) {
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000);
+        const res = await fetch(url, { signal: controller.signal, cache: 'no-store' });
+        clearTimeout(timeoutId);
+        if (!res.ok) continue;
+        const text = await res.text();
+        if (text && text.length > 20) {
+          return text;
+        }
+      } catch {
+        // Try next proxy
+      }
+    }
+    throw new Error(`Unable to reach ${targetUrl} via CORS proxies.`);
+  }
+
+  public async fetchLeaderboard(
+    shugoServerId: number,
+    className?: string,
+    limit = 50
+  ): Promise<readonly ShugoLeaderboardEntry[]> {
+    const targetUrl = ENDPOINTS_CONFIG.liveApi.shugoLeaderboardUrl(
+      shugoServerId,
+      className,
+      limit
+    );
+    try {
+      const rawText = await this.fetchTextWithCorsFallback(targetUrl);
+      const json = JSON.parse(rawText) as unknown;
+      return mapShugoLeaderboardDtoToDomain(json);
+    } catch {
+      return [];
+    }
+  }
+
+  public async fetchCharacterProfile(
+    serverSlug: string,
+    shugoServerId: number,
+    characterName: string
+  ): Promise<ShugoCharacterProfile> {
+    const cleanName = characterName.trim();
+    const profileUrl = ENDPOINTS_CONFIG.liveApi.shugoCharacterUrl(serverSlug, cleanName);
+    const html = await this.fetchTextWithCorsFallback(profileUrl);
+
+    // Extract className first so we can query class leaderboard for exact CP & GS rank
+    let detectedClass: string | undefined;
+    const classMatch = html.match(/"className"\s*:\s*"([^"]+)"/i);
+    if (classMatch?.[1]) {
+      detectedClass = classMatch[1];
+    }
+
+    const leaderboard = await this.fetchLeaderboard(shugoServerId, detectedClass, 100);
+    const parsed = parseShugoProfileHtmlToDomain(
+      html,
+      serverSlug,
+      shugoServerId,
+      cleanName,
+      leaderboard,
+      profileUrl
+    );
+
+    if (!parsed) {
+      throw new Error(
+        `No se encontró el perfil de "${cleanName}" en Shugo.gg (${serverSlug}). Verifica el nombre exacto y el servidor.`
+      );
+    }
+    return parsed;
+  }
+
+  // ==========================================================================
+  // MARKET & CATALOG REPOSITORIES
+  // ==========================================================================
   public async getAllMarketItems(): Promise<readonly MarketItem[]> {
     await this.initializeDatabaseIfNeeded();
     return dbInstance.marketItems.toArray();
   }
 
-  public async getMarketItem(itemId: number, fallbackNameEn?: string): Promise<MarketItem | null> {
+  public async getMarketItem(
+    itemId: number,
+    fallbackNameEn?: string
+  ): Promise<MarketItem | null> {
     await this.initializeDatabaseIfNeeded();
     const byKey = await dbInstance.marketItems.get(itemId);
     if (byKey) return byKey;
@@ -226,7 +436,10 @@ export class Aion2UnifiedRepository
     return null;
   }
 
-  public async updateCustomItemPrice(itemKey: number, newPriceKinah: number): Promise<void> {
+  public async updateCustomItemPrice(
+    itemKey: number,
+    newPriceKinah: number
+  ): Promise<void> {
     await this.initializeDatabaseIfNeeded();
     const existing = await dbInstance.marketItems.get(itemKey);
     if (existing) {
@@ -282,12 +495,16 @@ export class Aion2UnifiedRepository
 
         if (mappedItems.length > 50) {
           const nowIso = new Date().toISOString();
-          await dbInstance.transaction('rw', [dbInstance.marketItems, dbInstance.meta], async () => {
-            await dbInstance.marketItems.clear();
-            await dbInstance.marketItems.bulkPut(mappedItems);
-            await dbInstance.meta.put({ key: META_LAST_SYNC_KEY, value: nowIso });
-            await dbInstance.meta.put({ key: META_SYNC_SOURCE_KEY, value: 'LIVE_API' });
-          });
+          await dbInstance.transaction(
+            'rw',
+            [dbInstance.marketItems, dbInstance.meta],
+            async () => {
+              await dbInstance.marketItems.clear();
+              await dbInstance.marketItems.bulkPut(mappedItems);
+              await dbInstance.meta.put({ key: META_LAST_SYNC_KEY, value: nowIso });
+              await dbInstance.meta.put({ key: META_SYNC_SOURCE_KEY, value: 'LIVE_API' });
+            }
+          );
 
           return {
             updatedCount: mappedItems.length,
@@ -300,7 +517,6 @@ export class Aion2UnifiedRepository
       }
     }
 
-    // Fallback seguro: recargar desde el snapshot estático del proyecto
     const stats = await this.reseedFromStaticFiles();
     return {
       updatedCount: stats.marketItemsCount,
@@ -309,7 +525,10 @@ export class Aion2UnifiedRepository
     };
   }
 
-  public async searchCatalogItems(query: string, limit = 80): Promise<readonly CatalogItem[]> {
+  public async searchCatalogItems(
+    query: string,
+    limit = 80
+  ): Promise<readonly CatalogItem[]> {
     await this.initializeDatabaseIfNeeded();
     const trimmed = query.trim().toLowerCase();
     const all = await dbInstance.catalogItems.toArray();
@@ -348,6 +567,7 @@ export class Aion2UnifiedRepository
     return all
       .filter(
         (r) =>
+          r.nameEs.toLowerCase().includes(trimmed) ||
           r.nameEn.toLowerCase().includes(trimmed) ||
           r.category.toLowerCase().includes(trimmed) ||
           r.materials.some((m) => m.name.toLowerCase().includes(trimmed))
@@ -355,18 +575,48 @@ export class Aion2UnifiedRepository
       .slice(0, limit);
   }
 
-  public getVerifiedRecipes(category: CraftingCategory = 'All'): readonly VerifiedRecipe[] {
+  // ==========================================================================
+  // RECIPES AUDITOR (FEATURED META + ALL 240+ CLIENT RECIPES)
+  // ==========================================================================
+  public async getRecipes(
+    category: CraftingCategory = 'All',
+    scope: RecipeFilterScope = 'FEATURED_META'
+  ): Promise<readonly VerifiedRecipe[]> {
+    await this.initializeDatabaseIfNeeded();
+    const all = await dbInstance.clientRecipes.toArray();
+    const baseList = all.length > 0 ? all : VERIFIED_RECIPES_SEED;
+
+    const scoped =
+      scope === 'FEATURED_META'
+        ? baseList.filter((r) => Boolean(r.isFeatured))
+        : baseList;
+
     if (category === 'All') {
-      return VERIFIED_RECIPES_SEED;
+      return scoped;
     }
-    return VERIFIED_RECIPES_SEED.filter((r) => r.category === category);
+    if (category === 'Balaur') {
+      return scoped.filter((r) => r.category === 'Balaur' || Boolean(r.isBalaur));
+    }
+    if (category === 'Molienda') {
+      return scoped.filter((r) => r.category === 'Molienda' || Boolean(r.isMolienda));
+    }
+    if (category === 'Vinculados') {
+      return scoped.filter(
+        (r) => r.category === 'Vinculados' || Boolean(r.hasBoundInput)
+      );
+    }
+    return scoped.filter((r) => r.category === category);
   }
 
   public async evaluateRecipes(
-    category: CraftingCategory = 'All'
+    category: CraftingCategory = 'All',
+    scope: RecipeFilterScope = 'FEATURED_META'
   ): Promise<readonly EvaluatedRecipeAudit[]> {
     await this.initializeDatabaseIfNeeded();
-    const allMarketItems = await dbInstance.marketItems.toArray();
+    const [allMarketItems, recipes] = await Promise.all([
+      dbInstance.marketItems.toArray(),
+      this.getRecipes(category, scope),
+    ]);
 
     const byId = new Map<number, MarketItem>();
     const byName = new Map<string, MarketItem>();
@@ -376,10 +626,10 @@ export class Aion2UnifiedRepository
     }
 
     const findMarketItem = (id: number, nameEn: string): MarketItem | undefined => {
-      return byId.get(id) ?? byName.get(nameEn.toLowerCase());
+      const cleanName = nameEn.replace(/\s*\(Bulk x30\)/i, '').trim().toLowerCase();
+      return byId.get(id) ?? byName.get(cleanName);
     };
 
-    const recipes = this.getVerifiedRecipes(category);
     const retention = ENDPOINTS_CONFIG.brokerTax.netRetentionMultiplier;
 
     return recipes.map((recipe): EvaluatedRecipeAudit => {
@@ -390,7 +640,7 @@ export class Aion2UnifiedRepository
 
       for (const ing of recipe.ingredients) {
         if (ing.sourceType === 'NPC') {
-          const unitPrice = ing.fixedNpcPrice ?? 0;
+          const unitPrice = ing.fixedNpcPrice ?? 1200;
           const subtotal = unitPrice * ing.quantity;
           npcFixedCost += subtotal;
           ingredientBreakdown.push({
@@ -461,26 +711,32 @@ export class Aion2UnifiedRepository
 
       const netProfitBuyingAll = expectedNetRevenuePerAttempt90 - totalDirectAttemptCost;
       const roiBuyingAllPct =
-        totalDirectAttemptCost > 0 ? (netProfitBuyingAll / totalDirectAttemptCost) * 100 : 0;
+        totalDirectAttemptCost > 0
+          ? (netProfitBuyingAll / totalDirectAttemptCost) * 100
+          : 0;
 
-      // Escenario B: Coste de oportunidad de vender materiales propios comerciables en el Broker (90% neto)
       const opportunityCostRawSales90 = brokerMaterialsCost * retention;
       const valueAddedWithOwnMats =
         expectedNetRevenuePerAttempt90 - npcFixedCost - opportunityCostRawSales90;
 
-      // Escenario C: Materiales Bound cuestan 0 Kinah; solo se paga PNJ + materiales comerciables
       const outOfPocketBoundCost = npcFixedCost + brokerMaterialsCost;
       const profitWithBoundMats = expectedNetRevenuePerAttempt90 - outOfPocketBoundCost;
       const roiWithBoundMatsPct =
-        outOfPocketBoundCost > 0 ? (profitWithBoundMats / outOfPocketBoundCost) * 100 : 0;
+        outOfPocketBoundCost > 0
+          ? (profitWithBoundMats / outOfPocketBoundCost) * 100
+          : 0;
 
       const breakevenUnitPrice =
         recipe.baseSuccessRate > 0 && recipe.productQuantity > 0
-          ? totalDirectAttemptCost / (recipe.baseSuccessRate * recipe.productQuantity * retention)
+          ? totalDirectAttemptCost /
+            (recipe.baseSuccessRate * recipe.productQuantity * retention)
           : 0;
 
       let verdict: RecipeVerdict = 'LOW_MARGIN';
-      if (recipe.category === 'Vinculados' && profitWithBoundMats > 15000) {
+      if (
+        (recipe.category === 'Vinculados' || recipe.hasBoundInput) &&
+        profitWithBoundMats > 10000
+      ) {
         verdict = 'BOUND_GOLDMINE';
       } else if (netProfitBuyingAll > 1500 && valueAddedWithOwnMats > 1500) {
         verdict = 'PROFITABLE_BOTH';

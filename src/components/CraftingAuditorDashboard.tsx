@@ -5,429 +5,558 @@ import type {
   CraftingCategory,
   EvaluatedRecipeAudit,
   Locale,
-  RecipeVerdict,
+  RecipeFilterScope,
 } from '../domain/models/types';
 import { TRANSLATIONS } from '../i18n/translations';
+import { aion2Repository } from '../infrastructure/repositories/aion2.repository';
 
-export interface CraftingAuditorDashboardProps {
+interface CraftingAuditorDashboardProps {
   readonly locale: Locale;
   readonly audits: readonly EvaluatedRecipeAudit[];
-  readonly onUpdateCustomPrice: (itemKey: number, newPrice: number) => Promise<void>;
+  readonly activeScope: RecipeFilterScope;
+  readonly onScopeChange: (newScope: RecipeFilterScope) => void;
+  readonly onPriceUpdated: () => Promise<void>;
 }
 
-const CATEGORIES: readonly { readonly id: CraftingCategory; readonly labelEs: string; readonly labelEn: string }[] = [
-  { id: 'All', labelEs: 'Todas (16)', labelEn: 'All (16)' },
-  { id: 'Molienda', labelEs: '🌾 Molienda 100% Éxito', labelEn: '🌾 100% Milling' },
-  { id: 'Balaur', labelEs: '🐉 Materiales Balaur', labelEn: '🐉 Balaur Materials' },
-  { id: 'Vinculados', labelEs: '💎 Conversión Bound (20% Proc)', labelEn: '💎 Bound Conversion (20% Proc)' },
-  { id: 'Cocina', labelEs: '🍖 Cocina', labelEn: '🍖 Cooking' },
-  { id: 'Alquimia', labelEs: '🧪 Alquimia (Pergaminos/Elixires)', labelEn: '🧪 Alchemy (Scrolls/Serums)' },
-  { id: 'Orfebreria', labelEs: '💍 Orfebrería (Anillo Zafiro)', labelEn: '💍 Handicrafting (Sapphire Ring)' },
+const CATEGORIES: readonly {
+  readonly id: CraftingCategory;
+  readonly labelEs: string;
+  readonly labelEn: string;
+}[] = [
+  { id: 'All', labelEs: 'Todas', labelEn: 'All' },
+  { id: 'Blacksmithing', labelEs: '⚒️ Herrería (49)', labelEn: '⚒️ Blacksmithing (49)' },
+  { id: 'Jewelcrafting', labelEs: '💍 Orfebrería (53)', labelEn: '💍 Jewelcrafting (53)' },
+  { id: 'Tailoring', labelEs: '🧵 Sastrería (67)', labelEn: '🧵 Tailoring (67)' },
+  { id: 'Alchemy', labelEs: '⚗️ Alquimia (47)', labelEn: '⚗️ Alchemy (47)' },
+  { id: 'Cooking', labelEs: '🍖 Cocina (15)', labelEn: '🍖 Cooking (15)' },
+  { id: 'Molienda', labelEs: '💎 Molienda', labelEn: '💎 Milling' },
+  { id: 'Balaur', labelEs: '🐉 Balaur', labelEn: '🐉 Balaur' },
+  { id: 'Vinculados', labelEs: '🔒 Vinculados (Bound)', labelEn: '🔒 Bound' },
 ];
+
+const BATCH_SIZES: readonly number[] = [1, 10, 50, 100];
 
 export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> = ({
   locale,
   audits,
-  onUpdateCustomPrice,
+  activeScope,
+  onScopeChange,
+  onPriceUpdated,
 }) => {
   const t = TRANSLATIONS[locale];
   const [selectedCategory, setSelectedCategory] = useState<CraftingCategory>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [batchSize, setBatchSize] = useState<number>(1);
-  const [expandedRecipeId, setExpandedRecipeId] = useState<string | null>('315021005_30');
-  const [editingPriceMap, setEditingPriceMap] = useState<Readonly<Record<number, string>>>({});
+  const [expandedRecipeId, setExpandedRecipeId] = useState<string | null>(null);
+  const [editingPriceMap, setEditingPriceMap] = useState<Record<number, string>>({});
 
   const filteredAudits = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
-    return audits.filter((a) => {
-      if (selectedCategory !== 'All' && a.recipe.category !== selectedCategory) {
-        return false;
+    return audits.filter((audit) => {
+      if (selectedCategory !== 'All') {
+        if (selectedCategory === 'Balaur') {
+          if (audit.recipe.category !== 'Balaur' && !audit.recipe.isBalaur) return false;
+        } else if (selectedCategory === 'Molienda') {
+          if (audit.recipe.category !== 'Molienda' && !audit.recipe.isMolienda) return false;
+        } else if (selectedCategory === 'Vinculados') {
+          if (audit.recipe.category !== 'Vinculados' && !audit.recipe.hasBoundInput)
+            return false;
+        } else if (audit.recipe.category !== selectedCategory) {
+          return false;
+        }
       }
       if (!q) return true;
+      const localizedRecipeName =
+        locale === 'es' ? audit.recipe.nameEs : audit.recipe.nameEn;
       return (
-        a.recipe.nameEs.toLowerCase().includes(q) ||
-        a.recipe.nameEn.toLowerCase().includes(q) ||
-        a.recipe.professionEs.toLowerCase().includes(q) ||
-        a.ingredientBreakdown.some(
+        localizedRecipeName.toLowerCase().includes(q) ||
+        audit.recipe.nameEs.toLowerCase().includes(q) ||
+        audit.recipe.nameEn.toLowerCase().includes(q) ||
+        audit.recipe.professionEs.toLowerCase().includes(q) ||
+        audit.ingredientBreakdown.some(
           (ing) =>
             ing.nameEs.toLowerCase().includes(q) || ing.nameEn.toLowerCase().includes(q)
         )
       );
     });
-  }, [audits, selectedCategory, searchQuery]);
+  }, [audits, selectedCategory, searchQuery, locale]);
 
-  const renderVerdictBadge = (verdict: RecipeVerdict): React.ReactNode => {
-    switch (verdict) {
+  const handleSaveCustomPrice = async (itemId: number): Promise<void> => {
+    const rawVal = editingPriceMap[itemId];
+    if (rawVal === undefined) return;
+    const numeric = Number(rawVal);
+    if (!Number.isFinite(numeric) || numeric < 0) return;
+    await aion2Repository.updateCustomItemPrice(itemId, numeric);
+    await onPriceUpdated();
+  };
+
+  const renderVerdictBadge = (audit: EvaluatedRecipeAudit): React.ReactNode => {
+    switch (audit.verdict) {
       case 'PROFITABLE_BOTH':
         return (
-          <span className="inline-block rounded-full bg-emerald-500/20 border border-emerald-500/40 px-2.5 py-1 text-xs font-bold text-emerald-300">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#6fd08c]/15 text-[#6fd08c] border border-[#6fd08c]/40">
             ✅ {t.verdictProfitable}
           </span>
         );
       case 'BOUND_GOLDMINE':
         return (
-          <span className="inline-block rounded-full bg-amber-500/20 border border-amber-500/40 px-2.5 py-1 text-xs font-bold text-amber-300">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#d9b36c]/20 text-[#f0d59a] border border-[#d9b36c]/50">
             💎 {t.verdictGoldmine}
           </span>
         );
       case 'DESTROYS_VALUE':
         return (
-          <span className="inline-block rounded-full bg-rose-500/20 border border-rose-500/40 px-2.5 py-1 text-xs font-bold text-rose-300">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#e5484d]/15 text-rose-300 border border-[#e5484d]/40">
             🛑 {t.verdictDestroys}
           </span>
         );
       default:
         return (
-          <span className="inline-block rounded-full bg-slate-700/50 border border-slate-600 px-2.5 py-1 text-xs font-semibold text-slate-300">
-            ⚠️ {t.verdictLow}
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-[#1b2230] text-slate-300 border border-[#263042]">
+            ⚖️ {t.verdictLow}
           </span>
         );
     }
   };
 
-  const handlePriceInputCommit = async (itemKey: number): Promise<void> => {
-    const rawVal = editingPriceMap[itemKey];
-    if (rawVal === undefined) return;
-    const parsed = Number.parseFloat(rawVal);
-    if (Number.isFinite(parsed) && parsed >= 0) {
-      await onUpdateCustomPrice(itemKey, parsed);
-    }
-  };
-
   return (
     <div className="space-y-6">
-      {/* Banner de Fórmula de Coste de Oportunidad */}
-      <div className="rounded-xl border border-amber-500/30 bg-gradient-to-r from-amber-950/40 via-slate-900 to-slate-900 p-4">
-        <h3 className="text-sm font-bold text-amber-300">{t.formulaBannerTitle}</h3>
-        <p className="mt-1 text-xs text-slate-300 leading-relaxed">{t.formulaBannerDesc}</p>
-      </div>
-
-      {/* Controles de Filtro, Buscador y Multiplicador de Lote */}
-      <div className="flex flex-col gap-4 rounded-xl border border-slate-800 bg-slate-900/70 p-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap gap-2">
-          {CATEGORIES.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              onClick={() => setSelectedCategory(cat.id)}
-              className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition cursor-pointer ${
-                selectedCategory === cat.id
-                  ? 'bg-amber-500 text-slate-950 shadow'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-              }`}
-            >
-              {locale === 'es' ? cat.labelEs : cat.labelEn}
-            </button>
-          ))}
+      {/* Top Scope Toggle + Opportunity Cost Callout */}
+      <div className="aion-card-gold rounded-2xl p-5 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+        <div className="space-y-1 max-w-3xl">
+          <h3 className="text-sm font-bold text-[#f0d59a] flex items-center gap-2">
+            <span>📐</span>
+            <span>{t.formulaBannerTitle}</span>
+          </h3>
+          <p className="text-xs text-slate-300 leading-relaxed">{t.formulaBannerDesc}</p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3">
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder={t.searchPlaceholder}
-            className="w-full sm:w-72 rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-amber-400 focus:outline-none"
-          />
+        <div className="flex items-center gap-2 bg-[#0b0e14] p-1.5 rounded-xl border border-[#263042] shrink-0">
+          <button
+            type="button"
+            onClick={() => onScopeChange('FEATURED_META')}
+            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition ${
+              activeScope === 'FEATURED_META'
+                ? 'bg-[#d9b36c] text-[#0b0e14] shadow'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            {locale === 'es' ? '🔥 Recetas Meta Auditadas (22)' : '🔥 Featured Meta Recipes (22)'}
+          </button>
+          <button
+            type="button"
+            onClick={() => onScopeChange('ALL_CLIENT')}
+            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition ${
+              activeScope === 'ALL_CLIENT'
+                ? 'bg-[#d9b36c] text-[#0b0e14] shadow'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            {locale === 'es'
+              ? '📚 Todas las Recetas del Juego (242)'
+              : '📚 All Client Recipes (242)'}
+          </button>
+        </div>
+      </div>
 
-          <div className="flex items-center gap-1.5 rounded-lg border border-slate-800 bg-slate-950 px-2.5 py-1.5 text-xs">
-            <span className="text-slate-400">{t.batchLabel}</span>
-            {[1, 5, 10, 20].map((mult) => (
+      {/* Filter Bar */}
+      <div className="aion-card rounded-2xl p-4 space-y-4">
+        <div className="flex flex-wrap items-center gap-2">
+          {CATEGORIES.map((cat) => {
+            const active = selectedCategory === cat.id;
+            return (
               <button
-                key={mult}
+                key={cat.id}
                 type="button"
-                onClick={() => setBatchSize(mult)}
-                className={`rounded px-2 py-0.5 font-mono font-bold cursor-pointer ${
-                  batchSize === mult
-                    ? 'bg-sky-500 text-slate-950'
-                    : 'text-slate-300 hover:bg-slate-800'
+                onClick={() => setSelectedCategory(cat.id)}
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition border ${
+                  active
+                    ? 'bg-[#d9b36c]/20 text-[#f0d59a] border-[#d9b36c]/60 shadow-sm'
+                    : 'bg-[#0b0e14] text-slate-400 border-[#263042] hover:text-slate-200'
                 }`}
               >
-                x{mult}
+                {locale === 'es' ? cat.labelEs : cat.labelEn}
               </button>
-            ))}
+            );
+          })}
+        </div>
+
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-2 border-t border-[#263042]/60">
+          <div className="flex-1">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={t.searchPlaceholder}
+              className="w-full px-4 py-2 rounded-xl bg-[#0b0e14] border border-[#263042] text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#d9b36c]"
+            />
+          </div>
+
+          <div className="flex items-center gap-3">
+            <span className="text-xs text-slate-400">
+              {locale === 'es'
+                ? `Mostrando ${filteredAudits.length} receta(s)`
+                : `Showing ${filteredAudits.length} recipe(s)`}
+            </span>
+            <div className="flex items-center gap-1.5 bg-[#0b0e14] p-1 rounded-xl border border-[#263042]">
+              <span className="text-xs text-slate-400 px-2 font-medium">{t.batchLabel}</span>
+              {BATCH_SIZES.map((mult) => (
+                <button
+                  key={mult}
+                  type="button"
+                  onClick={() => setBatchSize(mult)}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-bold transition ${
+                    batchSize === mult
+                      ? 'bg-[#d9b36c] text-[#0b0e14]'
+                      : 'text-slate-400 hover:text-white'
+                  }`}
+                >
+                  ×{mult}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Tabla Maestra de Auditoría */}
-      <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80 shadow-xl">
-        <table className="w-full text-left text-xs">
-          <thead className="border-b border-slate-800 bg-slate-950/90 text-slate-400 uppercase">
-            <tr>
-              <th className="px-4 py-3">{t.colRecipe}</th>
-              <th className="px-3 py-3 text-center">{t.colSuccess}</th>
-              <th className="px-3 py-3 text-right">{t.colBrokerPrice}</th>
-              <th className="px-3 py-3 text-right">{t.colNpcCost}</th>
-              <th className="px-3 py-3 text-right">{t.colAttemptCost}</th>
-              <th className="px-3 py-3 text-right">{t.colExpectedNet}</th>
-              <th className="px-3 py-3 text-right">{t.colProfitBuyAll}</th>
-              <th className="px-3 py-3 text-right">{t.colValueAddedOwn}</th>
-              <th className="px-4 py-3 text-center">{t.colVerdict}</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-800/70">
-            {filteredAudits.map((audit) => {
-              const isExpanded = expandedRecipeId === audit.recipe.recipeId;
-              const profitBuyScaled = Math.round(audit.netProfitBuyingAll * batchSize);
-              const valueAddedScaled =
-                audit.recipe.category === 'Vinculados'
-                  ? Math.round(audit.profitWithBoundMats * batchSize)
-                  : Math.round(audit.valueAddedWithOwnMats * batchSize);
+      {/* Main Auditor Table — Single Dynamic Name Column */}
+      <div className="aion-card rounded-2xl overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead>
+              <tr className="bg-[#0b0e14] border-b border-[#263042] text-[11px] uppercase tracking-wider text-[#9aa6bc]">
+                <th className="py-3.5 px-4">{t.colRecipe}</th>
+                <th className="py-3.5 px-3 text-center">{t.colSuccess}</th>
+                <th className="py-3.5 px-3 text-right">{t.colBrokerPrice}</th>
+                <th className="py-3.5 px-3 text-right">{t.colNpcCost}</th>
+                <th className="py-3.5 px-3 text-right">{t.colAttemptCost}</th>
+                <th className="py-3.5 px-3 text-right">{t.colExpectedNet}</th>
+                <th className="py-3.5 px-3 text-right">{t.colProfitBuyAll}</th>
+                <th className="py-3.5 px-3 text-right">{t.colValueAddedOwn}</th>
+                <th className="py-3.5 px-4 text-center">{t.colVerdict}</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-[#263042]/60 text-sm">
+              {filteredAudits.map((audit) => {
+                const { recipe } = audit;
+                const isExpanded = expandedRecipeId === recipe.recipeId;
+                const primaryName = locale === 'es' ? recipe.nameEs : recipe.nameEn;
+                const profLabel =
+                  locale === 'es' ? recipe.professionEs : recipe.professionEn;
+                const comboLabel =
+                  locale === 'es' ? recipe.comboNameEs : recipe.comboNameEn;
 
-              return (
-                <React.Fragment key={audit.recipe.recipeId}>
-                  <tr
-                    onClick={() =>
-                      setExpandedRecipeId(isExpanded ? null : audit.recipe.recipeId)
-                    }
-                    className="hover:bg-slate-800/50 transition cursor-pointer"
-                  >
-                    <td className="px-4 py-3">
-                      <div className="font-bold text-white">
-                        {locale === 'es' ? audit.recipe.nameEs : audit.recipe.nameEn}
-                      </div>
-                      <div className="text-[11px] text-slate-400">
-                        {locale === 'es' ? audit.recipe.nameEn : audit.recipe.nameEs} •{' '}
-                        <span className="text-sky-400">
-                          {locale === 'es'
-                            ? audit.recipe.professionEs
-                            : audit.recipe.professionEn}
-                        </span>
-                      </div>
-                    </td>
+                const npcCostBatch = Math.round(audit.npcFixedCost * batchSize);
+                const attemptCostBatch = Math.round(
+                  audit.totalDirectAttemptCost * batchSize
+                );
+                const expectedNetBatch = Math.round(
+                  audit.expectedNetRevenuePerAttempt90 * batchSize
+                );
+                const profitBuyAllBatch = Math.round(audit.netProfitBuyingAll * batchSize);
+                const valueAddedOwnBatch = Math.round(
+                  audit.valueAddedWithOwnMats * batchSize
+                );
+                const profitBoundBatch = Math.round(audit.profitWithBoundMats * batchSize);
 
-                    <td className="px-3 py-3 text-center font-mono">
-                      <span
-                        className={`rounded px-1.5 py-0.5 font-bold ${
-                          audit.recipe.baseSuccessRate >= 1
-                            ? 'bg-emerald-500/20 text-emerald-300'
-                            : audit.recipe.baseSuccessRate >= 0.95
-                              ? 'bg-sky-500/20 text-sky-300'
-                              : 'bg-amber-500/20 text-amber-300'
-                        }`}
-                      >
-                        {(audit.recipe.baseSuccessRate * 100).toFixed(1)}%
-                      </span>
-                      {audit.recipe.comboRate && (
-                        <div className="mt-1 text-[10px] text-amber-400">
-                          +{(audit.recipe.comboRate * 100).toFixed(0)}% Proc
-                        </div>
-                      )}
-                    </td>
-
-                    <td className="px-3 py-3 text-right font-mono">
-                      <div className="font-bold text-white">
-                        {audit.unitBrokerPrice.toLocaleString()} K
-                      </div>
-                      <div className="text-[10px] text-slate-400">
-                        {audit.activeListings} listings | x{audit.recipe.productQuantity}
-                      </div>
-                    </td>
-
-                    <td className="px-3 py-3 text-right font-mono text-amber-300">
-                      {Math.round(audit.npcFixedCost * batchSize).toLocaleString()} K
-                    </td>
-
-                    <td className="px-3 py-3 text-right font-mono text-slate-200">
-                      {Math.round(audit.totalDirectAttemptCost * batchSize).toLocaleString()} K
-                    </td>
-
-                    <td className="px-3 py-3 text-right font-mono text-sky-300">
-                      {Math.round(
-                        audit.expectedNetRevenuePerAttempt90 * batchSize
-                      ).toLocaleString()}{' '}
-                      K
-                    </td>
-
-                    <td
-                      className={`px-3 py-3 text-right font-mono font-bold ${
-                        profitBuyScaled >= 0 ? 'text-emerald-400' : 'text-rose-400'
-                      }`}
+                return (
+                  <React.Fragment key={recipe.recipeId}>
+                    <tr
+                      onClick={() =>
+                        setExpandedRecipeId(isExpanded ? null : recipe.recipeId)
+                      }
+                      className="hover:bg-[#1b2230]/80 cursor-pointer transition-colors"
                     >
-                      <div>
-                        {profitBuyScaled >= 0 ? '+' : ''}
-                        {profitBuyScaled.toLocaleString()} K
-                      </div>
-                      <div className="text-[10px] font-normal">
-                        ({audit.roiBuyingAllPct >= 0 ? '+' : ''}
-                        {audit.roiBuyingAllPct.toFixed(1)}% ROI)
-                      </div>
-                    </td>
-
-                    <td
-                      className={`px-3 py-3 text-right font-mono font-bold ${
-                        valueAddedScaled >= 0 ? 'text-emerald-400' : 'text-rose-400'
-                      }`}
-                    >
-                      <div>
-                        {valueAddedScaled >= 0 ? '+' : ''}
-                        {valueAddedScaled.toLocaleString()} K
-                      </div>
-                      <div className="text-[10px] font-normal text-slate-400">
-                        {audit.recipe.category === 'Vinculados'
-                          ? `(+${audit.roiWithBoundMatsPct.toFixed(0)}% vs Bound)`
-                          : `(vs ${Math.round(audit.opportunityCostRawSales90 * batchSize).toLocaleString()} K crudo)`}
-                      </div>
-                    </td>
-
-                    <td className="px-4 py-3 text-center">
-                      {renderVerdictBadge(audit.verdict)}
-                    </td>
-                  </tr>
-
-                  {/* Desglose interactivo de ingredientes y edición de precios en IndexedDB */}
-                  {isExpanded && (
-                    <tr className="bg-slate-950/90">
-                      <td colSpan={9} className="p-4">
-                        <div className="grid gap-4 lg:grid-cols-2">
-                          <div className="space-y-2">
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-amber-400">
-                              {locale === 'es'
-                                ? 'Desglose Exacto de Ingredientes (Editable en IndexedDB)'
-                                : 'Exact Client Ingredients Breakdown (Editable in IndexedDB)'}
-                            </h4>
-                            <div className="divide-y divide-slate-800 rounded-lg border border-slate-800 bg-slate-900/90">
-                              {audit.ingredientBreakdown.map((ing) => (
-                                <div
-                                  key={ing.itemId}
-                                  className="flex flex-wrap items-center justify-between gap-2 px-3 py-2 text-xs"
-                                >
-                                  <div>
-                                    <span className="font-mono font-bold text-amber-300">
-                                      {ing.quantity * batchSize}x
-                                    </span>{' '}
-                                    <span className="font-semibold text-white">
-                                      {locale === 'es' ? ing.nameEs : ing.nameEn}
-                                    </span>{' '}
-                                    <span
-                                      className={`ml-1 rounded px-1.5 py-0.5 text-[10px] font-mono ${
-                                        ing.sourceType === 'NPC'
-                                          ? 'bg-amber-500/20 text-amber-300'
-                                          : ing.sourceType === 'BOUND'
-                                            ? 'bg-purple-500/20 text-purple-300'
-                                            : 'bg-sky-500/20 text-sky-300'
-                                      }`}
-                                    >
-                                      {ing.sourceType}
-                                    </span>
-                                  </div>
-
-                                  <div className="flex items-center gap-2">
-                                    {ing.sourceType !== 'NPC' ? (
-                                      <div
-                                        className="flex items-center gap-1"
-                                        onClick={(e) => e.stopPropagation()}
-                                      >
-                                        <input
-                                          type="number"
-                                          value={
-                                            editingPriceMap[ing.itemId] ??
-                                            String(ing.unitPriceKinah)
-                                          }
-                                          onChange={(e) =>
-                                            setEditingPriceMap((prev) => ({
-                                              ...prev,
-                                              [ing.itemId]: e.target.value,
-                                            }))
-                                          }
-                                          className="w-24 rounded border border-slate-700 bg-slate-950 px-2 py-1 text-right font-mono text-xs text-white"
-                                        />
-                                        <button
-                                          type="button"
-                                          onClick={() =>
-                                            void handlePriceInputCommit(ing.itemId)
-                                          }
-                                          className="rounded bg-sky-600 hover:bg-sky-500 px-2 py-1 text-[10px] font-bold text-white cursor-pointer"
-                                        >
-                                          Guardar
-                                        </button>
-                                      </div>
-                                    ) : (
-                                      <span className="font-mono text-amber-300">
-                                        {ing.unitPriceKinah.toLocaleString()} K c/u (Fijo PNJ)
-                                      </span>
-                                    )}
-                                    <span className="font-mono font-bold text-slate-200">
-                                      = {(ing.subtotalKinah * batchSize).toLocaleString()} K
-                                    </span>
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="flex flex-col justify-between rounded-lg border border-slate-800 bg-slate-900/90 p-3.5">
-                            <div>
-                              <h4 className="text-xs font-bold uppercase tracking-wider text-sky-400">
-                                {locale === 'es'
-                                  ? 'Notas de Auditoría y Precio Breakeven'
-                                  : 'Audit Notes & Breakeven Price'}
-                              </h4>
-                              <p className="mt-2 text-xs text-slate-200 leading-relaxed">
-                                {locale === 'es'
-                                  ? audit.recipe.notesEs
-                                  : audit.recipe.notesEn}
-                              </p>
-                            </div>
-
-                            <div className="mt-4 grid grid-cols-2 gap-2 border-t border-slate-800 pt-3 text-xs">
-                              <div>
-                                <span className="text-slate-400">
-                                  {locale === 'es'
-                                    ? 'Precio Mínimo Breakeven (c/u):'
-                                    : 'Breakeven Unit Price:'}
+                      <td className="py-3.5 px-4">
+                        <div className="flex items-start gap-2.5">
+                          <span className="text-[#d9b36c] text-xs mt-1">
+                            {isExpanded ? '▼' : '▶'}
+                          </span>
+                          <div>
+                            <div className="font-bold text-slate-100 flex items-center gap-2 flex-wrap">
+                              <span>{primaryName}</span>
+                              {recipe.productQuantity > 1 && (
+                                <span className="px-1.5 py-0.5 rounded bg-[#d9b36c]/20 text-[#f0d59a] text-[10px] font-bold">
+                                  ×{recipe.productQuantity}
                                 </span>
-                                <div className="font-mono font-bold text-amber-300">
-                                  {Math.round(audit.breakevenUnitPrice).toLocaleString()} Kinah
-                                </div>
-                              </div>
-                              <div>
-                                <span className="text-slate-400">
-                                  {locale === 'es'
-                                    ? 'Editar Precio Venta Producto:'
-                                    : 'Edit Product Sell Price:'}
+                              )}
+                              {recipe.isFeatured && (
+                                <span className="px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 text-[10px] font-bold">
+                                  META
                                 </span>
-                                <div
-                                  className="mt-1 flex items-center gap-1"
-                                  onClick={(e) => e.stopPropagation()}
-                                >
-                                  <input
-                                    type="number"
-                                    value={
-                                      editingPriceMap[audit.recipe.productId] ??
-                                      String(audit.unitBrokerPrice)
-                                    }
-                                    onChange={(e) =>
-                                      setEditingPriceMap((prev) => ({
-                                        ...prev,
-                                        [audit.recipe.productId]: e.target.value,
-                                      }))
-                                    }
-                                    className="w-28 rounded border border-slate-700 bg-slate-950 px-2 py-1 text-right font-mono text-xs text-white"
-                                  />
-                                  <button
-                                    type="button"
-                                    onClick={() =>
-                                      void handlePriceInputCommit(audit.recipe.productId)
-                                    }
-                                    className="rounded bg-emerald-600 hover:bg-emerald-500 px-2 py-1 text-[10px] font-bold text-white cursor-pointer"
-                                  >
-                                    OK
-                                  </button>
-                                </div>
-                              </div>
+                              )}
+                            </div>
+                            <div className="text-[11px] text-[#9aa6bc] mt-0.5">
+                              {profLabel}
                             </div>
                           </div>
                         </div>
                       </td>
+
+                      <td className="py-3.5 px-3 text-center">
+                        <div className="font-bold text-slate-200">
+                          {(recipe.baseSuccessRate * 100).toFixed(1)}%
+                        </div>
+                        {recipe.comboRate && recipe.comboRate > 0 ? (
+                          <div className="text-[11px] text-[#f0d59a] font-semibold">
+                            +{(recipe.comboRate * 100).toFixed(0)}% Proc
+                          </div>
+                        ) : null}
+                      </td>
+
+                      <td className="py-3.5 px-3 text-right font-mono">
+                        <div className="text-slate-100 font-semibold">
+                          {audit.unitBrokerPrice > 0
+                            ? audit.unitBrokerPrice.toLocaleString()
+                            : '—'}
+                        </div>
+                        <div className="text-[10px] text-[#9aa6bc]">
+                          {audit.activeListings} listings
+                        </div>
+                      </td>
+
+                      <td className="py-3.5 px-3 text-right font-mono text-[#f0d59a]">
+                        {npcCostBatch.toLocaleString()}
+                      </td>
+
+                      <td className="py-3.5 px-3 text-right font-mono text-slate-200">
+                        {attemptCostBatch.toLocaleString()}
+                      </td>
+
+                      <td className="py-3.5 px-3 text-right font-mono text-[#8b95ff] font-semibold">
+                        {expectedNetBatch.toLocaleString()}
+                      </td>
+
+                      <td
+                        className={`py-3.5 px-3 text-right font-mono font-bold ${
+                          profitBuyAllBatch >= 0 ? 'text-[#6fd08c]' : 'text-[#e5484d]'
+                        }`}
+                      >
+                        <div>
+                          {profitBuyAllBatch >= 0 ? '+' : ''}
+                          {profitBuyAllBatch.toLocaleString()}
+                        </div>
+                        <div className="text-[10px] opacity-80">
+                          ({audit.roiBuyingAllPct >= 0 ? '+' : ''}
+                          {audit.roiBuyingAllPct.toFixed(1)}%)
+                        </div>
+                      </td>
+
+                      <td
+                        className={`py-3.5 px-3 text-right font-mono font-bold ${
+                          recipe.category === 'Vinculados' || recipe.hasBoundInput
+                            ? 'text-[#f0d59a]'
+                            : valueAddedOwnBatch >= 0
+                              ? 'text-[#6fd08c]'
+                              : 'text-[#e5484d]'
+                        }`}
+                      >
+                        {recipe.category === 'Vinculados' || recipe.hasBoundInput ? (
+                          <div>
+                            +{profitBoundBatch.toLocaleString()}
+                            <div className="text-[10px] text-[#f0d59a]/80">
+                              (Bound = 0 Kinah)
+                            </div>
+                          </div>
+                        ) : (
+                          <div>
+                            {valueAddedOwnBatch >= 0 ? '+' : ''}
+                            {valueAddedOwnBatch.toLocaleString()}
+                            <div className="text-[10px] opacity-75">
+                              {locale === 'es' ? 'vs vender crudo' : 'vs raw sale'}
+                            </div>
+                          </div>
+                        )}
+                      </td>
+
+                      <td className="py-3.5 px-4 text-center">
+                        {renderVerdictBadge(audit)}
+                      </td>
                     </tr>
-                  )}
-                </React.Fragment>
-              );
-            })}
-          </tbody>
-        </table>
+
+                    {isExpanded && (
+                      <tr className="bg-[#0b0e14]/95">
+                        <td colSpan={9} className="p-5 border-l-4 border-[#d9b36c]">
+                          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            {/* Ingredients Breakdown — Single Localized Name */}
+                            <div className="space-y-3">
+                              <h4 className="text-xs font-bold uppercase tracking-wider text-[#f0d59a]">
+                                {locale === 'es'
+                                  ? 'Desglose de Ingredientes y Simulador de Precios'
+                                  : 'Ingredient Breakdown & Price Simulator'}
+                              </h4>
+                              <div className="space-y-2">
+                                {audit.ingredientBreakdown.map((ing) => {
+                                  const ingName =
+                                    locale === 'es' ? ing.nameEs : ing.nameEn;
+                                  return (
+                                    <div
+                                      key={ing.itemId}
+                                      className="flex flex-wrap items-center justify-between gap-2 p-2.5 rounded-xl bg-[#141a24] border border-[#263042]"
+                                    >
+                                      <div>
+                                        <div className="text-xs font-bold text-slate-100">
+                                          {ing.quantity * batchSize}× {ingName}
+                                        </div>
+                                        <div className="text-[10px] text-[#9aa6bc]">
+                                          ID: {ing.itemId}
+                                        </div>
+                                      </div>
+
+                                      <div className="flex items-center gap-2">
+                                        <span
+                                          className={`px-2 py-0.5 rounded text-[10px] font-bold ${
+                                            ing.sourceType === 'NPC'
+                                              ? 'bg-[#d9b36c]/20 text-[#f0d59a]'
+                                              : ing.sourceType === 'BOUND'
+                                                ? 'bg-[#8b95ff]/20 text-[#8b95ff]'
+                                                : 'bg-[#1b2230] text-slate-300'
+                                          }`}
+                                        >
+                                          {ing.sourceType}
+                                        </span>
+
+                                        {ing.sourceType !== 'NPC' ? (
+                                          <div className="flex items-center gap-1">
+                                            <input
+                                              type="number"
+                                              defaultValue={ing.unitPriceKinah}
+                                              onClick={(e) => e.stopPropagation()}
+                                              onChange={(e) =>
+                                                setEditingPriceMap((prev) => ({
+                                                  ...prev,
+                                                  [ing.itemId]: e.target.value,
+                                                }))
+                                              }
+                                              className="w-24 px-2 py-1 rounded bg-[#0b0e14] border border-[#263042] text-right font-mono text-xs text-slate-100"
+                                            />
+                                            <button
+                                              type="button"
+                                              onClick={(e) => {
+                                                e.stopPropagation();
+                                                void handleSaveCustomPrice(ing.itemId);
+                                              }}
+                                              className="px-2 py-1 rounded bg-[#d9b36c] hover:bg-[#f0d59a] text-[#0b0e14] text-[10px] font-bold"
+                                            >
+                                              OK
+                                            </button>
+                                          </div>
+                                        ) : (
+                                          <span className="font-mono text-xs text-[#f0d59a]">
+                                            {ing.unitPriceKinah.toLocaleString()} c/u
+                                          </span>
+                                        )}
+
+                                        <span className="font-mono text-xs font-bold text-slate-200 w-24 text-right">
+                                          ={(
+                                            ing.subtotalKinah * batchSize
+                                          ).toLocaleString()}
+                                        </span>
+                                      </div>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+
+                            {/* Notes & Product Price Simulator */}
+                            <div className="space-y-3">
+                              <h4 className="text-xs font-bold uppercase tracking-wider text-[#f0d59a]">
+                                {locale === 'es'
+                                  ? 'Diagnóstico Económico y Punto de Equilibrio (Breakeven)'
+                                  : 'Economic Diagnosis & Breakeven Analysis'}
+                              </h4>
+                              <div className="p-3.5 rounded-xl bg-[#141a24] border border-[#263042] space-y-2 text-xs">
+                                <p className="text-slate-200 leading-relaxed">
+                                  {locale === 'es' ? recipe.notesEs : recipe.notesEn}
+                                </p>
+                                <div className="pt-2 border-t border-[#263042] grid grid-cols-2 gap-2">
+                                  <div>
+                                    <span className="text-[#9aa6bc] block">
+                                      {locale === 'es'
+                                        ? 'Precio Breakeven Unitario:'
+                                        : 'Unit Breakeven Price:'}
+                                    </span>
+                                    <strong className="font-mono text-sm text-[#f0d59a]">
+                                      {Math.round(
+                                        audit.breakevenUnitPrice
+                                      ).toLocaleString()}{' '}
+                                      Kinah
+                                    </strong>
+                                  </div>
+                                  <div>
+                                    <span className="text-[#9aa6bc] block">
+                                      {locale === 'es'
+                                        ? 'Valor Neto 90% de tus Mats Crudos:'
+                                        : '90% Net Value of Your Raw Mats:'}
+                                    </span>
+                                    <strong className="font-mono text-sm text-slate-200">
+                                      {Math.round(
+                                        audit.opportunityCostRawSales90 * batchSize
+                                      ).toLocaleString()}{' '}
+                                      Kinah
+                                    </strong>
+                                  </div>
+                                </div>
+
+                                {comboLabel && (
+                                  <div className="pt-2 border-t border-[#263042] flex items-center justify-between">
+                                    <span className="text-[#f0d59a]">
+                                      ✨ Proc ({((recipe.comboRate ?? 0) * 100).toFixed(0)}
+                                      %): {comboLabel}
+                                    </span>
+                                    {audit.comboBrokerPrice > 0 && (
+                                      <span className="font-mono font-bold text-[#f0d59a]">
+                                        {audit.comboBrokerPrice.toLocaleString()} Kinah
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+
+                                {/* Simulate output price */}
+                                <div className="pt-2 border-t border-[#263042] flex items-center justify-between">
+                                  <span className="text-[#9aa6bc]">
+                                    {locale === 'es'
+                                      ? 'Simular Precio Venta Producto:'
+                                      : 'Simulate Product Sale Price:'}
+                                  </span>
+                                  <div className="flex items-center gap-1.5">
+                                    <input
+                                      type="number"
+                                      defaultValue={audit.unitBrokerPrice}
+                                      onClick={(e) => e.stopPropagation()}
+                                      onChange={(e) =>
+                                        setEditingPriceMap((prev) => ({
+                                          ...prev,
+                                          [recipe.productId]: e.target.value,
+                                        }))
+                                      }
+                                      className="w-28 px-2 py-1 rounded bg-[#0b0e14] border border-[#263042] text-right font-mono text-xs text-slate-100"
+                                    />
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        void handleSaveCustomPrice(recipe.productId);
+                                      }}
+                                      className="px-2.5 py-1 rounded bg-[#d9b36c] hover:bg-[#f0d59a] text-[#0b0e14] text-xs font-bold"
+                                    >
+                                      {locale === 'es' ? 'Guardar' : 'Save'}
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    )}
+                  </React.Fragment>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   );

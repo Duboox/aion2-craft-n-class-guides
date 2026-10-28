@@ -6,17 +6,18 @@ import type { Locale } from '../domain/models/types';
 export interface TranslationsDictionary {
   readonly headerTitle: string;
   readonly headerSubtitle: string;
-  readonly serverBadge: string;
   readonly navAuditor: string;
-  readonly navExplorer: string;
   readonly navClasses: string;
-  readonly navEconomy: string;
-  readonly navChecklist: string;
+  readonly navCharacters: string;
+  readonly navTools: string;
+  readonly navExplorer: string;
+  readonly navGlossary: string;
   readonly dbStatusTitle: string;
   readonly dbCatalogLabel: string;
   readonly dbMarketLabel: string;
   readonly dbVendorLabel: string;
   readonly dbMorphLabel: string;
+  readonly dbRecipesLabel: string;
   readonly dbLastSync: string;
   readonly btnRefreshLive: string;
   readonly btnReseed: string;
@@ -46,31 +47,33 @@ export interface TranslationsDictionary {
 
 export const TRANSLATIONS: Readonly<Record<Locale, TranslationsDictionary>> = {
   es: {
-    headerTitle: 'Aion 2 — Centro Maestro de Crafteo, Mercado y Guías de Clase',
+    headerTitle: 'Aion 2 — Hub Oficial de Crafteo, Clases, Personajes y Herramientas',
     headerSubtitle:
-      'Auditoría Matemática en Vivo (aion2.gg Client 2.0.8.0 × aion2.exchange) con Base de Datos IndexedDB Local',
-    serverBadge: 'Servidor: NA East - Azphel (Asmodian #12106) | Legión: SangreLatina',
-    navAuditor: '📊 Auditor de Recetas y Calculadora',
-    navExplorer: '🗄️ Explorador IndexedDB (6.637 Ítems)',
-    navClasses: '⚔️ Guías de Clase (Chanter & Gladiator)',
-    navEconomy: '💰 Economía, Mazmorras y Quna',
-    navChecklist: '✅ Checklist Diario y Semanal',
-    dbStatusTitle: 'Motor IndexedDB en el Navegador (Patrón Repository)',
-    dbCatalogLabel: 'Catálogo EN/ES',
-    dbMarketLabel: 'Precios Azphel',
-    dbVendorLabel: 'Precios Fijos PNJ',
-    dbMorphLabel: 'Transmutaciones',
-    dbLastSync: 'Última Sincronización',
-    btnRefreshLive: '🔄 Refrescar API en Vivo',
-    btnReseed: '♻️ Recargar Semilla Base',
-    btnClearDb: '🗑️ Eliminar IndexedDB / Caché',
+      'Ecosistema Completo: 242 Recetas Reales × Precios Broker × 8 Guías de Clase × Inspector Shugo.gg & Leaderboard',
+    navAuditor: '📊 Crafteo & Mercado (242)',
+    navClasses: '⚔️ Guías de Clases (8)',
+    navCharacters: '🏆 Mis PJs & Leaderboard',
+    navTools: '🛠️ Herramientas & Mazmorras',
+    navExplorer: '🗄️ Base de Datos (6.637)',
+    navGlossary: '📚 Glosario & Checklist',
+    dbStatusTitle: 'Motor IndexedDB Local + Selector de Servidor (Patrón Repository)',
+    dbCatalogLabel: 'Catálogo Ítems',
+    dbMarketLabel: 'Precios Broker',
+    dbVendorLabel: 'Precios PNJ',
+    dbMorphLabel: 'Transmutación',
+    dbRecipesLabel: 'Recetas Cliente',
+    dbLastSync: 'Sincronizado',
+    btnRefreshLive: '🔄 Refrescar API',
+    btnReseed: '♻️ Recargar Semilla',
+    btnClearDb: '🗑️ Vaciar IndexedDB',
     msgRefreshing: 'Consultando API de aion2.exchange y actualizando IndexedDB...',
-    msgCleared: 'Base de datos IndexedDB eliminada por completo. Pulsa "Recargar Semilla Base" para reindexar.',
-    msgReseeded: 'Semilla estática reindexada correctamente en IndexedDB.',
-    msgLiveUpdated: 'Precios de Azphel sincronizados en IndexedDB.',
-    searchPlaceholder: 'Buscar receta, material o ítem en Español o Inglés...',
-    batchLabel: 'Multiplicador de Lote:',
-    colRecipe: 'Receta (ES / EN)',
+    msgCleared:
+      'Base de datos IndexedDB vaciada. Pulsa "Recargar Semilla" para reindexar los datos base.',
+    msgReseeded: 'Semilla estática (242 recetas y 6.637 ítems) reindexada en IndexedDB.',
+    msgLiveUpdated: 'Precios del servidor sincronizados en IndexedDB.',
+    searchPlaceholder: 'Buscar por nombre, profesión o ingrediente...',
+    batchLabel: 'Lote:',
+    colRecipe: 'Nombre de Receta',
     colSuccess: 'Éxito / Proc',
     colBrokerPrice: 'Precio Broker',
     colNpcCost: 'Coste Fijo PNJ',
@@ -78,41 +81,43 @@ export const TRANSLATIONS: Readonly<Record<Locale, TranslationsDictionary>> = {
     colExpectedNet: 'Retorno Neto (× Éxito)',
     colProfitBuyAll: 'Escenario A: Comprando 100%',
     colValueAddedOwn: 'Escenario B: Valor Añadido (Mats Propios vs Crudo)',
-    colVerdict: 'Veredicto Matemático',
+    colVerdict: 'Veredicto',
     verdictProfitable: 'RENTABLE (Compra y Propios)',
     verdictGoldmine: 'ORO PURO (Solo Mats Bound)',
     verdictDestroys: 'DESTRUYE VALOR (Vende Crudo)',
     verdictLow: 'MARGEN BAJO / NEUTRO',
-    formulaBannerTitle: 'Demostración Matemática del Coste de Oportunidad:',
+    formulaBannerTitle: 'Regla Matemática de Coste de Oportunidad:',
     formulaBannerDesc:
-      'Valor Añadido Real = (Venta Neta 90% × Tasa Éxito) − Coste Fijo PNJ − (Valor de Mercado de Tus Mats Crudos × 90%). Si es negativo, fabricar con tus propios materiales te hace perder dinero frente a venderlos crudos en el Broker.',
+      'Valor Añadido Real = (Venta Neta 90% × Tasa Éxito) − Coste Fijo PNJ − (Valor de Mercado de Tus Mats Crudos × 90%). Si es negativo, fabricar con tus propios materiales destruye valor frente a venderlos crudos.',
   },
   en: {
-    headerTitle: 'Aion 2 — Master Crafting, Broker Market & Class Guides Hub',
+    headerTitle: 'Aion 2 — Official Crafting, Classes, Character Inspector & Tools Hub',
     headerSubtitle:
-      'Live Mathematical Audit (aion2.gg Client 2.0.8.0 × aion2.exchange) Powered by Browser IndexedDB',
-    serverBadge: 'Server: NA East - Azphel (Asmodian #12106) | Legion: SangreLatina',
-    navAuditor: '📊 Recipe Auditor & Calculator',
-    navExplorer: '🗄️ IndexedDB Explorer (6,637 Items)',
-    navClasses: '⚔️ Class Guides (Chanter & Gladiator)',
-    navEconomy: '💰 Economy, Dungeons & Quna',
-    navChecklist: '✅ Daily & Weekly Checklist',
-    dbStatusTitle: 'Browser IndexedDB Engine (Repository Pattern)',
-    dbCatalogLabel: 'EN/ES Catalog',
-    dbMarketLabel: 'Azphel Prices',
-    dbVendorLabel: 'Fixed NPC Prices',
+      'Full Ecosystem: 242 Client Recipes × Broker Prices × 8 Class Guides × Shugo.gg Inspector & Leaderboard',
+    navAuditor: '📊 Crafting & Market (242)',
+    navClasses: '⚔️ Class Guides (8)',
+    navCharacters: '🏆 My Chars & Leaderboard',
+    navTools: '🛠️ Tools & Dungeons',
+    navExplorer: '🗄️ Database (6,637)',
+    navGlossary: '📚 Glossary & Checklist',
+    dbStatusTitle: 'Browser IndexedDB Engine + Server Selector (Repository Pattern)',
+    dbCatalogLabel: 'Item Catalog',
+    dbMarketLabel: 'Broker Prices',
+    dbVendorLabel: 'NPC Prices',
     dbMorphLabel: 'Substance Morphs',
+    dbRecipesLabel: 'Client Recipes',
     dbLastSync: 'Last Synced',
-    btnRefreshLive: '🔄 Refresh Live API',
-    btnReseed: '♻️ Re-seed Base Cache',
-    btnClearDb: '🗑️ Delete IndexedDB / Cache',
+    btnRefreshLive: '🔄 Refresh API',
+    btnReseed: '♻️ Re-seed Cache',
+    btnClearDb: '🗑️ Clear IndexedDB',
     msgRefreshing: 'Querying aion2.exchange API and updating IndexedDB...',
-    msgCleared: 'IndexedDB database completely deleted. Click "Re-seed Base Cache" to re-index.',
-    msgReseeded: 'Static seed successfully re-indexed into IndexedDB.',
-    msgLiveUpdated: 'Azphel market prices synced into IndexedDB.',
-    searchPlaceholder: 'Search recipe, material, or item in Spanish or English...',
-    batchLabel: 'Batch Multiplier:',
-    colRecipe: 'Recipe (ES / EN)',
+    msgCleared:
+      'IndexedDB database cleared. Click "Re-seed Cache" to re-index base datasets.',
+    msgReseeded: 'Static seed (242 recipes & 6,637 items) re-indexed into IndexedDB.',
+    msgLiveUpdated: 'Server market prices synced into IndexedDB.',
+    searchPlaceholder: 'Search by name, profession, or ingredient...',
+    batchLabel: 'Batch:',
+    colRecipe: 'Recipe Name',
     colSuccess: 'Success / Proc',
     colBrokerPrice: 'Broker Price',
     colNpcCost: 'Fixed NPC Cost',
@@ -120,13 +125,13 @@ export const TRANSLATIONS: Readonly<Record<Locale, TranslationsDictionary>> = {
     colExpectedNet: 'Expected Net (× Success)',
     colProfitBuyAll: 'Scenario A: Buying 100%',
     colValueAddedOwn: 'Scenario B: Value Added (Own Mats vs Raw)',
-    colVerdict: 'Mathematical Verdict',
+    colVerdict: 'Verdict',
     verdictProfitable: 'PROFITABLE (Buy & Own)',
     verdictGoldmine: 'GOLDMINE (Bound Mats Only)',
     verdictDestroys: 'DESTROYS VALUE (Sell Raw)',
     verdictLow: 'LOW MARGIN / NEUTRAL',
-    formulaBannerTitle: 'Mathematical Opportunity Cost Proof:',
+    formulaBannerTitle: 'Mathematical Opportunity Cost Rule:',
     formulaBannerDesc:
-      'Real Value Added = (90% Net Sale × Base Success Rate) − Fixed NPC Cost − (90% Raw Market Value of Your Gathered Mats). If negative, crafting your own materials loses money compared to selling them raw on the Broker.',
+      'Real Value Added = (90% Net Sale × Base Success Rate) − Fixed NPC Cost − (90% Raw Market Value of Your Gathered Mats). If negative, crafting your own materials loses money compared to selling them raw.',
   },
 };

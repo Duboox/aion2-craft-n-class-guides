@@ -4,10 +4,65 @@
 
 :root {
   color-scheme: dark;
+  --aion-bg: #0b0e14;
+  --aion-surface: #141a24;
+  --aion-elevated: #1b2230;
+  --aion-border: #263042;
+  --aion-gold: #d9b36c;
+  --aion-gold-light: #f0d59a;
+  --aion-good: #6fd08c;
+  --aion-danger: #e5484d;
+  --aion-pvp: #8b95ff;
 }
 
 body {
-  background-color: #070b14;
-  color: #f8fafc;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #0b0e14;
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(217, 179, 108, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 10%, rgba(139, 149, 255, 0.06) 0%, transparent 40%);
+  background-attachment: fixed;
+  color: #edf1f7;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0e14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #263042;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d9b36c;
+}
+
+@layer utilities {
+  .aion-card {
+    background-color: #141a24;
+    border: 1px solid #263042;
+    box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.65);
+  }
+
+  .aion-card-gold {
+    background: linear-gradient(180deg, rgba(27, 34, 48, 0.92) 0%, rgba(20, 26, 36, 0.96) 100%);
+    border: 1px solid rgba(217, 179, 108, 0.35);
+    box-shadow: 0 12px 34px -10px rgba(0, 0, 0, 0.7);
+  }
 }

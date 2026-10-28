@@ -9,7 +9,12 @@ import type {
   EvaluatedRecipeAudit,
   MarketItem,
   NpcVendorMaterial,
+  RecipeFilterScope,
+  SavedCharacterConfig,
+  ShugoCharacterProfile,
+  ShugoLeaderboardEntry,
   SubstanceMorphRecipe,
+  UserPreferences,
   VerifiedRecipe,
 } from '../models/types';
 
@@ -31,8 +36,35 @@ export interface ICatalogRepository {
 }
 
 export interface IRecipeRepository {
-  getVerifiedRecipes(category?: CraftingCategory): readonly VerifiedRecipe[];
-  evaluateRecipes(category?: CraftingCategory): Promise<readonly EvaluatedRecipeAudit[]>;
+  getRecipes(
+    category?: CraftingCategory,
+    scope?: RecipeFilterScope
+  ): Promise<readonly VerifiedRecipe[]>;
+  evaluateRecipes(
+    category?: CraftingCategory,
+    scope?: RecipeFilterScope
+  ): Promise<readonly EvaluatedRecipeAudit[]>;
+}
+
+export interface IUserPreferencesRepository {
+  getUserPreferences(): Promise<UserPreferences>;
+  saveUserPreferences(prefs: UserPreferences): Promise<void>;
+  getSavedCharacters(): Promise<readonly SavedCharacterConfig[]>;
+  saveCharacterConfig(charConfig: SavedCharacterConfig): Promise<void>;
+  removeCharacterConfig(id: string): Promise<void>;
+}
+
+export interface IShugoRepository {
+  fetchCharacterProfile(
+    serverSlug: string,
+    shugoServerId: number,
+    characterName: string
+  ): Promise<ShugoCharacterProfile>;
+  fetchLeaderboard(
+    shugoServerId: number,
+    className?: string,
+    limit?: number
+  ): Promise<readonly ShugoLeaderboardEntry[]>;
 }
 
 export interface IDatabaseLifecycleRepository {

@@ -3,9 +3,9 @@ import React from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Aion 2 — Craft, Market Auditor & Class Guides (Azphel 12106)',
+  title: 'Aion 2 — SangreLatina Hub: Crafting (242), 8 Class Guides, Shugo.gg Inspector & Tools',
   description:
-    'Live Aion 2 Crafting Calculator, IndexedDB Market Auditor (aion2.gg x aion2.exchange) & Chanter/Gladiator Guides in Spanish and English.',
+    'Complete Aion 2 Community Hub: 242 Client Recipes Auditor, 8 Class Guides (PvE/PvP), Live Shugo.gg Character Inspector & Leaderboard, Transcendence T1-T4 & Kinah-to-Quna Tools.',
 };
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
 }): React.ReactElement {
   return (
     <html lang="es" className="dark">
-      <body className="min-h-screen bg-[#070b14] text-slate-100 antialiased selection:bg-amber-500 selection:text-slate-950">
+      <body className="min-h-screen bg-[#0b0e14] text-[#edf1f7] antialiased selection:bg-[#d9b36c] selection:text-[#0b0e14]">
         {children}
       </body>
     </html>

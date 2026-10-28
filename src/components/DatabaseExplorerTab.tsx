@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import { ENDPOINTS_CONFIG } from '../config/endpoints.config';
 import type {
   CatalogItem,
   Locale,
@@ -10,132 +11,133 @@ import type {
 } from '../domain/models/types';
 import { aion2Repository } from '../infrastructure/repositories/aion2.repository';
 
-export interface DatabaseExplorerTabProps {
+interface DatabaseExplorerTabProps {
   readonly locale: Locale;
-  readonly marketItems: readonly MarketItem[];
-  readonly vendorMaterials: readonly NpcVendorMaterial[];
-  readonly onUpdateCustomPrice: (itemKey: number, newPrice: number) => Promise<void>;
+  readonly refreshTrigger: number;
+  readonly onPriceUpdated: () => Promise<void>;
 }
 
-type ExplorerSubTab = 'MARKET' | 'VENDOR' | 'CATALOG' | 'MORPH';
+type ExplorerSubTab = 'MARKET' | 'CATALOG' | 'VENDOR' | 'MORPH';
 
 export const DatabaseExplorerTab: React.FC<DatabaseExplorerTabProps> = ({
   locale,
-  marketItems,
-  vendorMaterials,
-  onUpdateCustomPrice,
+  refreshTrigger,
+  onPriceUpdated,
 }) => {
   const [subTab, setSubTab] = useState<ExplorerSubTab>('MARKET');
   const [query, setQuery] = useState<string>('');
-  const [catalogResults, setCatalogResults] = useState<readonly CatalogItem[]>([]);
-  const [morphResults, setMorphResults] = useState<readonly SubstanceMorphRecipe[]>([]);
-  const [editingPriceMap, setEditingPriceMap] = useState<Readonly<Record<number, string>>>({});
+  const [marketItems, setMarketItems] = useState<readonly MarketItem[]>([]);
+  const [catalogItems, setCatalogItems] = useState<readonly CatalogItem[]>([]);
+  const [vendorItems, setVendorItems] = useState<readonly NpcVendorMaterial[]>([]);
+  const [morphItems, setMorphItems] = useState<readonly SubstanceMorphRecipe[]>([]);
+  const [customPriceMap, setCustomPriceMap] = useState<Record<number, string>>({});
+
+  const loadExplorerData = useCallback(async (): Promise<void> => {
+    const [mkt, cat, vnd, mrp] = await Promise.all([
+      aion2Repository.getAllMarketItems(),
+      aion2Repository.searchCatalogItems(query, 100),
+      aion2Repository.getAllVendorMaterials(),
+      aion2Repository.searchSubstanceMorphRecipes(query, 80),
+    ]);
+    setMarketItems(mkt);
+    setCatalogItems(cat);
+    setVendorItems(vnd);
+    setMorphItems(mrp);
+  }, [query]);
 
   useEffect(() => {
-    let active = true;
-    const load = async (): Promise<void> => {
-      if (subTab === 'CATALOG') {
-        const res = await aion2Repository.searchCatalogItems(query, 100);
-        if (active) setCatalogResults(res);
-      } else if (subTab === 'MORPH') {
-        const res = await aion2Repository.searchSubstanceMorphRecipes(query, 80);
-        if (active) setMorphResults(res);
-      }
-    };
-    void load();
-    return () => {
-      active = false;
-    };
-  }, [subTab, query]);
+    void loadExplorerData();
+  }, [loadExplorerData, refreshTrigger]);
 
   const filteredMarket = marketItems
-    .filter((item) => {
+    .filter((it) => {
       const q = query.trim().toLowerCase();
       if (!q) return true;
+      const localizedName = locale === 'es' ? it.nameEs : it.nameEn;
       return (
-        item.nameEs.toLowerCase().includes(q) ||
-        item.nameEn.toLowerCase().includes(q) ||
-        item.categoryName.toLowerCase().includes(q) ||
-        String(item.itemKey).includes(q)
+        localizedName.toLowerCase().includes(q) ||
+        it.nameEs.toLowerCase().includes(q) ||
+        it.nameEn.toLowerCase().includes(q) ||
+        it.categoryName.toLowerCase().includes(q) ||
+        String(it.itemKey).includes(q)
       );
     })
-    .slice(0, 120);
-
-  const filteredVendors = vendorMaterials.filter((v) => {
-    const q = query.trim().toLowerCase();
-    if (!q) return true;
-    return (
-      v.nameEs.toLowerCase().includes(q) ||
-      v.nameEn.toLowerCase().includes(q) ||
-      String(v.id).includes(q)
-    );
-  });
+    .slice(0, 100);
 
   const handleSavePrice = async (itemKey: number): Promise<void> => {
-    const raw = editingPriceMap[itemKey];
+    const raw = customPriceMap[itemKey];
     if (raw === undefined) return;
-    const num = Number.parseFloat(raw);
-    if (Number.isFinite(num) && num >= 0) {
-      await onUpdateCustomPrice(itemKey, num);
-    }
+    const num = Number(raw);
+    if (!Number.isFinite(num) || num < 0) return;
+    await aion2Repository.updateCustomItemPrice(itemKey, num);
+    await loadExplorerData();
+    await onPriceUpdated();
   };
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col gap-3 rounded-xl border border-slate-800 bg-slate-900/80 p-4 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={() => setSubTab('MARKET')}
-            className={`rounded-lg px-3 py-1.5 text-xs font-bold cursor-pointer ${
-              subTab === 'MARKET'
-                ? 'bg-emerald-500 text-slate-950'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-            }`}
+    <div className="space-y-6">
+      <div className="aion-card rounded-2xl p-5 space-y-4">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => setSubTab('MARKET')}
+              className={`px-4 py-2 rounded-xl text-xs font-extrabold border transition ${
+                subTab === 'MARKET'
+                  ? 'bg-[#d9b36c] text-[#0b0e14] border-[#d9b36c]'
+                  : 'bg-[#0b0e14] text-slate-300 border-[#263042] hover:text-white'
+              }`}
+            >
+              📈 {locale === 'es' ? 'Precios Broker' : 'Broker Prices'} (
+              {marketItems.length})
+            </button>
+            <button
+              type="button"
+              onClick={() => setSubTab('VENDOR')}
+              className={`px-4 py-2 rounded-xl text-xs font-extrabold border transition ${
+                subTab === 'VENDOR'
+                  ? 'bg-[#d9b36c] text-[#0b0e14] border-[#d9b36c]'
+                  : 'bg-[#0b0e14] text-slate-300 border-[#263042] hover:text-white'
+              }`}
+            >
+              🏪 {locale === 'es' ? 'Materiales PNJ Fijos (33)' : 'Fixed NPC Vendors (33)'}
+            </button>
+            <button
+              type="button"
+              onClick={() => setSubTab('CATALOG')}
+              className={`px-4 py-2 rounded-xl text-xs font-extrabold border transition ${
+                subTab === 'CATALOG'
+                  ? 'bg-[#d9b36c] text-[#0b0e14] border-[#d9b36c]'
+                  : 'bg-[#0b0e14] text-slate-300 border-[#263042] hover:text-white'
+              }`}
+            >
+              📖 {locale === 'es' ? 'Catálogo Oficial (6.637)' : 'Official Catalog (6,637)'}
+            </button>
+            <button
+              type="button"
+              onClick={() => setSubTab('MORPH')}
+              className={`px-4 py-2 rounded-xl text-xs font-extrabold border transition ${
+                subTab === 'MORPH'
+                  ? 'bg-[#d9b36c] text-[#0b0e14] border-[#d9b36c]'
+                  : 'bg-[#0b0e14] text-slate-300 border-[#263042] hover:text-white'
+              }`}
+            >
+              ⚗️ {locale === 'es' ? 'Transmutación (163)' : 'Substance Morphs (163)'}
+            </button>
+          </div>
+
+          <a
+            href={
+              locale === 'es'
+                ? ENDPOINTS_CONFIG.externalReferenceLinks.shugoDatabaseEs
+                : ENDPOINTS_CONFIG.externalReferenceLinks.shugoDatabaseEn
+            }
+            target="_blank"
+            rel="noreferrer"
+            className="px-3.5 py-2 rounded-xl bg-[#1b2230] hover:bg-[#263042] text-[#f0d59a] border border-[#d9b36c]/40 text-xs font-bold self-start transition"
           >
-            {locale === 'es'
-              ? `📈 Mercado Azphel (${marketItems.length})`
-              : `📈 Azphel Market (${marketItems.length})`}
-          </button>
-          <button
-            type="button"
-            onClick={() => setSubTab('VENDOR')}
-            className={`rounded-lg px-3 py-1.5 text-xs font-bold cursor-pointer ${
-              subTab === 'VENDOR'
-                ? 'bg-amber-500 text-slate-950'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-            }`}
-          >
-            {locale === 'es'
-              ? `🏪 33 Materiales PNJ (${vendorMaterials.length})`
-              : `🏪 33 NPC Vendor Mats (${vendorMaterials.length})`}
-          </button>
-          <button
-            type="button"
-            onClick={() => setSubTab('CATALOG')}
-            className={`rounded-lg px-3 py-1.5 text-xs font-bold cursor-pointer ${
-              subTab === 'CATALOG'
-                ? 'bg-sky-500 text-slate-950'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-            }`}
-          >
-            {locale === 'es'
-              ? '🌐 Diccionario 6.637 Ítems (EN ⇄ ES)'
-              : '🌐 6,637 Items Dictionary (EN ⇄ ES)'}
-          </button>
-          <button
-            type="button"
-            onClick={() => setSubTab('MORPH')}
-            className={`rounded-lg px-3 py-1.5 text-xs font-bold cursor-pointer ${
-              subTab === 'MORPH'
-                ? 'bg-purple-500 text-slate-950'
-                : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-            }`}
-          >
-            {locale === 'es'
-              ? '🔮 163 Transmutaciones (Substance Morph)'
-              : '🔮 163 Substance Morphs'}
-          </button>
+            🌐 {locale === 'es' ? 'Base de Datos Shugo.gg (ES)' : 'Shugo.gg Database (EN)'} ↗
+          </a>
         </div>
 
         <input
@@ -144,141 +146,218 @@ export const DatabaseExplorerTab: React.FC<DatabaseExplorerTabProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           placeholder={
             locale === 'es'
-              ? 'Buscar por nombre ES, EN o ID en IndexedDB...'
-              : 'Search by ES name, EN name, or ID in IndexedDB...'
+              ? 'Filtrar en tiempo real dentro de IndexedDB por nombre o ID...'
+              : 'Live filter inside IndexedDB by name or ID...'
           }
-          className="w-full sm:w-80 rounded-lg border border-slate-700 bg-slate-950 px-3 py-2 text-xs text-white placeholder-slate-500 focus:border-sky-400 focus:outline-none"
+          className="w-full px-4 py-2.5 rounded-xl bg-[#0b0e14] border border-[#263042] text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-[#d9b36c]"
         />
       </div>
 
+      {/* SubTab 1: Market Prices — Single Dynamic Name Column */}
       {subTab === 'MARKET' && (
-        <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80">
-          <table className="w-full text-left text-xs">
-            <thead className="border-b border-slate-800 bg-slate-950 text-slate-400 uppercase">
-              <tr>
-                <th className="px-4 py-3">ID Cliente</th>
-                <th className="px-4 py-3">Nombre Español (ES)</th>
-                <th className="px-4 py-3">Nombre Inglés (EN)</th>
-                <th className="px-3 py-3">Categoría</th>
-                <th className="px-3 py-3 text-right">Listings</th>
-                <th className="px-4 py-3 text-right">Precio Broker (Editable)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800/70">
-              {filteredMarket.map((item) => (
-                <tr key={item.itemKey} className="hover:bg-slate-800/40">
-                  <td className="px-4 py-2.5 font-mono text-slate-400">{item.itemKey}</td>
-                  <td className="px-4 py-2.5 font-semibold text-white">{item.nameEs}</td>
-                  <td className="px-4 py-2.5 text-slate-300">{item.nameEn}</td>
-                  <td className="px-3 py-2.5 text-sky-400">{item.categoryName}</td>
-                  <td className="px-3 py-2.5 text-right font-mono text-slate-300">
-                    {item.listings}
-                  </td>
-                  <td className="px-4 py-2.5 text-right">
-                    <div className="inline-flex items-center gap-1.5">
-                      <input
-                        type="number"
-                        value={editingPriceMap[item.itemKey] ?? String(item.price)}
-                        onChange={(e) =>
-                          setEditingPriceMap((prev) => ({
-                            ...prev,
-                            [item.itemKey]: e.target.value,
-                          }))
-                        }
-                        className="w-28 rounded border border-slate-700 bg-slate-950 px-2 py-1 text-right font-mono text-xs text-emerald-300"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => void handleSavePrice(item.itemKey)}
-                        className="rounded bg-emerald-700 hover:bg-emerald-600 px-2 py-1 text-[10px] font-bold text-white cursor-pointer"
-                      >
-                        OK
-                      </button>
-                    </div>
-                  </td>
+        <div className="aion-card rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#0b0e14] border-b border-[#263042] text-[11px] uppercase tracking-wider text-[#9aa6bc]">
+                  <th className="py-3.5 px-4">ID</th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Nombre del Ítem' : 'Item Name'}
+                  </th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Categoría' : 'Category'}
+                  </th>
+                  <th className="py-3.5 px-4 text-right">
+                    {locale === 'es' ? 'Precio Broker' : 'Broker Price'}
+                  </th>
+                  <th className="py-3.5 px-4 text-right">Listings</th>
+                  <th className="py-3.5 px-4 text-right">
+                    {locale === 'es' ? 'Editar Precio Local' : 'Edit Local Price'}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-[#263042]/60 text-sm">
+                {filteredMarket.map((item) => {
+                  const displayName = locale === 'es' ? item.nameEs : item.nameEn;
+                  return (
+                    <tr
+                      key={item.itemKey}
+                      className="hover:bg-[#1b2230]/70 transition"
+                    >
+                      <td className="py-3 px-4 font-mono text-xs text-[#9aa6bc]">
+                        {item.itemKey}
+                      </td>
+                      <td className="py-3 px-4 font-bold text-slate-100">
+                        {displayName}
+                      </td>
+                      <td className="py-3 px-4 text-xs text-[#9aa6bc]">
+                        {item.categoryName}
+                      </td>
+                      <td className="py-3 px-4 text-right font-mono font-bold text-[#6fd08c]">
+                        {item.price.toLocaleString()} K
+                      </td>
+                      <td className="py-3 px-4 text-right font-mono text-xs text-slate-300">
+                        {item.listings}
+                      </td>
+                      <td className="py-3 px-4 text-right">
+                        <div className="inline-flex items-center gap-1.5">
+                          <input
+                            type="number"
+                            defaultValue={item.price}
+                            onChange={(e) =>
+                              setCustomPriceMap((prev) => ({
+                                ...prev,
+                                [item.itemKey]: e.target.value,
+                              }))
+                            }
+                            className="w-24 px-2 py-1 rounded bg-[#0b0e14] border border-[#263042] text-right font-mono text-xs text-slate-100"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => void handleSavePrice(item.itemKey)}
+                            className="px-2.5 py-1 rounded bg-[#d9b36c] hover:bg-[#f0d59a] text-[#0b0e14] text-xs font-bold"
+                          >
+                            OK
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
+      {/* SubTab 2: NPC Vendor Prices — Single Dynamic Name Column */}
       {subTab === 'VENDOR' && (
-        <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80">
-          <table className="w-full text-left text-xs">
-            <thead className="border-b border-slate-800 bg-slate-950 text-slate-400 uppercase">
-              <tr>
-                <th className="px-4 py-3">ID Cliente</th>
-                <th className="px-4 py-3">Nombre Oficial Español (ES)</th>
-                <th className="px-4 py-3">Nombre Oficial Inglés (EN)</th>
-                <th className="px-4 py-3 text-right">Precio Fijo PNJ</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800/70">
-              {filteredVendors.map((v) => (
-                <tr key={v.id} className="hover:bg-slate-800/40">
-                  <td className="px-4 py-2.5 font-mono text-slate-400">{v.id}</td>
-                  <td className="px-4 py-2.5 font-bold text-amber-300">{v.nameEs}</td>
-                  <td className="px-4 py-2.5 text-slate-200">{v.nameEn}</td>
-                  <td className="px-4 py-2.5 text-right font-mono font-bold text-emerald-400">
-                    {v.vendorPriceKinah.toLocaleString()} Kinah
-                  </td>
+        <div className="aion-card rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#0b0e14] border-b border-[#263042] text-[11px] uppercase tracking-wider text-[#9aa6bc]">
+                  <th className="py-3.5 px-4">ID</th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Material de PNJ' : 'NPC Vendor Material'}
+                  </th>
+                  <th className="py-3.5 px-4 text-right">
+                    {locale === 'es'
+                      ? 'Precio Fijo Oficial PNJ (Kinah)'
+                      : 'Official Fixed NPC Price (Kinah)'}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-[#263042]/60 text-sm">
+                {vendorItems
+                  .filter((v) => {
+                    const q = query.trim().toLowerCase();
+                    if (!q) return true;
+                    const displayName = locale === 'es' ? v.nameEs : v.nameEn;
+                    return (
+                      displayName.toLowerCase().includes(q) || String(v.id).includes(q)
+                    );
+                  })
+                  .map((v) => {
+                    const displayName = locale === 'es' ? v.nameEs : v.nameEn;
+                    return (
+                      <tr key={v.id} className="hover:bg-[#1b2230]/70 transition">
+                        <td className="py-3 px-4 font-mono text-xs text-[#9aa6bc]">
+                          {v.id}
+                        </td>
+                        <td className="py-3 px-4 font-bold text-[#f0d59a]">
+                          {displayName}
+                        </td>
+                        <td className="py-3 px-4 text-right font-mono font-bold text-slate-100">
+                          {v.vendorPriceKinah.toLocaleString()} Kinah
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
+      {/* SubTab 3: 6,637 Official Catalog — Single Dynamic Name Column */}
       {subTab === 'CATALOG' && (
-        <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80">
-          <table className="w-full text-left text-xs">
-            <thead className="border-b border-slate-800 bg-slate-950 text-slate-400 uppercase">
-              <tr>
-                <th className="px-4 py-3">ID Cliente (aion2.gg)</th>
-                <th className="px-4 py-3">Español Oficial (ES)</th>
-                <th className="px-4 py-3">Inglés Oficial (EN)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800/70">
-              {catalogResults.map((c) => (
-                <tr key={c.id} className="hover:bg-slate-800/40">
-                  <td className="px-4 py-2.5 font-mono text-slate-400">{c.id}</td>
-                  <td className="px-4 py-2.5 font-semibold text-white">{c.nameEs}</td>
-                  <td className="px-4 py-2.5 text-sky-300">{c.nameEn}</td>
+        <div className="aion-card rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#0b0e14] border-b border-[#263042] text-[11px] uppercase tracking-wider text-[#9aa6bc]">
+                  <th className="py-3.5 px-4">Client Item ID</th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es'
+                      ? 'Nombre Oficial (Español)'
+                      : 'Official Name (English)'}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-[#263042]/60 text-sm">
+                {catalogItems.map((c) => {
+                  const displayName = locale === 'es' ? c.nameEs : c.nameEn;
+                  return (
+                    <tr key={c.id} className="hover:bg-[#1b2230]/70 transition">
+                      <td className="py-3 px-4 font-mono text-xs text-[#9aa6bc]">
+                        {c.id}
+                      </td>
+                      <td className="py-3 px-4 font-bold text-slate-100">
+                        {displayName}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
 
+      {/* SubTab 4: 163 Substance Morphs — Single Dynamic Name Column */}
       {subTab === 'MORPH' && (
-        <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/80">
-          <table className="w-full text-left text-xs">
-            <thead className="border-b border-slate-800 bg-slate-950 text-slate-400 uppercase">
-              <tr>
-                <th className="px-4 py-3">ID Receta</th>
-                <th className="px-4 py-3">Resultado (Substance Morph)</th>
-                <th className="px-3 py-3 text-center">Cantidad</th>
-                <th className="px-4 py-3">Materiales Requeridos</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-800/70">
-              {morphResults.map((m) => (
-                <tr key={m.id} className="hover:bg-slate-800/40">
-                  <td className="px-4 py-2.5 font-mono text-slate-400">{m.id}</td>
-                  <td className="px-4 py-2.5 font-bold text-purple-300">{m.nameEn}</td>
-                  <td className="px-3 py-2.5 text-center font-mono text-white">
-                    x{m.outputCount}
-                  </td>
-                  <td className="px-4 py-2.5 text-slate-300">
-                    {m.materials.map((mat) => `${mat.count}x ${mat.name}`).join(' + ')}
-                  </td>
+        <div className="aion-card rounded-2xl overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-[#0b0e14] border-b border-[#263042] text-[11px] uppercase tracking-wider text-[#9aa6bc]">
+                  <th className="py-3.5 px-4">ID</th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Resultado de Transmutación' : 'Morph Output'}
+                  </th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Categoría' : 'Category'}
+                  </th>
+                  <th className="py-3.5 px-4">
+                    {locale === 'es' ? 'Materiales Requeridos' : 'Required Materials'}
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="divide-y divide-[#263042]/60 text-sm">
+                {morphItems.map((m) => {
+                  const displayName = locale === 'es' ? m.nameEs : m.nameEn;
+                  return (
+                    <tr key={m.id} className="hover:bg-[#1b2230]/70 transition">
+                      <td className="py-3 px-4 font-mono text-xs text-[#9aa6bc]">
+                        {m.id}
+                      </td>
+                      <td className="py-3 px-4 font-bold text-[#f0d59a]">
+                        {displayName}{' '}
+                        {m.outputCount > 1 && (
+                          <span className="text-xs text-[#6fd08c]">×{m.outputCount}</span>
+                        )}
+                      </td>
+                      <td className="py-3 px-4 text-xs text-slate-300">{m.category}</td>
+                      <td className="py-3 px-4 text-xs text-slate-300">
+                        {m.materials.map((mat) => `${mat.count}× ${mat.name}`).join(' + ')}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </div>

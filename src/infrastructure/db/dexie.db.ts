@@ -6,7 +6,9 @@ import type {
   CatalogItem,
   MarketItem,
   NpcVendorMaterial,
+  SavedCharacterConfig,
   SubstanceMorphRecipe,
+  VerifiedRecipe,
 } from '../../domain/models/types';
 
 export interface DbMetaEntry {
@@ -25,16 +27,20 @@ export class Aion2CraftGuidesDatabase extends Dexie {
   public catalogItems!: EntityTable<CatalogItem, 'id'>;
   public vendorMaterials!: EntityTable<NpcVendorMaterial, 'id'>;
   public morphRecipes!: EntityTable<SubstanceMorphRecipe, 'id'>;
+  public clientRecipes!: EntityTable<VerifiedRecipe, 'recipeId'>;
+  public savedCharacters!: EntityTable<SavedCharacterConfig, 'id'>;
   public checklist!: EntityTable<ChecklistCompletedEntry, 'taskId'>;
   public meta!: EntityTable<DbMetaEntry, 'key'>;
 
   public constructor() {
     super('Aion2CraftGuidesDB');
-    this.version(1).stores({
+    this.version(2).stores({
       marketItems: 'itemKey, nameEn, nameEs, categoryName, price, listings',
       catalogItems: 'id, nameEn, nameEs',
       vendorMaterials: 'id, nameEn, nameEs, vendorPriceKinah',
       morphRecipes: 'id, nameEn, category, grade',
+      clientRecipes: 'recipeId, productId, category, nameEn, nameEs, isFeatured',
+      savedCharacters: 'id, name, serverId, role',
       checklist: 'taskId, completed',
       meta: 'key',
     });
