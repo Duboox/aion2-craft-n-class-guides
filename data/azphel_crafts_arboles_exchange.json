@@ -1,0 +1,415 @@
+﻿{
+    "server_id":  12106,
+    "faction":  "Asmodian",
+    "race":  "Dark",
+    "model":  {
+                  "model_id":  2,
+                  "algorithm_version":  2,
+                  "mastery":  100,
+                  "carry_hours":  6,
+                  "source":  "game files, AION2 5.3.2.0 (usmap AION2-5.3.2.0-2.0.5.0.2026100501); Data/Table CraftRecipe + ConversionRecipe + CraftComponentReplacement + ConversionComponentReplacement + ComponentCombine; CraftRecipeRate; the NPC shops and the conversions",
+                  "created_at":  "2026-10-11T08:03:45.441867Z"
+              },
+    "captured_at":  "2026-10-28T02:09:40.371000Z",
+    "targets":  [
+                    {
+                        "target_key":  110430014,
+                        "name":  "Artisan\u0027s Splendent Asvata Bow",
+                        "category":  "Weapon",
+                        "skill":  "Jewelcrafting",
+                        "profile":  "weapon:asvata-bow+asvata-staff",
+                        "profile_label":  "Asvata Bow / Staff",
+                        "cost":  19347747.1035,
+                        "cost_market":  19557995.4218,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  22222222.0,
+                        "listings":  2,
+                        "margin":  2874474.896499999,
+                        "margin_pct":  14.856897193885727,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110830014,
+                        "name":  "Artisan\u0027s Splendent Asvata Staff",
+                        "category":  "Weapon",
+                        "skill":  "Jewelcrafting",
+                        "profile":  "weapon:asvata-bow+asvata-staff",
+                        "profile_label":  "Asvata Bow / Staff",
+                        "cost":  19347747.1035,
+                        "cost_market":  19557995.4218,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  14999999.0,
+                        "listings":  6,
+                        "margin":  -4347748.103500001,
+                        "margin_pct":  -22.471598787403497,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  310230014,
+                        "name":  "Artisan\u0027s Splendent Diamond Earrings",
+                        "category":  "Accessory",
+                        "skill":  "Jewelcrafting",
+                        "profile":  "accessory:diamond-earrings",
+                        "profile_label":  "Diamond Earrings",
+                        "cost":  10048340.3368,
+                        "cost_market":  10048340.3368,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  9500000.0,
+                        "listings":  3,
+                        "margin":  -548340.3367999997,
+                        "margin_pct":  -5.457023930527263,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210630014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Boots",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-boots+orichalcum-helm+orichalcum-pauldrons",
+                        "profile_label":  "Orichalcum Boots / Helm / Pauldrons",
+                        "cost":  10407164.1811,
+                        "cost_market":  11403994.3004,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210130014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Breastplate",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-breastplate",
+                        "profile_label":  "Orichalcum Breastplate",
+                        "cost":  15496889.0386,
+                        "cost_market":  17013940.0871,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210730014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Cloak",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-cloak+orichalcum-gloves",
+                        "profile_label":  "Orichalcum Cloak / Gloves",
+                        "cost":  9565986.373,
+                        "cost_market":  10418484.0086,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  20000000.0,
+                        "listings":  1,
+                        "margin":  10434013.627,
+                        "margin_pct":  109.07410088362668,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110330014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Dagger",
+                        "category":  "Weapon",
+                        "skill":  "Blacksmithing",
+                        "profile":  "weapon:orichalcum-dagger+orichalcum-greatsword+orichalcum-guard+orichalcum-longsword+orichalcum-mace",
+                        "profile_label":  "Orichalcum weapons",
+                        "cost":  19973549.2189,
+                        "cost_market":  21477103.0015,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  19999997.0,
+                        "listings":  4,
+                        "margin":  26447.781100001186,
+                        "margin_pct":  0.13241402822376175,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210530014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Gloves",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-cloak+orichalcum-gloves",
+                        "profile_label":  "Orichalcum Cloak / Gloves",
+                        "cost":  9565986.373,
+                        "cost_market":  10418484.0086,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110130014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Greatsword",
+                        "category":  "Weapon",
+                        "skill":  "Blacksmithing",
+                        "profile":  "weapon:orichalcum-dagger+orichalcum-greatsword+orichalcum-guard+orichalcum-longsword+orichalcum-mace",
+                        "profile_label":  "Orichalcum weapons",
+                        "cost":  19973549.2189,
+                        "cost_market":  21477103.0015,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  17900000.0,
+                        "listings":  3,
+                        "margin":  -2073549.2188999988,
+                        "margin_pct":  -10.381476001961133,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210230014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Greaves",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-greaves",
+                        "profile_label":  "Orichalcum Greaves",
+                        "cost":  11309064.374,
+                        "cost_market":  12493838.7161,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  115030014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Guard",
+                        "category":  "Weapon",
+                        "skill":  "Blacksmithing",
+                        "profile":  "weapon:orichalcum-dagger+orichalcum-greatsword+orichalcum-guard+orichalcum-longsword+orichalcum-mace",
+                        "profile_label":  "Orichalcum weapons",
+                        "cost":  19973549.2189,
+                        "cost_market":  21477103.0015,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  19200000.0,
+                        "listings":  3,
+                        "margin":  -773549.2188999988,
+                        "margin_pct":  -3.872868113835406,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210330014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Helm",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-boots+orichalcum-helm+orichalcum-pauldrons",
+                        "profile_label":  "Orichalcum Boots / Helm / Pauldrons",
+                        "cost":  10407164.1811,
+                        "cost_market":  11403994.3004,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110230014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Longsword",
+                        "category":  "Weapon",
+                        "skill":  "Blacksmithing",
+                        "profile":  "weapon:orichalcum-dagger+orichalcum-greatsword+orichalcum-guard+orichalcum-longsword+orichalcum-mace",
+                        "profile_label":  "Orichalcum weapons",
+                        "cost":  19973549.2189,
+                        "cost_market":  21477103.0015,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  17499999.0,
+                        "listings":  1,
+                        "margin":  -2473550.218899999,
+                        "margin_pct":  -12.384129589544347,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110730014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Mace",
+                        "category":  "Weapon",
+                        "skill":  "Blacksmithing",
+                        "profile":  "weapon:orichalcum-dagger+orichalcum-greatsword+orichalcum-guard+orichalcum-longsword+orichalcum-mace",
+                        "profile_label":  "Orichalcum weapons",
+                        "cost":  19973549.2189,
+                        "cost_market":  21477103.0015,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  21400000.0,
+                        "listings":  9,
+                        "margin":  1426450.7811000012,
+                        "margin_pct":  7.141699081454288,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  210430014,
+                        "name":  "Artisan\u0027s Splendent Orichalcum Pauldrons",
+                        "category":  "Armor",
+                        "skill":  "Tailoring",
+                        "profile":  "armor:orichalcum-boots+orichalcum-helm+orichalcum-pauldrons",
+                        "profile_label":  "Orichalcum Boots / Helm / Pauldrons",
+                        "cost":  10407164.1811,
+                        "cost_market":  11403994.3004,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  null,
+                        "listings":  null,
+                        "margin":  null,
+                        "margin_pct":  null,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  310130014,
+                        "name":  "Artisan\u0027s Splendent Ruby Necklace",
+                        "category":  "Accessory",
+                        "skill":  "Jewelcrafting",
+                        "profile":  "accessory:ruby-necklace",
+                        "profile_label":  "Ruby Necklace",
+                        "cost":  13473064.6197,
+                        "cost_market":  null,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  9849999.0,
+                        "listings":  6,
+                        "margin":  -3623065.6196999997,
+                        "margin_pct":  -26.891176743874873,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  310330014,
+                        "name":  "Artisan\u0027s Splendent Sapphire Ring",
+                        "category":  "Accessory",
+                        "skill":  "Jewelcrafting",
+                        "profile":  "accessory:sapphire-ring",
+                        "profile_label":  "Sapphire Ring",
+                        "cost":  7289073.4276,
+                        "cost_market":  7289073.4276,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  6698999.0,
+                        "listings":  10,
+                        "margin":  -590074.4276,
+                        "margin_pct":  -8.095328349494867,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110630014,
+                        "name":  "Artisan\u0027s Splendent Truth Orb",
+                        "category":  "Weapon",
+                        "skill":  "Alchemy",
+                        "profile":  "weapon:truth-orb",
+                        "profile_label":  "Truth Orb",
+                        "cost":  18649317.6367,
+                        "cost_market":  18883205.7315,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  24000000.0,
+                        "listings":  3,
+                        "margin":  5350682.363299999,
+                        "margin_pct":  28.691035605347775,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    },
+                    {
+                        "target_key":  110530014,
+                        "name":  "Artisan\u0027s Splendent Truth Spellbook",
+                        "category":  "Weapon",
+                        "skill":  "Alchemy",
+                        "profile":  "weapon:truth-spellbook",
+                        "profile_label":  "Truth Spellbook",
+                        "cost":  18585182.1774,
+                        "cost_market":  18918484.3959,
+                        "carried":  0,
+                        "missing":  0,
+                        "market_price":  27777777.0,
+                        "listings":  4,
+                        "margin":  9192594.8226,
+                        "margin_pct":  49.46195703036154,
+                        "attempts":  [
+                                         74.9965811237252,
+                                         17.4594526992697,
+                                         4.1306422598306
+                                     ]
+                    }
+                ]
+}
