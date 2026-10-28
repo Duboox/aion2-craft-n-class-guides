@@ -1,0 +1,37 @@
+{
+  "name": "aion2-craft-n-class-guides",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aion 2 Crafting Calculator, Live Azphel Market Auditor (IndexedDB) & Class Guides (Chanter / Gladiator) in ES & EN",
+  "engines": {
+    "node": ">=22.0.0 <23.0.0",
+    "npm": ">=10.0.0"
+  },
+  "nvm": "22.14.0",
+  "scripts": {
+    "check:node": "node scripts/check-node-version.mjs",
+    "preinstall": "node scripts/check-node-version.mjs",
+    "predev": "node scripts/check-node-version.mjs",
+    "prebuild": "node scripts/check-node-version.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "lucide-react": "^0.475.0",
+    "next": "15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  }
+}
