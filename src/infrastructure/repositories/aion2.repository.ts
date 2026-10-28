@@ -35,6 +35,7 @@ import {
   type Aion2GgVendorDto,
   type ClientRecipeJsonDto,
   adaptExchangePayloadToDtoArray,
+  buildCharacterRecommendations,
   mapCatalogDtoToDomain,
   mapClientRecipeDtoToDomain,
   mapExchangeDtoToMarketItem,
@@ -48,6 +49,10 @@ import { dbInstance } from '../db/dexie.db';
 const META_LAST_SYNC_KEY = 'lastSyncedAt';
 const META_SYNC_SOURCE_KEY = 'syncSource';
 const META_USER_PREFS_KEY = 'userPreferencesJson';
+const META_SEED_VERSION_KEY = 'seedDatasetVersion';
+const CURRENT_SEED_VERSION = 'v2.4-complete-432';
+const MARKET_REFRESH_COOLDOWN_MS = 60_000;
+const CHAR_PROFILE_CACHE_TTL_MS = 300_000;
 
 const DEFAULT_USER_PREFS: UserPreferences = {
   selectedServerId: ENDPOINTS_CONFIG.defaultServerId,
@@ -65,6 +70,12 @@ export class Aion2UnifiedRepository
     IDatabaseLifecycleRepository
 {
   private initPromise: Promise<DatabaseStats> | null = null;
+  private readonly lastMarketRefreshByServer = new Map<number, number>();
+  private readonly characterProfileCache = new Map<
+    string,
+    { readonly profile: ShugoCharacterProfile; readonly expiresAt: number }
+  >();
+  private azphelLeaderboardSeedCache: readonly ShugoLeaderboardEntry[] | null = null;
 
   public async initializeDatabaseIfNeeded(): Promise<DatabaseStats> {
     if (typeof window === 'undefined') {
@@ -85,14 +96,24 @@ export class Aion2UnifiedRepository
 
     this.initPromise = (async (): Promise<DatabaseStats> => {
       await dbInstance.open();
-      const [existingMarketCount, existingCatalogCount, existingRecipeCount] =
-        await Promise.all([
-          dbInstance.marketItems.count(),
-          dbInstance.catalogItems.count(),
-          dbInstance.clientRecipes.count(),
-        ]);
+      const [
+        existingMarketCount,
+        existingCatalogCount,
+        existingRecipeCount,
+        seedVersionMeta,
+      ] = await Promise.all([
+        dbInstance.marketItems.count(),
+        dbInstance.catalogItems.count(),
+        dbInstance.clientRecipes.count(),
+        dbInstance.meta.get(META_SEED_VERSION_KEY),
+      ]);
 
-      if (existingMarketCount > 0 && existingCatalogCount > 0 && existingRecipeCount > 50) {
+      if (
+        existingMarketCount > 0 &&
+        existingCatalogCount > 0 &&
+        existingRecipeCount >= 400 &&
+        seedVersionMeta?.value === CURRENT_SEED_VERSION
+      ) {
         return this.getDatabaseStats();
       }
       return this.reseedFromStaticFiles();
@@ -212,7 +233,7 @@ export class Aion2UnifiedRepository
       }
     }
 
-    // Merge curated featured recipes + all 226 client recipes across all professions
+    // Merge curated featured recipes + all 416 client recipes across all professions
     const mergedRecipes: VerifiedRecipe[] = VERIFIED_RECIPES_SEED.map((r) => ({
       ...r,
       isFeatured: true,
@@ -221,18 +242,13 @@ export class Aion2UnifiedRepository
       hasBoundInput:
         r.category === 'Vinculados' || r.ingredients.some((i) => i.sourceType === 'BOUND'),
     }));
-    const seenProductIds = new Set<string>(
-      mergedRecipes.map((r) => `${r.productId}_${r.productQuantity}`)
-    );
+    const seenRecipeIds = new Set<string>(mergedRecipes.map((r) => r.recipeId));
 
     for (const dto of clientRecipeDtos) {
       const mapped = mapClientRecipeDtoToDomain(dto, vendorPriceMap);
-      if (mapped) {
-        const key = `${mapped.productId}_${mapped.productQuantity}`;
-        if (!seenProductIds.has(key)) {
-          seenProductIds.add(key);
-          mergedRecipes.push(mapped);
-        }
+      if (mapped && !seenRecipeIds.has(mapped.recipeId)) {
+        seenRecipeIds.add(mapped.recipeId);
+        mergedRecipes.push(mapped);
       }
     }
 
@@ -263,6 +279,10 @@ export class Aion2UnifiedRepository
 
         await dbInstance.meta.put({ key: META_LAST_SYNC_KEY, value: nowIso });
         await dbInstance.meta.put({ key: META_SYNC_SOURCE_KEY, value: 'STATIC_SEED' });
+        await dbInstance.meta.put({
+          key: META_SEED_VERSION_KEY,
+          value: CURRENT_SEED_VERSION,
+        });
       }
     );
 
@@ -332,8 +352,23 @@ export class Aion2UnifiedRepository
   }
 
   // ==========================================================================
-  // SHUGO.GG LIVE CHARACTER PROFILE & LEADERBOARD
+  // SHUGO.GG LIVE CHARACTER PROFILE & LEADERBOARD (WITH ZERO-CORS AZPHEL SEED & RATE LIMITING)
   // ==========================================================================
+  private unwrapProxyResponseText(rawText: string): string {
+    const trimmed = rawText.trim();
+    if (trimmed.startsWith('{') && trimmed.includes('"contents"')) {
+      try {
+        const parsed = JSON.parse(trimmed) as { readonly contents?: unknown };
+        if (typeof parsed.contents === 'string' && parsed.contents.length > 10) {
+          return parsed.contents;
+        }
+      } catch {
+        // Return original text
+      }
+    }
+    return rawText;
+  }
+
   private async fetchTextWithCorsFallback(targetUrl: string): Promise<string> {
     const candidateUrls: string[] = [
       ...ENDPOINTS_CONFIG.liveApi.corsProxies.map((proxyFn) => proxyFn(targetUrl)),
@@ -343,13 +378,14 @@ export class Aion2UnifiedRepository
     for (const url of candidateUrls) {
       try {
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 10000);
+        const timeoutId = setTimeout(() => controller.abort(), 9000);
         const res = await fetch(url, { signal: controller.signal, cache: 'no-store' });
         clearTimeout(timeoutId);
         if (!res.ok) continue;
-        const text = await res.text();
-        if (text && text.length > 20) {
-          return text;
+        const rawText = await res.text();
+        const unwrapped = this.unwrapProxyResponseText(rawText);
+        if (unwrapped && unwrapped.length > 20) {
+          return unwrapped;
         }
       } catch {
         // Try next proxy
@@ -358,11 +394,47 @@ export class Aion2UnifiedRepository
     throw new Error(`Unable to reach ${targetUrl} via CORS proxies.`);
   }
 
+  private async loadAzphelLeaderboardStaticSeed(): Promise<
+    readonly ShugoLeaderboardEntry[]
+  > {
+    if (this.azphelLeaderboardSeedCache) {
+      return this.azphelLeaderboardSeedCache;
+    }
+    try {
+      const res = await fetch(getStaticAssetUrl('/data/shugo_leaderboard_azphel.json'));
+      if (res.ok) {
+        const json = (await res.json()) as unknown;
+        const mapped = mapShugoLeaderboardDtoToDomain(json);
+        if (mapped.length > 0) {
+          this.azphelLeaderboardSeedCache = mapped;
+          return mapped;
+        }
+      }
+    } catch {
+      // Ignore fallback error
+    }
+    return [];
+  }
+
   public async fetchLeaderboard(
     shugoServerId: number,
     className?: string,
     limit = 50
   ): Promise<readonly ShugoLeaderboardEntry[]> {
+    // 1. For Azphel NA-East (2106), use our 1,723-player synced snapshot immediately (Zero CORS!)
+    if (shugoServerId === 2106) {
+      const staticAzphel = await this.loadAzphelLeaderboardStaticSeed();
+      if (staticAzphel.length > 0) {
+        const filtered =
+          className && className !== 'All'
+            ? staticAzphel.filter(
+                (e) => e.className.toLowerCase() === className.toLowerCase()
+              )
+            : staticAzphel;
+        return filtered.slice(0, limit);
+      }
+    }
+
     const targetUrl = ENDPOINTS_CONFIG.liveApi.shugoLeaderboardUrl(
       shugoServerId,
       className,
@@ -371,7 +443,7 @@ export class Aion2UnifiedRepository
     try {
       const rawText = await this.fetchTextWithCorsFallback(targetUrl);
       const json = JSON.parse(rawText) as unknown;
-      return mapShugoLeaderboardDtoToDomain(json);
+      return mapShugoLeaderboardDtoToDomain(json).slice(0, limit);
     } catch {
       return [];
     }
@@ -383,32 +455,92 @@ export class Aion2UnifiedRepository
     characterName: string
   ): Promise<ShugoCharacterProfile> {
     const cleanName = characterName.trim();
+    const cacheKey = `${serverSlug}_${cleanName.toLowerCase()}`;
+    const cached = this.characterProfileCache.get(cacheKey);
+    if (cached && cached.expiresAt > Date.now()) {
+      return cached.profile;
+    }
+
     const profileUrl = ENDPOINTS_CONFIG.liveApi.shugoCharacterUrl(serverSlug, cleanName);
-    const html = await this.fetchTextWithCorsFallback(profileUrl);
 
-    // Extract className first so we can query class leaderboard for exact CP & GS rank
-    let detectedClass: string | undefined;
-    const classMatch = html.match(/"className"\s*:\s*"([^"]+)"/i);
-    if (classMatch?.[1]) {
-      detectedClass = classMatch[1];
-    }
+    // Pre-load full server leaderboard so rankByCp & rankByGs are accurate
+    const fullLeaderboard =
+      shugoServerId === 2106
+        ? await this.loadAzphelLeaderboardStaticSeed()
+        : await this.fetchLeaderboard(shugoServerId, undefined, 100);
 
-    const leaderboard = await this.fetchLeaderboard(shugoServerId, detectedClass, 100);
-    const parsed = parseShugoProfileHtmlToDomain(
-      html,
-      serverSlug,
-      shugoServerId,
-      cleanName,
-      leaderboard,
-      profileUrl
-    );
-
-    if (!parsed) {
-      throw new Error(
-        `No se encontró el perfil de "${cleanName}" en Shugo.gg (${serverSlug}). Verifica el nombre exacto y el servidor.`
+    try {
+      const html = await this.fetchTextWithCorsFallback(profileUrl);
+      const parsed = parseShugoProfileHtmlToDomain(
+        html,
+        serverSlug,
+        shugoServerId,
+        cleanName,
+        fullLeaderboard,
+        profileUrl
       );
+
+      if (parsed) {
+        this.characterProfileCache.set(cacheKey, {
+          profile: parsed,
+          expiresAt: Date.now() + CHAR_PROFILE_CACHE_TTL_MS,
+        });
+        return parsed;
+      }
+    } catch {
+      // Fallback to Leaderboard snapshot below if CORS proxy was rate-limited
     }
-    return parsed;
+
+    // Zero-CORS Fallback: If character is in the 1,723-player Azphel Leaderboard snapshot, build profile directly!
+    const lbMatch = fullLeaderboard.find(
+      (e) => e.name.toLowerCase() === cleanName.toLowerCase()
+    );
+    if (lbMatch) {
+      const fallbackProfile: ShugoCharacterProfile = {
+        characterName: lbMatch.name,
+        serverName: serverSlug.toUpperCase(),
+        serverSlug,
+        shugoServerId,
+        className: lbMatch.className,
+        raceName: lbMatch.raceName,
+        level: lbMatch.level,
+        combatPower: lbMatch.combatPower,
+        gearScore: lbMatch.gearScore,
+        titleName: `Ranked #${lbMatch.rankByCp} CP / #${lbMatch.rankByGs} GS`,
+        rankByCp: lbMatch.rankByCp,
+        rankByGs: lbMatch.rankByGs,
+        totalClassRanked: fullLeaderboard.length,
+        stats: [
+          { name: 'CombatPower', value: lbMatch.combatPower },
+          { name: 'ItemLevel (GS)', value: lbMatch.gearScore },
+          {
+            name: 'CP/GS Ratio',
+            value:
+              lbMatch.gearScore > 0
+                ? (lbMatch.combatPower / lbMatch.gearScore).toFixed(1)
+                : '0',
+          },
+        ],
+        equipment: [],
+        recommendations: buildCharacterRecommendations(
+          lbMatch.combatPower,
+          lbMatch.gearScore,
+          [],
+          []
+        ),
+        fetchedAt: new Date().toISOString(),
+        profileUrl,
+      };
+      this.characterProfileCache.set(cacheKey, {
+        profile: fallbackProfile,
+        expiresAt: Date.now() + CHAR_PROFILE_CACHE_TTL_MS,
+      });
+      return fallbackProfile;
+    }
+
+    throw new Error(
+      `No se encontró el perfil de "${cleanName}" en Shugo.gg (${serverSlug}) ni en el Leaderboard de ${fullLeaderboard.length} jugadores. Verifica el nombre exacto y el servidor.`
+    );
   }
 
   // ==========================================================================
@@ -460,6 +592,21 @@ export class Aion2UnifiedRepository
     readonly timestamp: string;
   }> {
     await this.initializeDatabaseIfNeeded();
+
+    // Rate-Limit Cooldown Guard (60s per server) so free proxies are never spammed
+    const lastRefresh = this.lastMarketRefreshByServer.get(serverId) ?? 0;
+    if (Date.now() - lastRefresh < MARKET_REFRESH_COOLDOWN_MS) {
+      const currentCount = await dbInstance.marketItems.count();
+      const syncMeta = await dbInstance.meta.get(META_LAST_SYNC_KEY);
+      if (currentCount > 50) {
+        return {
+          updatedCount: currentCount,
+          source: 'LIVE_API',
+          timestamp: syncMeta?.value ?? new Date().toISOString(),
+        };
+      }
+    }
+
     const targetUrl = ENDPOINTS_CONFIG.liveApi.exchangeItemsUrl(serverId, 1000);
 
     const catalogAll = await dbInstance.catalogItems.toArray();
@@ -481,7 +628,9 @@ export class Aion2UnifiedRepository
         clearTimeout(timeoutId);
 
         if (!res.ok) continue;
-        const jsonRaw = (await res.json()) as unknown;
+        const rawText = await res.text();
+        const unwrappedText = this.unwrapProxyResponseText(rawText);
+        const jsonRaw = JSON.parse(unwrappedText) as unknown;
         const dtos = adaptExchangePayloadToDtoArray(jsonRaw);
         if (dtos.length < 50) continue;
 
@@ -495,6 +644,7 @@ export class Aion2UnifiedRepository
 
         if (mappedItems.length > 50) {
           const nowIso = new Date().toISOString();
+          this.lastMarketRefreshByServer.set(serverId, Date.now());
           await dbInstance.transaction(
             'rw',
             [dbInstance.marketItems, dbInstance.meta],

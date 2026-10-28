@@ -32,7 +32,7 @@ type MainTab =
 export default function HomePage(): React.ReactElement {
   const [locale, setLocale] = useState<Locale>('es');
   const [activeTab, setActiveTab] = useState<MainTab>('AUDITOR');
-  const [recipeScope, setRecipeScope] = useState<RecipeFilterScope>('FEATURED_META');
+  const [recipeScope, setRecipeScope] = useState<RecipeFilterScope>('ALL_CLIENT');
 
   const [dbStats, setDbStats] = useState<DatabaseStats>({
     catalogCount: 0,

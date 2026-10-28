@@ -1,0 +1,53 @@
+name: Sync Live Market & Shugo Leaderboard (Zero-CORS)
+
+on:
+  schedule:
+    # Ejecuta cada 6 horas automáticamente en los runners gratuitos de GitHub (sin CORS)
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.14.0'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch live Market Prices (aion2.exchange) & Azphel Leaderboard (shugo.gg) Server-Side
+        run: node scripts/sync-live-market-and-shugo.mjs
+
+      - name: Commit updated JSON snapshots to main if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/azphel_items_precios_mercado.json public/data/azphel_crafts_arboles_exchange.json public/data/shugo_leaderboard_azphel.json
+          git diff --staged --quiet || (git commit -m "chore(data): auto-sync live Azphel market & Shugo leaderboard [skip ci]" && git push origin main)
+
+      - name: Build static export for GitHub Pages
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /aion2-craft-n-class-guides
+
+      - name: Create .nojekyll in out/
+        run: touch out/.nojekyll
+
+      - name: Deploy out/ to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          force_orphan: true

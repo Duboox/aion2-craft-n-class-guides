@@ -24,17 +24,34 @@ const CATEGORIES: readonly {
   readonly labelEn: string;
 }[] = [
   { id: 'All', labelEs: 'Todas', labelEn: 'All' },
-  { id: 'Blacksmithing', labelEs: '⚒️ Herrería (49)', labelEn: '⚒️ Blacksmithing (49)' },
-  { id: 'Jewelcrafting', labelEs: '💍 Orfebrería (53)', labelEn: '💍 Jewelcrafting (53)' },
-  { id: 'Tailoring', labelEs: '🧵 Sastrería (67)', labelEn: '🧵 Tailoring (67)' },
-  { id: 'Alchemy', labelEs: '⚗️ Alquimia (47)', labelEn: '⚗️ Alchemy (47)' },
-  { id: 'Cooking', labelEs: '🍖 Cocina (15)', labelEn: '🍖 Cooking (15)' },
+  { id: 'Blacksmithing', labelEs: '⚒️ Herrería', labelEn: '⚒️ Blacksmithing' },
+  { id: 'Jewelcrafting', labelEs: '💍 Orfebrería', labelEn: '💍 Jewelcrafting' },
+  { id: 'Tailoring', labelEs: '🧵 Sastrería / Armaduras', labelEn: '🧵 Tailoring / Armor' },
+  { id: 'Alchemy', labelEs: '⚗️ Alquimia', labelEn: '⚗️ Alchemy' },
+  { id: 'Cooking', labelEs: '🍖 Cocina', labelEn: '🍖 Cooking' },
   { id: 'Molienda', labelEs: '💎 Molienda', labelEn: '💎 Milling' },
-  { id: 'Balaur', labelEs: '🐉 Balaur', labelEn: '🐉 Balaur' },
+  { id: 'Balaur', labelEs: '🐉 Balaur / Dracónico', labelEn: '🐉 Balaur / Draconic' },
   { id: 'Vinculados', labelEs: '🔒 Vinculados (Bound)', labelEn: '🔒 Bound' },
 ];
 
 const BATCH_SIZES: readonly number[] = [1, 10, 50, 100];
+
+const matchesCategory = (
+  audit: EvaluatedRecipeAudit,
+  cat: CraftingCategory
+): boolean => {
+  if (cat === 'All') return true;
+  if (cat === 'Balaur') {
+    return audit.recipe.category === 'Balaur' || Boolean(audit.recipe.isBalaur);
+  }
+  if (cat === 'Molienda') {
+    return audit.recipe.category === 'Molienda' || Boolean(audit.recipe.isMolienda);
+  }
+  if (cat === 'Vinculados') {
+    return audit.recipe.category === 'Vinculados' || Boolean(audit.recipe.hasBoundInput);
+  }
+  return audit.recipe.category === cat;
+};
 
 export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> = ({
   locale,
@@ -50,20 +67,36 @@ export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> =
   const [expandedRecipeId, setExpandedRecipeId] = useState<string | null>(null);
   const [editingPriceMap, setEditingPriceMap] = useState<Record<number, string>>({});
 
+  const categoryCounts = useMemo((): Readonly<Record<CraftingCategory, number>> => {
+    const counts: Record<CraftingCategory, number> = {
+      All: audits.length,
+      Blacksmithing: 0,
+      Jewelcrafting: 0,
+      Tailoring: 0,
+      Alchemy: 0,
+      Cooking: 0,
+      Molienda: 0,
+      Balaur: 0,
+      Vinculados: 0,
+    };
+    for (const a of audits) {
+      if (matchesCategory(a, 'Blacksmithing')) counts.Blacksmithing++;
+      if (matchesCategory(a, 'Jewelcrafting')) counts.Jewelcrafting++;
+      if (matchesCategory(a, 'Tailoring')) counts.Tailoring++;
+      if (matchesCategory(a, 'Alchemy')) counts.Alchemy++;
+      if (matchesCategory(a, 'Cooking')) counts.Cooking++;
+      if (matchesCategory(a, 'Molienda')) counts.Molienda++;
+      if (matchesCategory(a, 'Balaur')) counts.Balaur++;
+      if (matchesCategory(a, 'Vinculados')) counts.Vinculados++;
+    }
+    return counts;
+  }, [audits]);
+
   const filteredAudits = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     return audits.filter((audit) => {
-      if (selectedCategory !== 'All') {
-        if (selectedCategory === 'Balaur') {
-          if (audit.recipe.category !== 'Balaur' && !audit.recipe.isBalaur) return false;
-        } else if (selectedCategory === 'Molienda') {
-          if (audit.recipe.category !== 'Molienda' && !audit.recipe.isMolienda) return false;
-        } else if (selectedCategory === 'Vinculados') {
-          if (audit.recipe.category !== 'Vinculados' && !audit.recipe.hasBoundInput)
-            return false;
-        } else if (audit.recipe.category !== selectedCategory) {
-          return false;
-        }
+      if (!matchesCategory(audit, selectedCategory)) {
+        return false;
       }
       if (!q) return true;
       const localizedRecipeName =
@@ -134,17 +167,6 @@ export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> =
         <div className="flex items-center gap-2 bg-[#0b0e14] p-1.5 rounded-xl border border-[#263042] shrink-0">
           <button
             type="button"
-            onClick={() => onScopeChange('FEATURED_META')}
-            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition ${
-              activeScope === 'FEATURED_META'
-                ? 'bg-[#d9b36c] text-[#0b0e14] shadow'
-                : 'text-slate-300 hover:text-white'
-            }`}
-          >
-            {locale === 'es' ? '🔥 Recetas Meta Auditadas (22)' : '🔥 Featured Meta Recipes (22)'}
-          </button>
-          <button
-            type="button"
             onClick={() => onScopeChange('ALL_CLIENT')}
             className={`px-3.5 py-2 rounded-lg text-xs font-bold transition ${
               activeScope === 'ALL_CLIENT'
@@ -153,8 +175,19 @@ export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> =
             }`}
           >
             {locale === 'es'
-              ? '📚 Todas las Recetas del Juego (242)'
-              : '📚 All Client Recipes (242)'}
+              ? '📚 Todas las Recetas del Juego (432)'
+              : '📚 All Client Recipes (432)'}
+          </button>
+          <button
+            type="button"
+            onClick={() => onScopeChange('FEATURED_META')}
+            className={`px-3.5 py-2 rounded-lg text-xs font-bold transition ${
+              activeScope === 'FEATURED_META'
+                ? 'bg-[#d9b36c] text-[#0b0e14] shadow'
+                : 'text-slate-300 hover:text-white'
+            }`}
+          >
+            {locale === 'es' ? '🔥 Solo Meta Destacadas' : '🔥 Featured Meta Only'}
           </button>
         </div>
       </div>
@@ -164,18 +197,24 @@ export const CraftingAuditorDashboard: React.FC<CraftingAuditorDashboardProps> =
         <div className="flex flex-wrap items-center gap-2">
           {CATEGORIES.map((cat) => {
             const active = selectedCategory === cat.id;
+            const count = categoryCounts[cat.id] ?? 0;
             return (
               <button
                 key={cat.id}
                 type="button"
-                onClick={() => setSelectedCategory(cat.id)}
+                onClick={() => {
+                  setSelectedCategory(cat.id);
+                  if (activeScope === 'FEATURED_META' && cat.id !== 'All' && count <= 1) {
+                    onScopeChange('ALL_CLIENT');
+                  }
+                }}
                 className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition border ${
                   active
                     ? 'bg-[#d9b36c]/20 text-[#f0d59a] border-[#d9b36c]/60 shadow-sm'
                     : 'bg-[#0b0e14] text-slate-400 border-[#263042] hover:text-slate-200'
                 }`}
               >
-                {locale === 'es' ? cat.labelEs : cat.labelEn}
+                {locale === 'es' ? cat.labelEs : cat.labelEn} ({count})
               </button>
             );
           })}

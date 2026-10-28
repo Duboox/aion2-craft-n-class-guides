@@ -188,6 +188,10 @@ export const ENDPOINTS_CONFIG: ExternalEndpointsConfig = {
     },
     corsProxies: [
       (targetUrl: string): string =>
+        `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`,
+      (targetUrl: string): string =>
+        `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`,
+      (targetUrl: string): string =>
         `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
       (targetUrl: string): string =>
         `https://corsproxy.io/?${encodeURIComponent(targetUrl)}`,
